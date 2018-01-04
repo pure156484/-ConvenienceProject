@@ -66,5 +66,10 @@ namespace PosProject_psi
         {
             new Receipt().Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new Events().Show();
+        }
     }
 }
