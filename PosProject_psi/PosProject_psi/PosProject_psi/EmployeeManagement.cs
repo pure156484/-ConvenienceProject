@@ -20,18 +20,19 @@ namespace CommonProject
 
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {
-            employeeGridView.ColumnCount = 6;
-            employeeGridView.Columns[0].Name = "NO";
-            employeeGridView.Columns[1].Name = "직원명";
-            employeeGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            employeeGridView.Columns[2].Name = "직책";
-            employeeGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            employeeGridView.Columns[3].Name = "주소";
-            employeeGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            employeeGridView.Columns[4].Name = "전화번호";
-            employeeGridView.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            employeeGridView.Columns[5].Name = "주민번호";
-            employeeGridView.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.ColumnCount = 6;
+            EmployeeGridView.Columns[0].Name = "NO";
+            EmployeeGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.Columns[1].Name = "직원명";
+            EmployeeGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.Columns[2].Name = "직책";
+            EmployeeGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.Columns[3].Name = "주소";
+            EmployeeGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.Columns[4].Name = "전화번호";
+            EmployeeGridView.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            EmployeeGridView.Columns[5].Name = "주민번호";
+            EmployeeGridView.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btn_Add_Click_1(object sender, EventArgs e)

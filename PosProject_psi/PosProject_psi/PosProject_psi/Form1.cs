@@ -28,7 +28,7 @@ namespace PosProject_psi
             itemGrid.Columns[3].Name = "단 가";
             itemGrid.Columns[4].Name = "수 량";
             itemGrid.Columns[5].Name = "할 인";
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -67,9 +67,13 @@ namespace PosProject_psi
             new Receipt().Show();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            new ProductManagement().Show();
+            new Events().Show();
         }
-    }
-}
+            private void button10_Click(object sender, EventArgs e)
+            {
+                new ProductManagement().Show();
+            }
+        
+    } }

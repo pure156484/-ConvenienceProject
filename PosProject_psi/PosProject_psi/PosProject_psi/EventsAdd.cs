@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PosProject_psi
 {
-    public partial class SalesStatus : Form
+    public partial class EventsAdd : Form
     {
-        public SalesStatus()
+        public EventsAdd()
         {
             InitializeComponent();
         }

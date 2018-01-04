@@ -33,7 +33,7 @@
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddr = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPosition = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Confirm = new System.Windows.Forms.Button();
@@ -82,12 +82,12 @@
             this.txtAddr.Size = new System.Drawing.Size(100, 21);
             this.txtAddr.TabIndex = 60;
             // 
-            // textBox1
+            // txtPosition
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 59;
+            this.txtPosition.Location = new System.Drawing.Point(138, 62);
+            this.txtPosition.Name = "txtPosition";
+            this.txtPosition.Size = new System.Drawing.Size(100, 21);
+            this.txtPosition.TabIndex = 59;
             // 
             // label3
             // 
@@ -151,7 +151,7 @@
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddr);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_Confirm);
@@ -172,7 +172,7 @@
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAddr;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Confirm;

@@ -48,7 +48,10 @@
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
+>>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -56,17 +59,21 @@
             // 
             // product_grid
             // 
+            this.product_grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(212)))), ((int)(((byte)(246)))));
             this.product_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.product_grid.Location = new System.Drawing.Point(26, 300);
+            this.product_grid.Location = new System.Drawing.Point(12, 300);
             this.product_grid.Name = "product_grid";
             this.product_grid.RowTemplate.Height = 23;
-            this.product_grid.Size = new System.Drawing.Size(704, 169);
+            this.product_grid.Size = new System.Drawing.Size(756, 205);
             this.product_grid.TabIndex = 33;
             // 
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_exit.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_exit.FlatAppearance.BorderSize = 0;
+            this.btn_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btn_exit.Location = new System.Drawing.Point(329, 245);
             this.btn_exit.Name = "btn_exit";
@@ -78,9 +85,12 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_delete.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_delete.Location = new System.Drawing.Point(228, 245);
+            this.btn_delete.Location = new System.Drawing.Point(223, 245);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(95, 46);
             this.btn_delete.TabIndex = 31;
@@ -90,9 +100,12 @@
             // btn_modified
             // 
             this.btn_modified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_modified.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_modified.FlatAppearance.BorderSize = 0;
+            this.btn_modified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_modified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modified.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_modified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_modified.Location = new System.Drawing.Point(127, 245);
+            this.btn_modified.Location = new System.Drawing.Point(118, 245);
             this.btn_modified.Name = "btn_modified";
             this.btn_modified.Size = new System.Drawing.Size(95, 46);
             this.btn_modified.TabIndex = 30;
@@ -102,9 +115,12 @@
             // btn_enroll
             // 
             this.btn_enroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_enroll.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_enroll.FlatAppearance.BorderSize = 0;
+            this.btn_enroll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_enroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_enroll.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_enroll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_enroll.Location = new System.Drawing.Point(26, 245);
+            this.btn_enroll.Location = new System.Drawing.Point(12, 245);
             this.btn_enroll.Name = "btn_enroll";
             this.btn_enroll.Size = new System.Drawing.Size(95, 46);
             this.btn_enroll.TabIndex = 29;
@@ -125,9 +141,9 @@
             this.groupBox1.Controls.Add(this.product_name);
             this.groupBox1.Controls.Add(this.product_barcode);
             this.groupBox1.Controls.Add(this.product_count);
-            this.groupBox1.Location = new System.Drawing.Point(26, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 227);
+            this.groupBox1.Size = new System.Drawing.Size(412, 227);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
@@ -135,6 +151,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+<<<<<<< HEAD
+=======
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+>>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label6.Location = new System.Drawing.Point(6, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 19);
@@ -153,6 +173,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+<<<<<<< HEAD
+=======
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+>>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label5.Location = new System.Drawing.Point(6, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
@@ -171,6 +195,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 19);
@@ -181,6 +206,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label2.Location = new System.Drawing.Point(5, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 19);
@@ -191,6 +217,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label3.Location = new System.Drawing.Point(3, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 19);
@@ -201,6 +228,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label4.Location = new System.Drawing.Point(6, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 19);
@@ -234,9 +262,12 @@
             // btn_image
             // 
             this.btn_image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
+            this.btn_image.FlatAppearance.BorderSize = 0;
+            this.btn_image.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_image.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_image.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_image.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_image.Location = new System.Drawing.Point(634, 245);
+            this.btn_image.Location = new System.Drawing.Point(672, 245);
             this.btn_image.Name = "btn_image";
             this.btn_image.Size = new System.Drawing.Size(96, 29);
             this.btn_image.TabIndex = 27;
@@ -246,21 +277,23 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("휴먼매직체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(558, 21);
+            this.label7.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.label7.Location = new System.Drawing.Point(563, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 24);
+            this.label7.Size = new System.Drawing.Size(76, 21);
             this.label7.TabIndex = 25;
             this.label7.Text = "이미지";
             // 
             // product__image
             // 
-            this.product__image.Location = new System.Drawing.Point(458, 51);
+            this.product__image.Location = new System.Drawing.Point(430, 49);
             this.product__image.Name = "product__image";
-            this.product__image.Size = new System.Drawing.Size(272, 188);
+            this.product__image.Size = new System.Drawing.Size(338, 190);
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
             // 
+<<<<<<< HEAD
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -269,12 +302,14 @@
             this.comboBox1.Size = new System.Drawing.Size(192, 20);
             this.comboBox1.TabIndex = 18;
             // 
+=======
+>>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(755, 491);
+            this.ClientSize = new System.Drawing.Size(780, 517);
             this.Controls.Add(this.product_grid);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_delete);
@@ -285,6 +320,7 @@
             this.Controls.Add(this.product__image);
             this.Controls.Add(this.label7);
             this.Name = "ProductManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductManagement";
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).EndInit();
             this.groupBox1.ResumeLayout(false);
