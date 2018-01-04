@@ -20,6 +20,7 @@ C:\Users\gd3-12\Desktop\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\P
 C:\Users\gd3-12\Desktop\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-12\Desktop\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
 C:\Users\gd3-12\Desktop\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Setting.resources
+<<<<<<< HEAD
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EmployeeAdd.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\CommonProject.EmployeeManagement.resources
@@ -37,3 +38,17 @@ C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\Pos
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
+=======
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MainForm.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.GarbageProd.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Properties.Resources.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Setting.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.GenerateResource.Cache
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
+>>>>>>> 46d1b180c4c48bee11fc60f17ad5b05a50acccc3
