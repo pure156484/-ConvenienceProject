@@ -45,6 +45,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btn_Add.Location = new System.Drawing.Point(12, 387);
             this.btn_Add.Name = "btn_Add";
@@ -61,18 +62,18 @@
             this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Search.Location = new System.Drawing.Point(112, 20);
+            this.btn_Search.Location = new System.Drawing.Point(112, 25);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(71, 21);
+            this.btn_Search.Size = new System.Drawing.Size(71, 26);
             this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "확인";
             this.btn_Search.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 20);
+            this.textBox1.Location = new System.Drawing.Point(6, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 2;
             // 
             // btn_Del
@@ -81,6 +82,7 @@
             this.btn_Del.FlatAppearance.BorderSize = 0;
             this.btn_Del.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Del.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Del.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btn_Del.Location = new System.Drawing.Point(286, 387);
             this.btn_Del.Name = "btn_Del";
@@ -95,6 +97,7 @@
             this.btn_Modi.FlatAppearance.BorderSize = 0;
             this.btn_Modi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Modi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Modi.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Modi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btn_Modi.Location = new System.Drawing.Point(149, 387);
             this.btn_Modi.Name = "btn_Modi";
@@ -107,10 +110,11 @@
             // 
             this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.groupBox1.Location = new System.Drawing.Point(579, 387);
+            this.groupBox1.Location = new System.Drawing.Point(579, 375);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 53);
+            this.groupBox1.Size = new System.Drawing.Size(189, 65);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "전화번호로 검색";
