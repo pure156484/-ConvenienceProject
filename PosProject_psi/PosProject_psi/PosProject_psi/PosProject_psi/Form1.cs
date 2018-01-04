@@ -67,15 +67,9 @@ namespace PosProject_psi
             new Receipt().Show();
         }
 
-<<<<<<< HEAD
-        private void button8_Click(object sender, EventArgs e)
-        {
-            new Events().Show();
-=======
         private void button10_Click(object sender, EventArgs e)
         {
             new ProductManagement().Show();
->>>>>>> 432adc255d973214be55c4ef554bd4520f41e36e
         }
     }
 }
