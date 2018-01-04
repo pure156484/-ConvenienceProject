@@ -34,21 +34,21 @@
             this.btn_modified = new System.Windows.Forms.Button();
             this.btn_enroll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.product__unit_price = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.product_cust_price = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.product_name = new System.Windows.Forms.TextBox();
             this.product_barcode = new System.Windows.Forms.TextBox();
-            this.product_num = new System.Windows.Forms.TextBox();
             this.product_count = new System.Windows.Forms.TextBox();
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.product_cust_price = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.product__unit_price = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -113,6 +113,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.product__unit_price);
             this.groupBox1.Controls.Add(this.label5);
@@ -123,13 +124,48 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.product_name);
             this.groupBox1.Controls.Add(this.product_barcode);
-            this.groupBox1.Controls.Add(this.product_num);
             this.groupBox1.Controls.Add(this.product_count);
             this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(398, 227);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(6, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 19);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "단      가";
+            // 
+            // product__unit_price
+            // 
+            this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.product__unit_price.Location = new System.Drawing.Point(190, 193);
+            this.product__unit_price.Name = "product__unit_price";
+            this.product__unit_price.Size = new System.Drawing.Size(192, 26);
+            this.product__unit_price.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(6, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "가      격";
+            // 
+            // product_cust_price
+            // 
+            this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.product_cust_price.Location = new System.Drawing.Point(190, 157);
+            this.product_cust_price.Name = "product_cust_price";
+            this.product_cust_price.Size = new System.Drawing.Size(192, 26);
+            this.product_cust_price.TabIndex = 15;
             // 
             // label1
             // 
@@ -187,14 +223,6 @@
             this.product_barcode.Size = new System.Drawing.Size(192, 26);
             this.product_barcode.TabIndex = 9;
             // 
-            // product_num
-            // 
-            this.product_num.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_num.Location = new System.Drawing.Point(190, 121);
-            this.product_num.Name = "product_num";
-            this.product_num.Size = new System.Drawing.Size(192, 26);
-            this.product_num.TabIndex = 13;
-            // 
             // product_count
             // 
             this.product_count.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -233,41 +261,13 @@
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
             // 
-            // label5
+            // comboBox1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(6, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "가      격";
-            // 
-            // product_cust_price
-            // 
-            this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_cust_price.Location = new System.Drawing.Point(190, 157);
-            this.product_cust_price.Name = "product_cust_price";
-            this.product_cust_price.Size = new System.Drawing.Size(192, 26);
-            this.product_cust_price.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(6, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 19);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "단      가";
-            // 
-            // product__unit_price
-            // 
-            this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product__unit_price.Location = new System.Drawing.Point(190, 193);
-            this.product__unit_price.Name = "product__unit_price";
-            this.product__unit_price.Size = new System.Drawing.Size(192, 26);
-            this.product__unit_price.TabIndex = 17;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(190, 124);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 20);
+            this.comboBox1.TabIndex = 18;
             // 
             // ProductManagement
             // 
@@ -309,7 +309,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox product_name;
         private System.Windows.Forms.TextBox product_barcode;
-        private System.Windows.Forms.TextBox product_num;
         private System.Windows.Forms.TextBox product_count;
         private System.Windows.Forms.Button btn_image;
         private System.Windows.Forms.PictureBox product__image;
@@ -318,5 +317,6 @@
         private System.Windows.Forms.TextBox product__unit_price;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox product_cust_price;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
