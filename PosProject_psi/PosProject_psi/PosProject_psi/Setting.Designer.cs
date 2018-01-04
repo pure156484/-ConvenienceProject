@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnWait);
             this.Controls.Add(this.panel1);
             this.Name = "Setting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setting";
             this.Load += new System.EventHandler(this.Setting_Load);
             this.panel1.ResumeLayout(false);

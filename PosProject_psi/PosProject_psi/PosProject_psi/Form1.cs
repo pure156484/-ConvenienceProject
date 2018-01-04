@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,21 @@ namespace PosProject_psi
         private void button5_Click(object sender, EventArgs e)
         {
             new Setting().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new MembershipManagement().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new EmployeeManagement().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Receipt().Show();
         }
     }
 }
