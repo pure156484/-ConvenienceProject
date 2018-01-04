@@ -28,5 +28,23 @@ namespace PosProject_psi
             empGridView.Columns[5].Name = "누 적 근 무 시 간";
             empGridView.Columns[5].Name = "누 적 수 당";
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            txtAddr.ReadOnly = false;
+            txtCeoName.ReadOnly = false;
+            txtCeoNum.ReadOnly = false;
+            txtPhone.ReadOnly = false;
+            txtShopName.ReadOnly = false;
+            btnSave.Enabled = true;
+            btnSave.Visible = true;
+            btnUpdate.Enabled = false;
+            btnUpdate.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
