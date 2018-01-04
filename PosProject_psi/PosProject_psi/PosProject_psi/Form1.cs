@@ -71,5 +71,10 @@ namespace PosProject_psi
         {
             new ProductManagement().Show();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            new OrderInventoryForm().Show();
+        }
     }
 }

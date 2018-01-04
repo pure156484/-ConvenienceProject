@@ -83,6 +83,12 @@
     <Compile Include="MembershipManagement.Designer.cs">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderInventoryForm.Designer.cs">
+      <DependentUpon>OrderInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MembershipManagement.resx">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderInventoryForm.resx">
+      <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement.resx">
       <DependentUpon>ProductManagement.cs</DependentUpon>
