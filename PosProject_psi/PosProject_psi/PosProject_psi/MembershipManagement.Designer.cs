@@ -112,7 +112,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.groupBox1.Location = new System.Drawing.Point(579, 375);
+            this.groupBox1.Location = new System.Drawing.Point(579, 379);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(189, 65);
             this.groupBox1.TabIndex = 26;

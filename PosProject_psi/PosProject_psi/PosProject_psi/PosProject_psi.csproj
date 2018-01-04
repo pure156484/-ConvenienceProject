@@ -143,6 +143,9 @@
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalesStatus.resx">
+      <DependentUpon>SalesStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>

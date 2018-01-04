@@ -52,6 +52,7 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
 >>>>>>> 46d1b180c4c48bee11fc60f17ad5b05a50acccc3
+<<<<<<< HEAD
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
@@ -70,3 +71,6 @@ C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosP
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
+=======
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.SalesStatus.resources
+>>>>>>> 9406af34fb4a64b640bb0fa64657d772cfac89f6
