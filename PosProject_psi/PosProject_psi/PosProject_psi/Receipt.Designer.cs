@@ -52,19 +52,20 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 371);
+            this.groupBox1.Location = new System.Drawing.Point(12, 355);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 74);
+            this.groupBox1.Size = new System.Drawing.Size(396, 90);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "시간대 별 검색";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(65, 17);
+            this.dateTimePicker1.Location = new System.Drawing.Point(80, 19);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(236, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(236, 26);
             this.dateTimePicker1.TabIndex = 48;
             // 
             // btn_Search
@@ -74,9 +75,9 @@
             this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Search.Location = new System.Drawing.Point(307, 16);
+            this.btn_Search.Location = new System.Drawing.Point(322, 19);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(68, 49);
+            this.btn_Search.Size = new System.Drawing.Size(68, 62);
             this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "확인";
             this.btn_Search.UseVisualStyleBackColor = false;
@@ -85,33 +86,33 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(176, 49);
+            this.label3.Location = new System.Drawing.Point(188, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 12);
+            this.label3.Size = new System.Drawing.Size(21, 16);
             this.label3.TabIndex = 52;
             this.label3.Text = "~";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(201, 44);
+            this.textBox4.Location = new System.Drawing.Point(216, 55);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 51;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(65, 44);
+            this.textBox3.Location = new System.Drawing.Point(80, 55);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 50;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(6, 48);
+            this.label2.Location = new System.Drawing.Point(4, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 49;
             this.label2.Text = "시간대별";
             // 
@@ -119,9 +120,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Location = new System.Drawing.Point(4, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 48;
             this.label1.Text = "영업일자";
             // 
@@ -131,10 +132,11 @@
             this.btn_Refund.FlatAppearance.BorderSize = 0;
             this.btn_Refund.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Refund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refund.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Refund.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Refund.Location = new System.Drawing.Point(406, 387);
+            this.btn_Refund.Location = new System.Drawing.Point(414, 375);
             this.btn_Refund.Name = "btn_Refund";
-            this.btn_Refund.Size = new System.Drawing.Size(75, 49);
+            this.btn_Refund.Size = new System.Drawing.Size(75, 62);
             this.btn_Refund.TabIndex = 50;
             this.btn_Refund.Text = "환불";
             this.btn_Refund.UseVisualStyleBackColor = false;
@@ -157,7 +159,7 @@
             this.MemberGridView.Name = "MemberGridView";
             this.MemberGridView.ReadOnly = true;
             this.MemberGridView.RowTemplate.Height = 23;
-            this.MemberGridView.Size = new System.Drawing.Size(477, 352);
+            this.MemberGridView.Size = new System.Drawing.Size(477, 337);
             this.MemberGridView.TabIndex = 48;
             // 
             // Receipt

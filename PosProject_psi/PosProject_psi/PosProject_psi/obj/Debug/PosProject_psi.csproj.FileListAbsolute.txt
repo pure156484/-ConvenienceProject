@@ -52,3 +52,4 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
 >>>>>>> 46d1b180c4c48bee11fc60f17ad5b05a50acccc3
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.SalesStatus.resources
