@@ -50,6 +50,8 @@
             // 
             // itemGrid
             // 
+            this.itemGrid.AllowUserToAddRows = false;
+            this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -64,6 +66,7 @@
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.itemGrid.Location = new System.Drawing.Point(12, 60);
             this.itemGrid.Name = "itemGrid";
+            this.itemGrid.ReadOnly = true;
             this.itemGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.itemGrid.RowTemplate.Height = 23;
             this.itemGrid.Size = new System.Drawing.Size(850, 327);
