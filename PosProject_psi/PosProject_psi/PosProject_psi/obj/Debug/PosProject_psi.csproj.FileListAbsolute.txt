@@ -18,9 +18,7 @@ C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\Pos
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
-<<<<<<< HEAD
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
-=======
 =======
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
@@ -44,3 +42,4 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.OrderInventoryForm.resources
 >>>>>>> PSI
 >>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.OrderInventoryForm.resources

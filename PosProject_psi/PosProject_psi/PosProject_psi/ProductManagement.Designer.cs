@@ -48,10 +48,7 @@
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-=======
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -132,11 +129,8 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.btn_exit);
-=======
             this.groupBox1.Controls.Add(this.comboBox1);
->>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.product__unit_price);
@@ -160,18 +154,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-<<<<<<< HEAD
             this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label6.Location = new System.Drawing.Point(6, 199);
-=======
             this.label6.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-<<<<<<< HEAD
-=======
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label6.Location = new System.Drawing.Point(6, 200);
->>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 16;
@@ -188,18 +176,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label5.Location = new System.Drawing.Point(6, 163);
-=======
             this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-<<<<<<< HEAD
-=======
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label5.Location = new System.Drawing.Point(6, 164);
->>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 16);
             this.label5.TabIndex = 14;
@@ -272,8 +254,7 @@
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 26);
             this.product_barcode.TabIndex = 9;
-            // 
-<<<<<<< HEAD
+            //
             // product_num
             // 
             this.product_num.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -282,8 +263,6 @@
             this.product_num.Size = new System.Drawing.Size(192, 26);
             this.product_num.TabIndex = 13;
             // 
-=======
->>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             // product_count
             // 
             this.product_count.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -326,7 +305,6 @@
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
             // 
-<<<<<<< HEAD
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -335,8 +313,6 @@
             this.comboBox1.Size = new System.Drawing.Size(192, 20);
             this.comboBox1.TabIndex = 18;
             // 
-=======
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
