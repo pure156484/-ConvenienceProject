@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,6 +62,19 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPordInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+            this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button5 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+=======
             this.btnList = new System.Windows.Forms.Button();
             this.btnGarbage = new System.Windows.Forms.Button();
             this.btnDiscount = new System.Windows.Forms.Button();
@@ -74,6 +86,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnProd = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
+>>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,14 +98,6 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -501,21 +506,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Orange;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(346, 371);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 46);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "폐기물";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Orange;
@@ -557,20 +547,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "매출현황";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Orange;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(847, 371);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(150, 46);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "발주/재고";
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -720,6 +696,39 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+<<<<<<< HEAD
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button5.BackgroundImage = global::PosProject_psi.Properties.Resources.if_icons_settings_1564529;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(949, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 52);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Orange;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button10.Location = new System.Drawing.Point(179, 371);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(150, 46);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "상품관리";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+=======
             // btnProd
             // 
             this.btnProd.BackColor = System.Drawing.Color.Orange;
@@ -751,6 +760,36 @@
             this.btnSetting.TabIndex = 6;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.button5_Click);
+>>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Orange;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.Location = new System.Drawing.Point(346, 371);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(150, 46);
+            this.button11.TabIndex = 12;
+            this.button11.Text = "발주/재고";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Orange;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(847, 371);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 46);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "폐기물";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // MainForm
             // 
@@ -758,6 +797,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
+<<<<<<< HEAD
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+=======
             this.Controls.Add(this.btnProd);
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnEmploy);
@@ -768,11 +818,13 @@
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnGain);
             this.Controls.Add(this.btnList);
+>>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnWait);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.itemGrid);
+            this.Controls.Add(this.button11);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POS";
@@ -812,6 +864,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnWait;
         private System.Windows.Forms.Panel panel2;
+<<<<<<< HEAD
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+=======
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnGarbage;
@@ -825,6 +890,7 @@
         private System.Windows.Forms.TextBox txtMoney;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtBacode;
+>>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -832,7 +898,13 @@
         private System.Windows.Forms.TextBox txtPordInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
+<<<<<<< HEAD
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button6;
+=======
         private System.Windows.Forms.Button btnProd;
+>>>>>>> 35c1ced34cf0d5d4206d7ff8b78252ba89dffa29
     }
 }
 

@@ -61,7 +61,7 @@
             this.groupBox1.Size = new System.Drawing.Size(477, 90);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "시간대 별 검색";
+            this.groupBox1.Text = "시간대별 검색";
             // 
             // btn_Refund
             // 
