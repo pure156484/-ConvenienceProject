@@ -53,27 +53,27 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnWait = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtReturnMoney = new System.Windows.Forms.TextBox();
+            this.txtMoney = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtBacode = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPordInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
+            this.btnGarbage = new System.Windows.Forms.Button();
+            this.btnDiscount = new System.Windows.Forms.Button();
+            this.btnEvent = new System.Windows.Forms.Button();
+            this.btnGain = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnEmploy = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button5 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnProd = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -370,67 +370,67 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtReturnMoney);
+            this.panel2.Controls.Add(this.txtMoney);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtBacode);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtPordInfo);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 423);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(850, 187);
             this.panel2.TabIndex = 5;
             // 
-            // textBox5
+            // txtReturnMoney
             // 
-            this.textBox5.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(635, 141);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox5.Size = new System.Drawing.Size(208, 39);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.Text = "0원";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtReturnMoney.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtReturnMoney.Location = new System.Drawing.Point(635, 141);
+            this.txtReturnMoney.Multiline = true;
+            this.txtReturnMoney.Name = "txtReturnMoney";
+            this.txtReturnMoney.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtReturnMoney.Size = new System.Drawing.Size(208, 39);
+            this.txtReturnMoney.TabIndex = 14;
+            this.txtReturnMoney.Text = "0원";
+            this.txtReturnMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtMoney
             // 
-            this.textBox4.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(635, 92);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox4.Size = new System.Drawing.Size(208, 39);
-            this.textBox4.TabIndex = 13;
-            this.textBox4.Text = "0원";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMoney.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMoney.Location = new System.Drawing.Point(635, 92);
+            this.txtMoney.Multiline = true;
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtMoney.Size = new System.Drawing.Size(208, 39);
+            this.txtMoney.TabIndex = 13;
+            this.txtMoney.Text = "0원";
+            this.txtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // txtPrice
             // 
-            this.textBox3.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(635, 47);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox3.Size = new System.Drawing.Size(208, 39);
-            this.textBox3.TabIndex = 12;
-            this.textBox3.Text = "0원";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPrice.Location = new System.Drawing.Point(635, 47);
+            this.txtPrice.Multiline = true;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPrice.Size = new System.Drawing.Size(208, 39);
+            this.txtPrice.TabIndex = 12;
+            this.txtPrice.Text = "0원";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // txtBacode
             // 
-            this.textBox2.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(635, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(208, 39);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBacode.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBacode.Location = new System.Drawing.Point(635, 2);
+            this.txtBacode.Multiline = true;
+            this.txtBacode.Name = "txtBacode";
+            this.txtBacode.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBacode.Size = new System.Drawing.Size(208, 39);
+            this.txtBacode.TabIndex = 11;
+            this.txtBacode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -468,13 +468,13 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "상품등록";
             // 
-            // textBox1
+            // txtPordInfo
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(442, 187);
-            this.textBox1.TabIndex = 6;
+            this.txtPordInfo.Location = new System.Drawing.Point(49, 0);
+            this.txtPordInfo.Multiline = true;
+            this.txtPordInfo.Name = "txtPordInfo";
+            this.txtPordInfo.Size = new System.Drawing.Size(442, 187);
+            this.txtPordInfo.TabIndex = 6;
             // 
             // label5
             // 
@@ -485,6 +485,7 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "상품정보";
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
@@ -598,43 +599,158 @@
             this.button4.Text = "회원관리";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+=======
+            // btnList
+            // 
+            this.btnList.BackColor = System.Drawing.Color.Orange;
+            this.btnList.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnList.Location = new System.Drawing.Point(12, 371);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(150, 46);
+            this.btnList.TabIndex = 4;
+            this.btnList.Text = "영수증조회";
+            this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnGarbage
+            // 
+            this.btnGarbage.BackColor = System.Drawing.Color.Orange;
+            this.btnGarbage.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnGarbage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGarbage.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGarbage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGarbage.Location = new System.Drawing.Point(346, 371);
+            this.btnGarbage.Name = "btnGarbage";
+            this.btnGarbage.Size = new System.Drawing.Size(150, 46);
+            this.btnGarbage.TabIndex = 7;
+            this.btnGarbage.Text = "폐기물";
+            this.btnGarbage.UseVisualStyleBackColor = false;
+            this.btnGarbage.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnDiscount
+            // 
+            this.btnDiscount.BackColor = System.Drawing.Color.Orange;
+            this.btnDiscount.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscount.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDiscount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDiscount.Location = new System.Drawing.Point(680, 371);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(150, 46);
+            this.btnDiscount.TabIndex = 7;
+            this.btnDiscount.Text = "할인";
+            this.btnDiscount.UseVisualStyleBackColor = false;
+            // 
+            // btnEvent
+            // 
+            this.btnEvent.BackColor = System.Drawing.Color.Orange;
+            this.btnEvent.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvent.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEvent.Location = new System.Drawing.Point(513, 371);
+            this.btnEvent.Name = "btnEvent";
+            this.btnEvent.Size = new System.Drawing.Size(150, 46);
+            this.btnEvent.TabIndex = 7;
+            this.btnEvent.Text = "행사상품";
+            this.btnEvent.UseVisualStyleBackColor = false;
+            // 
+            // btnGain
+            // 
+            this.btnGain.BackColor = System.Drawing.Color.White;
+            this.btnGain.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnGain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGain.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnGain.Location = new System.Drawing.Point(879, 555);
+            this.btnGain.Name = "btnGain";
+            this.btnGain.Size = new System.Drawing.Size(120, 55);
+            this.btnGain.TabIndex = 4;
+            this.btnGain.Text = "매출현황";
+            this.btnGain.UseVisualStyleBackColor = false;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.Orange;
+            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOrder.Location = new System.Drawing.Point(847, 371);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(150, 46);
+            this.btnOrder.TabIndex = 8;
+            this.btnOrder.Text = "발주/재고";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnEmploy
+            // 
+            this.btnEmploy.BackColor = System.Drawing.Color.White;
+            this.btnEmploy.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnEmploy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmploy.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnEmploy.Location = new System.Drawing.Point(879, 489);
+            this.btnEmploy.Name = "btnEmploy";
+            this.btnEmploy.Size = new System.Drawing.Size(120, 55);
+            this.btnEmploy.TabIndex = 9;
+            this.btnEmploy.Text = "직원관리";
+            this.btnEmploy.UseVisualStyleBackColor = false;
+            this.btnEmploy.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.White;
+            this.btnCustomer.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCustomer.Location = new System.Drawing.Point(879, 423);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(120, 55);
+            this.btnCustomer.TabIndex = 10;
+            this.btnCustomer.Text = "회원관리";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.button4_Click);
+>>>>>>> PSI
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button5
+            // btnProd
             // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button5.BackgroundImage = global::PosProject_psi.Properties.Resources.if_icons_settings_1564529;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(949, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 52);
-            this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnProd.BackColor = System.Drawing.Color.Orange;
+            this.btnProd.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProd.Location = new System.Drawing.Point(179, 371);
+            this.btnProd.Name = "btnProd";
+            this.btnProd.Size = new System.Drawing.Size(150, 46);
+            this.btnProd.TabIndex = 11;
+            this.btnProd.Text = "상품 관리";
+            this.btnProd.UseVisualStyleBackColor = false;
+            this.btnProd.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button10
+            // btnSetting
             // 
-            this.button10.BackColor = System.Drawing.Color.Orange;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(179, 371);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(150, 46);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "상품 관리";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnSetting.AutoSize = true;
+            this.btnSetting.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSetting.BackgroundImage = global::PosProject_psi.Properties.Resources.if_icons_settings_1564529;
+            this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSetting.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSetting.Location = new System.Drawing.Point(949, 5);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(50, 52);
+            this.btnSetting.TabIndex = 6;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.button5_Click);
             // 
             // MainForm
             // 
@@ -642,16 +758,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnProd);
+            this.Controls.Add(this.btnCustomer);
+            this.Controls.Add(this.btnEmploy);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.btnEvent);
+            this.Controls.Add(this.btnDiscount);
+            this.Controls.Add(this.btnGarbage);
+            this.Controls.Add(this.btnSetting);
+            this.Controls.Add(this.btnGain);
+            this.Controls.Add(this.btnList);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnWait);
             this.Controls.Add(this.groupBox1);
@@ -696,27 +812,27 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnWait;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnGarbage;
+        private System.Windows.Forms.Button btnDiscount;
+        private System.Windows.Forms.Button btnEvent;
+        private System.Windows.Forms.Button btnGain;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnEmploy;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.TextBox txtReturnMoney;
+        private System.Windows.Forms.TextBox txtMoney;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtBacode;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPordInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnProd;
     }
 }
 
