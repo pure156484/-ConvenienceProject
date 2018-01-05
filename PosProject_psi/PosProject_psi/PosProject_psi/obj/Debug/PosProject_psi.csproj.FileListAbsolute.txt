@@ -17,3 +17,4 @@ C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\Pos
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache

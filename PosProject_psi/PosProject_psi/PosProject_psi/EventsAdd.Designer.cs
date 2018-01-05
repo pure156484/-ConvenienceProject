@@ -44,10 +44,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(110, 116);
+            this.label3.Location = new System.Drawing.Point(110, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 47;
             this.label3.Text = "행사기간";
             // 
@@ -57,24 +58,25 @@
             this.btn_Confirm.FlatAppearance.BorderSize = 0;
             this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Confirm.Location = new System.Drawing.Point(100, 218);
+            this.btn_Confirm.Location = new System.Drawing.Point(100, 219);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(75, 23);
+            this.btn_Confirm.Size = new System.Drawing.Size(85, 23);
             this.btn_Confirm.TabIndex = 46;
             this.btn_Confirm.Text = "등록하기";
             this.btn_Confirm.UseVisualStyleBackColor = false;
             // 
             // txtEventsName
             // 
-            this.txtEventsName.Location = new System.Drawing.Point(138, 52);
+            this.txtEventsName.Location = new System.Drawing.Point(138, 51);
             this.txtEventsName.Name = "txtEventsName";
             this.txtEventsName.Size = new System.Drawing.Size(100, 21);
             this.txtEventsName.TabIndex = 45;
             // 
             // txtProducts
             // 
-            this.txtProducts.Location = new System.Drawing.Point(138, 21);
+            this.txtProducts.Location = new System.Drawing.Point(138, 20);
             this.txtProducts.Name = "txtProducts";
             this.txtProducts.Size = new System.Drawing.Size(100, 21);
             this.txtProducts.TabIndex = 44;
@@ -82,33 +84,35 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(47, 56);
+            this.label2.Location = new System.Drawing.Point(47, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 43;
             this.label2.Text = "행사이름";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(47, 25);
+            this.label1.Location = new System.Drawing.Point(47, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 42;
-            this.label1.Text = "상품명";
+            this.label1.Text = "상 품 명";
             // 
             // EventPeriod1
             // 
-            this.EventPeriod1.Location = new System.Drawing.Point(49, 137);
+            this.EventPeriod1.Location = new System.Drawing.Point(49, 143);
             this.EventPeriod1.Name = "EventPeriod1";
             this.EventPeriod1.Size = new System.Drawing.Size(189, 21);
             this.EventPeriod1.TabIndex = 49;
             // 
             // EventPeriod2
             // 
-            this.EventPeriod2.Location = new System.Drawing.Point(49, 178);
+            this.EventPeriod2.Location = new System.Drawing.Point(49, 184);
             this.EventPeriod2.Name = "EventPeriod2";
             this.EventPeriod2.Size = new System.Drawing.Size(189, 21);
             this.EventPeriod2.TabIndex = 50;
@@ -117,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label4.Location = new System.Drawing.Point(127, 163);
+            this.label4.Location = new System.Drawing.Point(127, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 12);
             this.label4.TabIndex = 51;
@@ -125,7 +129,7 @@
             // 
             // txtEventsInfo
             // 
-            this.txtEventsInfo.Location = new System.Drawing.Point(138, 84);
+            this.txtEventsInfo.Location = new System.Drawing.Point(138, 83);
             this.txtEventsInfo.Name = "txtEventsInfo";
             this.txtEventsInfo.Size = new System.Drawing.Size(100, 21);
             this.txtEventsInfo.TabIndex = 53;
@@ -133,10 +137,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(47, 88);
+            this.label5.Location = new System.Drawing.Point(47, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 52;
             this.label5.Text = "행사설명";
             // 
