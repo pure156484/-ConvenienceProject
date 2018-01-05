@@ -48,10 +48,7 @@
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-=======
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -151,10 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-<<<<<<< HEAD
-=======
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label6.Location = new System.Drawing.Point(6, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 19);
@@ -173,10 +167,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-<<<<<<< HEAD
-=======
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             this.label5.Location = new System.Drawing.Point(6, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
@@ -293,7 +284,6 @@
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
             // 
-<<<<<<< HEAD
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -302,8 +292,6 @@
             this.comboBox1.Size = new System.Drawing.Size(192, 20);
             this.comboBox1.TabIndex = 18;
             // 
-=======
->>>>>>> afc4dfaf9bf6e2fee3f44b034fafa37fa5c5cfe8
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);

@@ -71,19 +71,24 @@ namespace PosProject_psi
         {
             new Events().Show();
         }
-<<<<<<< HEAD
-            private void button10_Click(object sender, EventArgs e)
-            {
-                new ProductManagement().Show();
-            }
-        
-    } }
-=======
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new ProductManagement().Show();
+        }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             new OrderInventoryForm().Show();
         }
+
+        private void btnEvent_Click(object sender, EventArgs e)
+        {
+            new Events().Show();
+        }
+
+        private void btnOrder_Click_1(object sender, EventArgs e)
+        {
+            new OrderInventoryForm().Show();
+        }
     }
 }
->>>>>>> PSI
