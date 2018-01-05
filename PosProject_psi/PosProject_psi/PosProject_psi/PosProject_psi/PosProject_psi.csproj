@@ -189,5 +189,8 @@
   <ItemGroup>
     <None Include="Resources\if_icons_settings_1564529.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_298865.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
