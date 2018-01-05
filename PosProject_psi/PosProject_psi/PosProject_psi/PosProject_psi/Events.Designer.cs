@@ -149,9 +149,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(587, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 21);
+            this.label1.Size = new System.Drawing.Size(106, 21);
             this.label1.TabIndex = 52;
-            this.label1.Text = "행사정보";
+            this.label1.Text = "행사 정보";
             // 
             // Events
             // 
