@@ -128,7 +128,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.itemGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+<<<<<<< HEAD
             this.itemGridView.ColumnHeadersHeight = 40;
+=======
+            this.itemGridView.ColumnHeadersHeight = 18;
+>>>>>>> 1e5fbf06831cef5dc8bf8bad7a983ef872f2a788
             this.itemGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGridView.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.itemGridView.Location = new System.Drawing.Point(13, 252);
