@@ -58,6 +58,18 @@
     <Compile Include="EmployeeManagement.Designer.cs">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventsAdd.Designer.cs">
+      <DependentUpon>EventsAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     <Compile Include="MembershipManagement.Designer.cs">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderInventoryForm.Designer.cs">
+      <DependentUpon>OrderInventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +115,6 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SalesStatus.Designer.cs">
-      <DependentUpon>SalesStatus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     <EmbeddedResource Include="EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventsAdd.resx">
+      <DependentUpon>EventsAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MembershipManagement.resx">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderInventoryForm.resx">
+      <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement.resx">
       <DependentUpon>ProductManagement.cs</DependentUpon>
@@ -142,9 +163,6 @@
     </Compile>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SalesStatus.resx">
-      <DependentUpon>SalesStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>

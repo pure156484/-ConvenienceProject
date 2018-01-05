@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.empGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtShopName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCeoName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCeoNum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCeoNum = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCeoName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtShopName = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -129,27 +131,17 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(14, 344);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "사원정보";
-            // 
             // empGridView
             // 
             this.empGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.empGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.empGridView.ColumnHeadersHeight = 40;
             this.empGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.empGridView.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -178,75 +170,6 @@
             this.panel2.Size = new System.Drawing.Size(751, 252);
             this.panel2.TabIndex = 12;
             // 
-            // txtShopName
-            // 
-            this.txtShopName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtShopName.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtShopName.Location = new System.Drawing.Point(9, 31);
-            this.txtShopName.Multiline = true;
-            this.txtShopName.Name = "txtShopName";
-            this.txtShopName.ReadOnly = true;
-            this.txtShopName.Size = new System.Drawing.Size(245, 30);
-            this.txtShopName.TabIndex = 13;
-            this.txtShopName.Text = "구디 편의점";
-            this.txtShopName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(6, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "매장명";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(3, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "업주명";
-            // 
-            // txtCeoName
-            // 
-            this.txtCeoName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtCeoName.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCeoName.Location = new System.Drawing.Point(9, 122);
-            this.txtCeoName.Multiline = true;
-            this.txtCeoName.Name = "txtCeoName";
-            this.txtCeoName.ReadOnly = true;
-            this.txtCeoName.Size = new System.Drawing.Size(245, 30);
-            this.txtCeoName.TabIndex = 15;
-            this.txtCeoName.Text = "홍길동";
-            this.txtCeoName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(6, 195);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 16);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "사업자번호";
-            // 
-            // txtCeoNum
-            // 
-            this.txtCeoNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtCeoNum.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtCeoNum.Location = new System.Drawing.Point(9, 213);
-            this.txtCeoNum.Multiline = true;
-            this.txtCeoNum.Name = "txtCeoNum";
-            this.txtCeoNum.ReadOnly = true;
-            this.txtCeoNum.Size = new System.Drawing.Size(245, 30);
-            this.txtCeoNum.TabIndex = 17;
-            this.txtCeoNum.Text = "21545-43218";
-            this.txtCeoNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -259,7 +182,7 @@
             // 
             // txtAddr
             // 
-            this.txtAddr.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtAddr.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtAddr.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtAddr.Location = new System.Drawing.Point(462, 122);
             this.txtAddr.Multiline = true;
@@ -282,7 +205,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtPhone.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtPhone.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtPhone.Location = new System.Drawing.Point(462, 31);
             this.txtPhone.Multiline = true;
@@ -292,6 +215,75 @@
             this.txtPhone.TabIndex = 19;
             this.txtPhone.Text = "010-1234-5678";
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(6, 195);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 16);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "사업자번호";
+            // 
+            // txtCeoNum
+            // 
+            this.txtCeoNum.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCeoNum.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCeoNum.Location = new System.Drawing.Point(9, 213);
+            this.txtCeoNum.Multiline = true;
+            this.txtCeoNum.Name = "txtCeoNum";
+            this.txtCeoNum.ReadOnly = true;
+            this.txtCeoNum.Size = new System.Drawing.Size(245, 30);
+            this.txtCeoNum.TabIndex = 17;
+            this.txtCeoNum.Text = "21545-43218";
+            this.txtCeoNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(3, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "업주명";
+            // 
+            // txtCeoName
+            // 
+            this.txtCeoName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCeoName.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCeoName.Location = new System.Drawing.Point(9, 122);
+            this.txtCeoName.Multiline = true;
+            this.txtCeoName.Name = "txtCeoName";
+            this.txtCeoName.ReadOnly = true;
+            this.txtCeoName.Size = new System.Drawing.Size(245, 30);
+            this.txtCeoName.TabIndex = 15;
+            this.txtCeoName.Text = "홍길동";
+            this.txtCeoName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(6, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "매장명";
+            // 
+            // txtShopName
+            // 
+            this.txtShopName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtShopName.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtShopName.Location = new System.Drawing.Point(9, 31);
+            this.txtShopName.Multiline = true;
+            this.txtShopName.Name = "txtShopName";
+            this.txtShopName.ReadOnly = true;
+            this.txtShopName.Size = new System.Drawing.Size(245, 30);
+            this.txtShopName.TabIndex = 13;
+            this.txtShopName.Text = "구디 편의점";
+            this.txtShopName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnUpdate
             // 
@@ -307,6 +299,20 @@
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(14, 344);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "사원정보";
             // 
             // Setting
             // 
@@ -343,7 +349,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView empGridView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
@@ -357,5 +362,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtShopName;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
     }
 }
