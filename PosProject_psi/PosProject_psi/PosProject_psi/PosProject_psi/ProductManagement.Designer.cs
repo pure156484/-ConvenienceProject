@@ -34,21 +34,19 @@
             this.btn_modified = new System.Windows.Forms.Button();
             this.btn_enroll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.product__unit_price = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.product_cust_price = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.product_name = new System.Windows.Forms.TextBox();
             this.product_barcode = new System.Windows.Forms.TextBox();
-            this.product_count = new System.Windows.Forms.TextBox();
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -133,16 +131,22 @@
             this.groupBox1.Controls.Add(this.product_cust_price);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.product_name);
             this.groupBox1.Controls.Add(this.product_barcode);
-            this.groupBox1.Controls.Add(this.product_count);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(412, 227);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(190, 105);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 20);
+            this.comboBox1.TabIndex = 18;
             // 
             // label6
             // 
@@ -158,7 +162,7 @@
             // product__unit_price
             // 
             this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product__unit_price.Location = new System.Drawing.Point(190, 193);
+            this.product__unit_price.Location = new System.Drawing.Point(190, 191);
             this.product__unit_price.Name = "product__unit_price";
             this.product__unit_price.Size = new System.Drawing.Size(192, 26);
             this.product__unit_price.TabIndex = 17;
@@ -168,7 +172,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(6, 164);
+            this.label5.Location = new System.Drawing.Point(6, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 14;
@@ -177,7 +181,7 @@
             // product_cust_price
             // 
             this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_cust_price.Location = new System.Drawing.Point(190, 157);
+            this.product_cust_price.Location = new System.Drawing.Point(190, 145);
             this.product_cust_price.Name = "product_cust_price";
             this.product_cust_price.Size = new System.Drawing.Size(192, 26);
             this.product_cust_price.TabIndex = 15;
@@ -198,33 +202,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(5, 56);
+            this.label2.Location = new System.Drawing.Point(5, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "바  코   드";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(3, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "재       고";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("휴먼매직체", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label4.Location = new System.Drawing.Point(6, 128);
+            this.label4.Location = new System.Drawing.Point(6, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "종       류";
+            this.label4.Text = "품       종";
             // 
             // product_name
             // 
@@ -237,18 +230,10 @@
             // product_barcode
             // 
             this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_barcode.Location = new System.Drawing.Point(190, 49);
+            this.product_barcode.Location = new System.Drawing.Point(190, 59);
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 26);
             this.product_barcode.TabIndex = 9;
-            // 
-            // product_count
-            // 
-            this.product_count.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_count.Location = new System.Drawing.Point(190, 85);
-            this.product_count.Name = "product_count";
-            this.product_count.Size = new System.Drawing.Size(192, 26);
-            this.product_count.TabIndex = 10;
             // 
             // btn_image
             // 
@@ -283,14 +268,6 @@
             this.product__image.Size = new System.Drawing.Size(338, 190);
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 20);
-            this.comboBox1.TabIndex = 18;
             // 
             // ProductManagement
             // 
@@ -329,11 +306,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox product_name;
         private System.Windows.Forms.TextBox product_barcode;
-        private System.Windows.Forms.TextBox product_count;
         private System.Windows.Forms.Button btn_image;
         private System.Windows.Forms.PictureBox product__image;
         private System.Windows.Forms.Label label7;
