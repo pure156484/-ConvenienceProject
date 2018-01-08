@@ -258,7 +258,6 @@
             // btnSeacrch
             // 
             this.btnSeacrch.BackColor = System.Drawing.Color.Orange;
-            this.btnSeacrch.BackgroundImage = global::PosProject_psi.Properties.Resources.if_search_298865;
             this.btnSeacrch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSeacrch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSeacrch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
