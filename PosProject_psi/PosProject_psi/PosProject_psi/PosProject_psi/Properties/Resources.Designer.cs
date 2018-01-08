@@ -73,9 +73,9 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap if_search_298865 {
+        internal static System.Drawing.Bitmap if_icons_settings_15645291 {
             get {
-                object obj = ResourceManager.GetObject("if_search_298865", resourceCulture);
+                object obj = ResourceManager.GetObject("if_icons_settings_15645291", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

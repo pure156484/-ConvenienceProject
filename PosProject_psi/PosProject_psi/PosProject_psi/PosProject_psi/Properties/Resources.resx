@@ -127,7 +127,7 @@
   <data name="if_icons_settings_1564529" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_icons_settings_1564529.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_search_298865" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_search_298865.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_icons_settings_15645291" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_icons_settings_15645291.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
