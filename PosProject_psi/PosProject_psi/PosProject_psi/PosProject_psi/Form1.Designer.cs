@@ -479,6 +479,7 @@
             // 
             this.btnList.BackColor = System.Drawing.Color.Orange;
             this.btnList.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnList.FlatAppearance.BorderSize = 0;
             this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnList.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -494,6 +495,7 @@
             // 
             this.btnGarbage.BackColor = System.Drawing.Color.Orange;
             this.btnGarbage.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnGarbage.FlatAppearance.BorderSize = 0;
             this.btnGarbage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGarbage.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGarbage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -509,6 +511,7 @@
             // 
             this.btnDiscount.BackColor = System.Drawing.Color.Orange;
             this.btnDiscount.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnDiscount.FlatAppearance.BorderSize = 0;
             this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscount.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDiscount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -523,6 +526,7 @@
             // 
             this.btnEvent.BackColor = System.Drawing.Color.Orange;
             this.btnEvent.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnEvent.FlatAppearance.BorderSize = 0;
             this.btnEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEvent.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -538,6 +542,7 @@
             // 
             this.btnGain.BackColor = System.Drawing.Color.White;
             this.btnGain.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnGain.FlatAppearance.BorderSize = 0;
             this.btnGain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGain.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGain.Location = new System.Drawing.Point(879, 555);
@@ -551,6 +556,7 @@
             // 
             this.btnOrder.BackColor = System.Drawing.Color.Orange;
             this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -566,6 +572,7 @@
             // 
             this.btnEmploy.BackColor = System.Drawing.Color.White;
             this.btnEmploy.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnEmploy.FlatAppearance.BorderSize = 0;
             this.btnEmploy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmploy.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnEmploy.Location = new System.Drawing.Point(879, 489);
@@ -580,6 +587,7 @@
             // 
             this.btnCustomer.BackColor = System.Drawing.Color.White;
             this.btnCustomer.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCustomer.Location = new System.Drawing.Point(879, 423);
@@ -599,6 +607,7 @@
             // 
             this.btnProd.BackColor = System.Drawing.Color.Orange;
             this.btnProd.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnProd.FlatAppearance.BorderSize = 0;
             this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
