@@ -47,10 +47,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label3.Location = new System.Drawing.Point(47, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 40;
             this.label3.Text = "생년월일";
             // 
@@ -60,10 +61,11 @@
             this.btn_Confirm.FlatAppearance.BorderSize = 0;
             this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btn_Confirm.Location = new System.Drawing.Point(100, 196);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(75, 23);
+            this.btn_Confirm.Size = new System.Drawing.Size(84, 23);
             this.btn_Confirm.TabIndex = 39;
             this.btn_Confirm.Text = "등록하기";
             this.btn_Confirm.UseVisualStyleBackColor = false;
@@ -85,20 +87,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label2.Location = new System.Drawing.Point(47, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 36;
             this.label2.Text = "전화번호";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.label1.Location = new System.Drawing.Point(47, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 35;
             this.label1.Text = "회원명";
             // 

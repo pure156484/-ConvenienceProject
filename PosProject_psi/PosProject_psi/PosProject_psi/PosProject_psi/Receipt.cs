@@ -19,14 +19,15 @@ namespace PosProject_psi
 
         private void Receipt_Load(object sender, EventArgs e)
         {
-            MemberGridView.ColumnCount = 4;
-            MemberGridView.Columns[0].Name = "NO";
-            MemberGridView.Columns[1].Name = "거래시간";
-            MemberGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[2].Name = "거래형태";
-            MemberGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[3].Name = "금액";
-            MemberGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ReceiptGridView.ColumnCount = 4;
+            ReceiptGridView.Columns[0].Name = "NO";
+            ReceiptGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ReceiptGridView.Columns[1].Name = "거래시간";
+            ReceiptGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ReceiptGridView.Columns[2].Name = "거래형태";
+            ReceiptGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ReceiptGridView.Columns[3].Name = "금액";
+            ReceiptGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

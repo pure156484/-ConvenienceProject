@@ -32,11 +32,11 @@
             this.btn_Modi = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.employeeGridView = new System.Windows.Forms.DataGridView();
+            this.btn_Confirm = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.EmployeeGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Del
@@ -87,8 +87,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_Search);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btn_Confirm);
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.groupBox1.Location = new System.Drawing.Point(579, 379);
@@ -98,39 +98,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "전화번호로 검색";
             // 
-            // btn_Search
+            // btn_Confirm
             // 
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Search.Location = new System.Drawing.Point(112, 25);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(71, 26);
-            this.btn_Search.TabIndex = 1;
-            this.btn_Search.Text = "확인";
-            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
+            this.btn_Confirm.FlatAppearance.BorderSize = 0;
+            this.btn_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.btn_Confirm.Location = new System.Drawing.Point(112, 25);
+            this.btn_Confirm.Name = "btn_Confirm";
+            this.btn_Confirm.Size = new System.Drawing.Size(71, 26);
+            this.btn_Confirm.TabIndex = 1;
+            this.btn_Confirm.Text = "확인";
+            this.btn_Confirm.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtSearch.Location = new System.Drawing.Point(6, 25);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 26);
+            this.txtSearch.TabIndex = 2;
             // 
-            // employeeGridView
+            // EmployeeGridView
             // 
-            this.employeeGridView.AllowUserToAddRows = false;
-            this.employeeGridView.AllowUserToDeleteRows = false;
-            this.employeeGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(212)))), ((int)(((byte)(246)))));
-            this.employeeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeGridView.Location = new System.Drawing.Point(12, 17);
-            this.employeeGridView.Name = "employeeGridView";
-            this.employeeGridView.ReadOnly = true;
-            this.employeeGridView.RowTemplate.Height = 23;
-            this.employeeGridView.Size = new System.Drawing.Size(756, 352);
-            this.employeeGridView.TabIndex = 29;
+            this.EmployeeGridView.AllowUserToAddRows = false;
+            this.EmployeeGridView.AllowUserToDeleteRows = false;
+            this.EmployeeGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(212)))), ((int)(((byte)(246)))));
+            this.EmployeeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeGridView.Location = new System.Drawing.Point(12, 17);
+            this.EmployeeGridView.Name = "EmployeeGridView";
+            this.EmployeeGridView.ReadOnly = true;
+            this.EmployeeGridView.RowTemplate.Height = 23;
+            this.EmployeeGridView.Size = new System.Drawing.Size(756, 352);
+            this.EmployeeGridView.TabIndex = 29;
             // 
             // EmployeeManagement
             // 
@@ -142,14 +142,14 @@
             this.Controls.Add(this.btn_Modi);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.employeeGridView);
+            this.Controls.Add(this.EmployeeGridView);
             this.Name = "EmployeeManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "직원 관리";
             this.Load += new System.EventHandler(this.EmployeeManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,8 +160,8 @@
         private System.Windows.Forms.Button btn_Modi;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView employeeGridView;
+        private System.Windows.Forms.Button btn_Confirm;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridView EmployeeGridView;
     }
 }
