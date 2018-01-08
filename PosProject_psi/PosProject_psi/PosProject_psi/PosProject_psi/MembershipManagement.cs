@@ -21,6 +21,7 @@ namespace CommonProject
         {
             MemberGridView.ColumnCount = 5;
             MemberGridView.Columns[0].Name = "NO";
+            MemberGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             MemberGridView.Columns[1].Name = "회원명";
             MemberGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             MemberGridView.Columns[2].Name = "전화번호";
