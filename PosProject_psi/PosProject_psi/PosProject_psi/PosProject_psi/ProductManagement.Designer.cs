@@ -73,7 +73,7 @@
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_exit.Location = new System.Drawing.Point(311, 173);
+            this.btn_exit.Location = new System.Drawing.Point(311, 170);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(95, 46);
             this.btn_exit.TabIndex = 32;
@@ -88,7 +88,7 @@
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_delete.Location = new System.Drawing.Point(311, 121);
+            this.btn_delete.Location = new System.Drawing.Point(311, 118);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(95, 46);
             this.btn_delete.TabIndex = 31;
@@ -103,7 +103,7 @@
             this.btn_modified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modified.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_modified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_modified.Location = new System.Drawing.Point(311, 69);
+            this.btn_modified.Location = new System.Drawing.Point(311, 66);
             this.btn_modified.Name = "btn_modified";
             this.btn_modified.Size = new System.Drawing.Size(95, 46);
             this.btn_modified.TabIndex = 30;
@@ -118,7 +118,7 @@
             this.btn_enroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_enroll.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_enroll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_enroll.Location = new System.Drawing.Point(311, 17);
+            this.btn_enroll.Location = new System.Drawing.Point(311, 14);
             this.btn_enroll.Name = "btn_enroll";
             this.btn_enroll.Size = new System.Drawing.Size(95, 46);
             this.btn_enroll.TabIndex = 29;
@@ -141,7 +141,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.product_name);
             this.groupBox1.Controls.Add(this.product_barcode);
-            this.groupBox1.Location = new System.Drawing.Point(12, 0);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(412, 229);
@@ -151,8 +150,8 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 126);
-            this.comboBox1.Location = new System.Drawing.Point(190, 105);
+            this.comboBox1.Location = new System.Drawing.Point(105, 108);
+            this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 20);
             this.comboBox1.TabIndex = 18;
             // 
@@ -161,7 +160,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label6.Location = new System.Drawing.Point(6, 202);
+            this.label6.Location = new System.Drawing.Point(6, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 16;
@@ -170,9 +169,8 @@
             // product__unit_price
             // 
             this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product__unit_price.Location = new System.Drawing.Point(105, 198);
+            this.product__unit_price.Location = new System.Drawing.Point(105, 195);
             this.product__unit_price.Multiline = true;
-            this.product__unit_price.Location = new System.Drawing.Point(190, 191);
             this.product__unit_price.Name = "product__unit_price";
             this.product__unit_price.Size = new System.Drawing.Size(192, 20);
             this.product__unit_price.TabIndex = 17;
@@ -182,8 +180,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(6, 166);
-            this.label5.Location = new System.Drawing.Point(6, 155);
+            this.label5.Location = new System.Drawing.Point(6, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 14;
@@ -192,9 +189,8 @@
             // product_cust_price
             // 
             this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_cust_price.Location = new System.Drawing.Point(105, 162);
+            this.product_cust_price.Location = new System.Drawing.Point(105, 149);
             this.product_cust_price.Multiline = true;
-            this.product_cust_price.Location = new System.Drawing.Point(190, 145);
             this.product_cust_price.Name = "product_cust_price";
             this.product_cust_price.Size = new System.Drawing.Size(192, 20);
             this.product_cust_price.TabIndex = 15;
@@ -204,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Location = new System.Drawing.Point(6, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 0;
@@ -215,33 +211,27 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(6, 58);
-            this.label2.Location = new System.Drawing.Point(5, 65);
+            this.label2.Location = new System.Drawing.Point(5, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "바코드";
-            // 
-            // label3
-            // 
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label4.Location = new System.Drawing.Point(6, 130);
-            this.label4.Location = new System.Drawing.Point(6, 110);
+            this.label4.Location = new System.Drawing.Point(6, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "종류";
-            this.label4.Text = "품       종";
+            this.label4.Text = "품종";
             // 
             // product_name
             // 
             this.product_name.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_name.Location = new System.Drawing.Point(105, 18);
+            this.product_name.Location = new System.Drawing.Point(105, 15);
             this.product_name.Multiline = true;
             this.product_name.Name = "product_name";
             this.product_name.Size = new System.Drawing.Size(192, 20);
@@ -250,15 +240,11 @@
             // product_barcode
             // 
             this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_barcode.Location = new System.Drawing.Point(105, 54);
+            this.product_barcode.Location = new System.Drawing.Point(105, 59);
             this.product_barcode.Multiline = true;
-            this.product_barcode.Location = new System.Drawing.Point(190, 59);
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 20);
             this.product_barcode.TabIndex = 9;
-            // 
-            // product_count
-            // 
             // 
             // btn_image
             // 

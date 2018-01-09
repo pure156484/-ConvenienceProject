@@ -1,6 +1,6 @@
-﻿namespace CommonProject
+﻿namespace PosProject_psi
 {
-    partial class MemberAdd
+    partial class MemberModi
     {
         /// <summary>
         /// Required designer variable.
@@ -32,9 +32,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.txtMobile = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtModiUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUserNameSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBirth
@@ -42,7 +43,7 @@
             this.txtBirth.Location = new System.Drawing.Point(138, 133);
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.Size = new System.Drawing.Size(100, 21);
-            this.txtBirth.TabIndex = 41;
+            this.txtBirth.TabIndex = 48;
             // 
             // label3
             // 
@@ -52,7 +53,7 @@
             this.label3.Location = new System.Drawing.Point(47, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
-            this.label3.TabIndex = 40;
+            this.label3.TabIndex = 47;
             this.label3.Text = "생년월일";
             // 
             // btn_Confirm
@@ -63,11 +64,11 @@
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Confirm.Location = new System.Drawing.Point(100, 196);
+            this.btn_Confirm.Location = new System.Drawing.Point(138, 191);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(84, 23);
-            this.btn_Confirm.TabIndex = 39;
-            this.btn_Confirm.Text = "등록하기";
+            this.btn_Confirm.TabIndex = 46;
+            this.btn_Confirm.Text = "수정하기";
             this.btn_Confirm.UseVisualStyleBackColor = false;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
@@ -76,14 +77,14 @@
             this.txtMobile.Location = new System.Drawing.Point(138, 88);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(100, 21);
-            this.txtMobile.TabIndex = 38;
+            this.txtMobile.TabIndex = 45;
             // 
-            // txtName
+            // txtModiUserName
             // 
-            this.txtName.Location = new System.Drawing.Point(138, 42);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 21);
-            this.txtName.TabIndex = 37;
+            this.txtModiUserName.Location = new System.Drawing.Point(138, 42);
+            this.txtModiUserName.Name = "txtModiUserName";
+            this.txtModiUserName.Size = new System.Drawing.Size(100, 21);
+            this.txtModiUserName.TabIndex = 44;
             // 
             // label2
             // 
@@ -93,7 +94,7 @@
             this.label2.Location = new System.Drawing.Point(47, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 36;
+            this.label2.TabIndex = 43;
             this.label2.Text = "전화번호";
             // 
             // label1
@@ -104,25 +105,36 @@
             this.label1.Location = new System.Drawing.Point(47, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
-            this.label1.TabIndex = 35;
+            this.label1.TabIndex = 42;
             this.label1.Text = "회원명";
             // 
-            // MemberAdd
+            // btnUserNameSearch
+            // 
+            this.btnUserNameSearch.Location = new System.Drawing.Point(256, 88);
+            this.btnUserNameSearch.Name = "btnUserNameSearch";
+            this.btnUserNameSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnUserNameSearch.TabIndex = 49;
+            this.btnUserNameSearch.Text = "검색";
+            this.btnUserNameSearch.UseVisualStyleBackColor = true;
+            this.btnUserNameSearch.Click += new System.EventHandler(this.btnUserNameSearch_Click);
+            // 
+            // MemberModi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(353, 242);
+            this.Controls.Add(this.btnUserNameSearch);
             this.Controls.Add(this.txtBirth);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Confirm);
             this.Controls.Add(this.txtMobile);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtModiUserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MemberAdd";
+            this.Name = "MemberModi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "회원 등록";
+            this.Text = "회원 수정";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,8 +146,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.TextBox txtMobile;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtModiUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUserNameSearch;
     }
 }
