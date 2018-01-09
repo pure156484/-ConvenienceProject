@@ -18,10 +18,6 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
-C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
-C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
-C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
-C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EmployeeAdd.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\CommonProject.EmployeeManagement.resources
@@ -33,10 +29,13 @@ C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\Pos
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\CommonProject.MembershipManagement.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.OrderInventoryForm.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ProductManagement.resources
-C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Properties.Resources.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Receipt.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Setting.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.GenerateResource.Cache
-C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Properties.Resources.resources
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe.config
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
+C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
