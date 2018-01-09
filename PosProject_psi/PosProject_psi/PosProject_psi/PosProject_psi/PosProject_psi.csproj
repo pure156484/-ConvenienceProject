@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbMan.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeAdd.cs">
       <SubType>Form</SubType>
