@@ -15,7 +15,6 @@ namespace PosProject_psi
     public partial class MemberModi : Form
     {
         string x;
-
         public MemberModi()
         {
             InitializeComponent();

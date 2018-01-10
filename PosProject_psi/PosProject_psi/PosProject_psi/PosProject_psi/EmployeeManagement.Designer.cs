@@ -7,18 +7,6 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -53,6 +41,7 @@
             this.btn_Del.TabIndex = 33;
             this.btn_Del.Text = "직원 삭제";
             this.btn_Del.UseVisualStyleBackColor = false;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Modi
             // 
@@ -68,6 +57,7 @@
             this.btn_Modi.TabIndex = 32;
             this.btn_Modi.Text = "직원 수정";
             this.btn_Modi.UseVisualStyleBackColor = false;
+            this.btn_Modi.Click += new System.EventHandler(this.btn_Modi_Click);
             // 
             // btn_Add
             // 
@@ -111,6 +101,7 @@
             this.btn_Confirm.TabIndex = 1;
             this.btn_Confirm.Text = "확인";
             this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // txtSearch
             // 
@@ -162,6 +153,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView EmployeeGridView;
+        public System.Windows.Forms.DataGridView EmployeeGridView;
     }
 }

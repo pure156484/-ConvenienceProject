@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,6 +54,9 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnWait = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtReturnMoney = new System.Windows.Forms.TextBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -74,9 +77,6 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnProd = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -88,14 +88,14 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.itemGrid.ColumnHeadersHeight = 40;
             this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -199,9 +199,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("굴림", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(168, 20);
+            this.button1.Location = new System.Drawing.Point(168, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 46);
             this.button1.TabIndex = 5;
@@ -213,9 +214,10 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnClear.Location = new System.Drawing.Point(6, 20);
+            this.btnClear.Location = new System.Drawing.Point(6, 17);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(156, 46);
             this.btnClear.TabIndex = 4;
@@ -227,9 +229,10 @@
             // 
             this.btnOK.BackColor = System.Drawing.Color.White;
             this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOK.Location = new System.Drawing.Point(168, 256);
+            this.btnOK.Location = new System.Drawing.Point(168, 253);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 46);
             this.btnOK.TabIndex = 3;
@@ -241,9 +244,10 @@
             // 
             this.btn9.BackColor = System.Drawing.Color.White;
             this.btn9.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn9.FlatAppearance.BorderSize = 0;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn9.Location = new System.Drawing.Point(168, 197);
+            this.btn9.Location = new System.Drawing.Point(168, 194);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(75, 46);
             this.btn9.TabIndex = 3;
@@ -255,9 +259,10 @@
             // 
             this.btn6.BackColor = System.Drawing.Color.White;
             this.btn6.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn6.FlatAppearance.BorderSize = 0;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6.Location = new System.Drawing.Point(168, 138);
+            this.btn6.Location = new System.Drawing.Point(168, 135);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(75, 46);
             this.btn6.TabIndex = 3;
@@ -269,9 +274,10 @@
             // 
             this.btn3.BackColor = System.Drawing.Color.White;
             this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn3.FlatAppearance.BorderSize = 0;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn3.Location = new System.Drawing.Point(168, 79);
+            this.btn3.Location = new System.Drawing.Point(168, 76);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(75, 46);
             this.btn3.TabIndex = 3;
@@ -283,9 +289,10 @@
             // 
             this.btn0.BackColor = System.Drawing.Color.White;
             this.btn0.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn0.FlatAppearance.BorderSize = 0;
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn0.Location = new System.Drawing.Point(87, 256);
+            this.btn0.Location = new System.Drawing.Point(87, 253);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(75, 46);
             this.btn0.TabIndex = 3;
@@ -297,9 +304,10 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(6, 256);
+            this.btnCancel.Location = new System.Drawing.Point(6, 253);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 46);
             this.btnCancel.TabIndex = 3;
@@ -311,9 +319,10 @@
             // 
             this.btn8.BackColor = System.Drawing.Color.White;
             this.btn8.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn8.FlatAppearance.BorderSize = 0;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn8.Location = new System.Drawing.Point(87, 197);
+            this.btn8.Location = new System.Drawing.Point(87, 194);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(75, 46);
             this.btn8.TabIndex = 3;
@@ -325,9 +334,10 @@
             // 
             this.btn7.BackColor = System.Drawing.Color.White;
             this.btn7.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn7.FlatAppearance.BorderSize = 0;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn7.Location = new System.Drawing.Point(6, 197);
+            this.btn7.Location = new System.Drawing.Point(6, 194);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(75, 46);
             this.btn7.TabIndex = 3;
@@ -339,9 +349,10 @@
             // 
             this.btn5.BackColor = System.Drawing.Color.White;
             this.btn5.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn5.FlatAppearance.BorderSize = 0;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5.Location = new System.Drawing.Point(87, 138);
+            this.btn5.Location = new System.Drawing.Point(87, 135);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(75, 46);
             this.btn5.TabIndex = 3;
@@ -353,9 +364,10 @@
             // 
             this.btn4.BackColor = System.Drawing.Color.White;
             this.btn4.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4.Location = new System.Drawing.Point(6, 138);
+            this.btn4.Location = new System.Drawing.Point(6, 135);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(75, 46);
             this.btn4.TabIndex = 3;
@@ -367,9 +379,10 @@
             // 
             this.btn2.BackColor = System.Drawing.Color.White;
             this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn2.FlatAppearance.BorderSize = 0;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn2.Location = new System.Drawing.Point(87, 79);
+            this.btn2.Location = new System.Drawing.Point(87, 76);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(75, 46);
             this.btn2.TabIndex = 3;
@@ -381,9 +394,10 @@
             // 
             this.btn1.BackColor = System.Drawing.Color.White;
             this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn1.FlatAppearance.BorderSize = 0;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn1.Location = new System.Drawing.Point(5, 79);
+            this.btn1.Location = new System.Drawing.Point(5, 76);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(75, 46);
             this.btn1.TabIndex = 3;
@@ -393,11 +407,13 @@
             // 
             // btnWait
             // 
-            this.btnWait.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnWait.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(212)))), ((int)(((byte)(246)))));
             this.btnWait.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnWait.FlatAppearance.BorderSize = 0;
+            this.btnWait.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
             this.btnWait.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWait.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnWait.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnWait.ForeColor = System.Drawing.SystemColors.Window;
             this.btnWait.Location = new System.Drawing.Point(833, 6);
             this.btnWait.Name = "btnWait";
             this.btnWait.Size = new System.Drawing.Size(110, 52);
@@ -425,6 +441,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(850, 187);
             this.panel2.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(805, 142);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 39);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "원";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(805, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 39);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "원";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(805, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 39);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "원";
             // 
             // txtReturnMoney
             // 
@@ -475,7 +518,6 @@
             this.txtBacode.WordWrap = false;
             this.txtBacode.Click += new System.EventHandler(this.txtBacode_Click);
             this.txtBacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBacode_KeyDown);
-            this.txtBacode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBacode_KeyPress);
             // 
             // label9
             // 
@@ -532,12 +574,13 @@
             // 
             // btnList
             // 
-            this.btnList.BackColor = System.Drawing.Color.Orange;
+            this.btnList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnList.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnList.FlatAppearance.BorderSize = 0;
+            this.btnList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnList.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btnList.Location = new System.Drawing.Point(12, 371);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(150, 46);
@@ -548,13 +591,14 @@
             // 
             // btnGarbage
             // 
-            this.btnGarbage.BackColor = System.Drawing.Color.Orange;
+            this.btnGarbage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnGarbage.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnGarbage.FlatAppearance.BorderSize = 0;
+            this.btnGarbage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnGarbage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGarbage.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnGarbage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGarbage.Location = new System.Drawing.Point(346, 371);
+            this.btnGarbage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.btnGarbage.Location = new System.Drawing.Point(849, 371);
             this.btnGarbage.Name = "btnGarbage";
             this.btnGarbage.Size = new System.Drawing.Size(150, 46);
             this.btnGarbage.TabIndex = 7;
@@ -564,12 +608,13 @@
             // 
             // btnDiscount
             // 
-            this.btnDiscount.BackColor = System.Drawing.Color.Orange;
+            this.btnDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnDiscount.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnDiscount.FlatAppearance.BorderSize = 0;
+            this.btnDiscount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscount.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDiscount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btnDiscount.Location = new System.Drawing.Point(680, 371);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(150, 46);
@@ -579,12 +624,13 @@
             // 
             // btnEvent
             // 
-            this.btnEvent.BackColor = System.Drawing.Color.Orange;
+            this.btnEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnEvent.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnEvent.FlatAppearance.BorderSize = 0;
+            this.btnEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEvent.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEvent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btnEvent.Location = new System.Drawing.Point(513, 371);
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(150, 46);
@@ -606,16 +652,18 @@
             this.btnGain.TabIndex = 4;
             this.btnGain.Text = "매출현황";
             this.btnGain.UseVisualStyleBackColor = false;
+            this.btnGain.Click += new System.EventHandler(this.btnGain_Click);
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.Color.Orange;
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOrder.Location = new System.Drawing.Point(849, 371);
+            this.btnOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.btnOrder.Location = new System.Drawing.Point(346, 371);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(150, 46);
             this.btnOrder.TabIndex = 8;
@@ -660,12 +708,13 @@
             // 
             // btnProd
             // 
-            this.btnProd.BackColor = System.Drawing.Color.Orange;
+            this.btnProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
             this.btnProd.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.btnProd.FlatAppearance.BorderSize = 0;
+            this.btnProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
             this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
             this.btnProd.Location = new System.Drawing.Point(179, 371);
             this.btnProd.Name = "btnProd";
             this.btnProd.Size = new System.Drawing.Size(150, 46);
@@ -674,43 +723,15 @@
             this.btnProd.UseVisualStyleBackColor = false;
             this.btnProd.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(805, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 39);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "원";
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(805, 92);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 39);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "원";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(805, 142);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 39);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "원";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1010, 622);
             this.Controls.Add(this.btnProd);
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnEmploy);
-            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnEvent);
             this.Controls.Add(this.btnDiscount);
             this.Controls.Add(this.btnGarbage);
@@ -721,6 +742,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.itemGrid);
+            this.Controls.Add(this.btnOrder);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POS";

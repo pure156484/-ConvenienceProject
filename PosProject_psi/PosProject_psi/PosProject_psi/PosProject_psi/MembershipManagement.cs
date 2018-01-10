@@ -24,7 +24,6 @@ namespace CommonProject
 
         private void MembershipManagement_Load(object sender, EventArgs e)
         {
-            //MemberGridView.ColumnCount = 4;
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
                 con.Open();
@@ -52,7 +51,6 @@ namespace CommonProject
                         
                         this.MemberGridView.DataSource = list;
                         
-
                         sdr.Close();
                         MemberGridView.Columns[0].HeaderText = "NO";
                         MemberGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

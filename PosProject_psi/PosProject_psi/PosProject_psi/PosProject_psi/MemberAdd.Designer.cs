@@ -63,9 +63,9 @@
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Confirm.Location = new System.Drawing.Point(100, 196);
+            this.btn_Confirm.Location = new System.Drawing.Point(98, 196);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(84, 23);
+            this.btn_Confirm.Size = new System.Drawing.Size(89, 26);
             this.btn_Confirm.TabIndex = 39;
             this.btn_Confirm.Text = "등록하기";
             this.btn_Confirm.UseVisualStyleBackColor = false;
@@ -129,13 +129,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtBirth;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_Confirm;
-        private System.Windows.Forms.TextBox txtMobile;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Button btn_Confirm;
+        internal System.Windows.Forms.TextBox txtBirth;
+        internal System.Windows.Forms.TextBox txtMobile;
+        internal System.Windows.Forms.TextBox txtName;
     }
 }

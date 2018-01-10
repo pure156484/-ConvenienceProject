@@ -124,9 +124,9 @@ namespace PosProject_psi
             itemGrid.CurrentRow.Cells[3].Value = price * int.Parse(itemGrid.CurrentRow.Cells[4].Value.ToString());
             price = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) / int.Parse(prodCount);
             //txtPrice.Text = itemGrid.CurrentRow.Cells[3].Value.ToString();
-            GiveMoney();  
+            GiveMoney();
             prodCount = "";
-        }
+        } 
 
         private void GiveMoney()
         {
@@ -233,6 +233,11 @@ namespace PosProject_psi
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnGain_Click(object sender, EventArgs e)
+        {
+            new SalesStatus().Show();
         }
     }
 }
