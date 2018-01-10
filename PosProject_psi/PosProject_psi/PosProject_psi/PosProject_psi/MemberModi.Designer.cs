@@ -43,7 +43,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(46, 129);
+            this.label3.Location = new System.Drawing.Point(46, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 47;
@@ -106,7 +106,7 @@
             // 
             // txtBirth
             // 
-            this.txtBirth.Location = new System.Drawing.Point(137, 130);
+            this.txtBirth.Location = new System.Drawing.Point(137, 126);
             this.txtBirth.Mask = "0000-00-00";
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.Size = new System.Drawing.Size(100, 21);
