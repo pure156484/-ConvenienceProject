@@ -61,7 +61,7 @@ namespace PosProject_psi
 
                 ds = new DataSet();
                 adapter.Fill(ds);
-                EmployeeView(ds);
+                //EmployeeView(ds);
             }
         }
 

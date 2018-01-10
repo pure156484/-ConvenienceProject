@@ -36,14 +36,7 @@ namespace PosProject_psi
             }
             return con;
         }
-        
-        private void Reset()
-        {
-            product_grid.DataSource = null;
-            product_grid.DataSource = ds.Tables[0];
-        }
-
-        private void ProductManagement_Load(object sender, EventArgs e)
+        private void Rests()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
@@ -74,9 +67,38 @@ namespace PosProject_psi
                 product_grid.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 product_grid.Columns[7].HeaderText = "수량";
                 product_grid.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
             }
             //// 그리드 뷰에 출력
+
+            /// 폼에 이벤트 종류 출력
+            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
+            {
+                string query = "select event_name from Event";
+                con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = new SqlCommand(query, con);
+                con.Close();
+                ds = new DataSet();
+                adapter.Fill(ds);
+
+                DataRowCollection dataRow = ds.Tables[0].Rows;
+
+                foreach (DataRow row in dataRow)
+                {
+                    this.product_event.Items.Add(row.ItemArray[0].ToString());
+                }
+
+                //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)  // 쌤쌤
+                //{
+                //    this.product_event.Items.Add(ds.Tables[0].Rows[i].ItemArray[0].ToString());
+                //}
+            }
+        }
+
+
+        private void ProductManagement_Load(object sender, EventArgs e)
+        {
+            Rests();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,14 +109,15 @@ namespace PosProject_psi
  // 저장
         private void btn_enroll_Click(object sender, EventArgs e)
         {
+            
             string ubarcode = this.product_barcode.Text.Trim();
             string uname = this.product_name.Text.Trim();
             string uselect = this.product_select.Text.Trim();
             string uunit_price = this.product__unit_price.Text.Trim();
             string ucust_price = this.product_cust_price.Text.Trim();
             string ucount = this.product_count.Text.Trim();
-            
-            
+            string uevent = this.product_count.Text.Trim();
+
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
              
@@ -124,6 +147,11 @@ namespace PosProject_psi
                     cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                     
                     cmd.Parameters.AddWithValue("@ucounts", ucount);
+                    //    MessageBox.Show((int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+
+                 //   (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString();
+                    cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+
                     cmd.Parameters.AddWithValue("@uimage", bImg);
                     con.Open();
                     int i = cmd.ExecuteNonQuery();
@@ -131,6 +159,7 @@ namespace PosProject_psi
                     if (i == 1)
                     {
                         MessageBox.Show("저장 되었습니다.");
+                        Rests();
                         ComponentInit();
                         return;
                     }
@@ -157,7 +186,7 @@ namespace PosProject_psi
         private void ComponentInit()
         {
             product_barcode.Text = product_name.Text = product_select.Text = product__unit_price.Text = product_cust_price.Text =
-                product_count.Text = "";
+               product_event.Text = product_count.Text = "";
             product__image = null;
         }
 
@@ -225,7 +254,7 @@ namespace PosProject_psi
                             break;
                     }
                     //  cmd.Parameters.AddWithValue("@uselects", uselect);
-
+                    cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
                     cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                     cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                     cmd.Parameters.AddWithValue("@uimage", bImg);
@@ -238,6 +267,7 @@ namespace PosProject_psi
                     if (i == 1)
                     {
                         MessageBox.Show("저장 되었습니다.");
+                        Rests();
                         ComponentInit();
                         return;
                     }
@@ -274,6 +304,7 @@ namespace PosProject_psi
                     if (i == 1)
                     {
                         MessageBox.Show("삭제 되었습니다.");
+                        Rests();
                         ComponentInit();
                      //   Reset();
                         return;
@@ -288,6 +319,7 @@ namespace PosProject_psi
             }
             
         }
+
 
         private void product_grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -309,6 +341,8 @@ namespace PosProject_psi
 
             product__unit_price.Text = product_grid.CurrentRow.Cells[3].Value.ToString();
             product_cust_price.Text = product_grid.CurrentRow.Cells[4].Value.ToString();
+            product_event.Text = product_grid.CurrentRow.Cells[6].Value.ToString();
+            
             product_count.Text = product_grid.CurrentRow.Cells[7].Value.ToString();
 
             try

@@ -85,7 +85,7 @@ namespace PosProject_psi
                     cmd.Parameters.AddWithValue("@employee_pk", this.txtBirth.Text);
 
                     con.Open();
-                    componentInit();
+                    //componentInit();
 
                     int i = cmd.ExecuteNonQuery();
                     if (i == 1)
@@ -101,8 +101,9 @@ namespace PosProject_psi
                 }
             }
         }
-
-        // 입력후 초기화
-        private void componentInit()
-        {
-            this.txtName.Text = txtMobile.Text = txtPosition.Text = 
+    }
+}
+        //// 입력후 초기화
+        //private void componentInit()
+        //{
+        //    this.txtName.Text = txtMobile.Text = txtPosition.Text = 
