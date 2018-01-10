@@ -14,6 +14,8 @@ namespace PosProject_psi
 {
     public partial class MainForm : Form
     {
+        SqlDataAdapter adapter;
+        DataSet ds;
         SqlConnection sqlcon = null;
         int noCount = 1;
         string prodCount;
@@ -38,7 +40,7 @@ namespace PosProject_psi
             itemGrid.Columns[2].Name = "상 품 코 드";
             itemGrid.Columns[3].Name = "가 격";
             itemGrid.Columns[4].Name = "수 량";
-            itemGrid.Columns[5].Name = "비 고";
+            itemGrid.Columns[5].Name = "행 사";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -121,12 +123,23 @@ namespace PosProject_psi
         private void button1_Click_1(object sender, EventArgs e) //수량 클릭시
         {
             itemGrid.CurrentRow.Cells[4].Value = prodCount;
-            itemGrid.CurrentRow.Cells[3].Value = price * int.Parse(itemGrid.CurrentRow.Cells[4].Value.ToString());
+            try
+            {
+                itemGrid.CurrentRow.Cells[3].Value = (price * int.Parse(itemGrid.CurrentRow.Cells[4].Value.ToString())).ToString();
+            }
+            catch (FormatException)
+            {
+
+                MessageBox.Show("항목선택 후 수량을 입려해 주세요");
+                txtBacode.Text = "";
+                prodCount = "";
+                return;
+            }
             price = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) / int.Parse(prodCount);
             //txtPrice.Text = itemGrid.CurrentRow.Cells[3].Value.ToString();
-            GiveMoney();
+            GiveMoney();  
             prodCount = "";
-        } 
+        }
 
         private void GiveMoney()
         {
@@ -150,46 +163,122 @@ namespace PosProject_psi
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+           
             InputInfo();
         }
 
         private void InputInfo()
         {
-            if(cursor == txtMoney)
+            txtProdInfo.Text = "";
+            if (cursor == txtMoney) 
             {
                 txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
             }
             var con = DbMan.Dbcon(sqlcon);
             var cmd = new SqlCommand("ProdRegist", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            con.Open();
             cmd.Parameters.AddWithValue("@prodNum", txtBacode.Text);
-            var er = cmd.ExecuteReader();
-            while (er.Read())
+            con.Open();
+
+            adapter = DbMan.DbAdap(adapter);
+            adapter.SelectCommand = cmd;
+            ds = DbMan.DbDs(ds);
+            adapter.Fill(ds);
+            DataTable pro = ds.Tables[0];
+            DataRowCollection rows = pro.Rows;
+
+            if (rows.Count.ToString() == "0")
             {
-                itemGrid.Rows.Add(noCount, er.GetString(0), er.GetString(1), er.GetInt32(2), 1);
-                price = er.GetInt32(2);
-                bacode = er.GetString(1);
+                cmd = new SqlCommand("ProdRegistNoEvent", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@barcode", txtBacode.Text);
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds);
+                pro = ds.Tables[0];
+                rows = pro.Rows;
+
+                foreach (DataRow er in rows)
+                {
+
+                    string[] row =
+                    {
+                    noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1"
+                };
+                    itemGrid.Rows.Add(row);
+                    price = int.Parse(er[2].ToString());
+                    bacode = er[1].ToString();
+                    txtProdInfo.Text += "<상품 명>\r\n";
+                    txtProdInfo.Text += er[0] + "\r\n\r\n";
+                }
+                
             }
+            else
+            {
+                foreach (DataRow er in rows)
+                {
+
+                    string[] row =
+                    {
+                    noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1",er[3].ToString()
+                };
+
+
+                    itemGrid.Rows.Add(row);
+                    price = int.Parse(er[2].ToString());
+                    bacode = er[1].ToString();
+                    txtProdInfo.Text += "<상품 명>\r\n";
+                    txtProdInfo.Text += er[0] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 명>\r\n";
+                    txtProdInfo.Text += er[3] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 기간>\r\n";
+                    txtProdInfo.Text += er[4] + "~\r\n" + er[5] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 내용>\r\n";
+                    txtProdInfo.Text += er[6] + "\r\n\r\n";
+                }
+            }
+            //var er = cmd.ExecuteReader();
+            //while (er.Read())
+            //{
+            //    itemGrid.Rows.Add(noCount, er.GetString(0), er.GetString(1), er.GetInt32(2), 1);
+            //    price = er.GetInt32(2);
+            //    bacode = er.GetString(1);
+            //    txtProdInfo.Text += "<상품 명>\r\n";
+            //    txtProdInfo.Text += er.GetString(0) + "\r\n";
+
+            //}
             for (int i = 0; i < itemGrid.Rows.Count-1; i++)
             {
                 if(itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
                 {
                     itemGrid.Rows[i].Cells[4].Value = int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()) + 1;
+                    itemGrid.Rows[i].Cells[3].Value = (price * int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString())).ToString(); //qq
                     itemGrid.Rows.Remove(itemGrid.Rows[itemGrid.Rows.Count - 1]);
                     noCount--;
                 }
             }
+            //try
+            //{
+            //    itemGrid.CurrentRow.Cells[3].Value = (price * int.Parse(itemGrid.CurrentRow.Cells[4].Value.ToString())).ToString();
+            //}
+            //catch (FormatException)
+            //{
+
+            //    MessageBox.Show("항목선택 후 수량을 입려해 주세요");
+            //    txtBacode.Text = "";
+            //    prodCount = "";
+            //    return;
+            //}
             txtBacode.Text = "";
             noCount++;
             con.Close();
             GiveMoney();
-            if (txtPrice.Text == "0")
+
+            for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
-                MessageBox.Show("일치하는 상품이 없습니다.");
-                noCount--;
+                itemGrid.Rows[i].Cells[0].Value = i + 1;
             }
             prodCount = "";
+            rows.Clear();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -224,7 +313,54 @@ namespace PosProject_psi
 
         private void itemGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtProdInfo.Text = "";
             cursor = null;
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("ProdRegist", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@prodNum", itemGrid.CurrentRow.Cells[2].Value.ToString());
+            con.Open();
+            adapter = DbMan.DbAdap(adapter);
+            adapter.SelectCommand = cmd;
+            ds = DbMan.DbDs(ds);
+            adapter.Fill(ds);
+            DataTable pro = ds.Tables[0];
+            DataRowCollection rows = pro.Rows;
+
+            if (rows.Count.ToString() == "0")
+            {
+                cmd = new SqlCommand("ProdRegistNoEvent", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@barcode", itemGrid.CurrentRow.Cells[2].Value.ToString());
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds);
+                pro = ds.Tables[0];
+                rows = pro.Rows;
+
+                foreach (DataRow er in rows)
+                {
+                    txtProdInfo.Text += "<상품 명>\r\n";
+                    txtProdInfo.Text += er[0] + "\r\n\r\n";
+                }
+
+            }
+            else
+            {
+                foreach (DataRow er in rows)
+                {
+                    txtProdInfo.Text += "<상품 명>\r\n";
+                    txtProdInfo.Text += er[0] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 명>\r\n";
+                    txtProdInfo.Text += er[3] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 기간>\r\n";
+                    txtProdInfo.Text += er[4] + "~\r\n" + er[5] + "\r\n\r\n";
+                    txtProdInfo.Text += "<이벤트 내용>\r\n";
+                    txtProdInfo.Text += er[6] + "\r\n\r\n";
+                }
+            }
+            con.Close();
+            rows.Clear();
+
         }
 
         private void txtBacode_KeyPress(object sender, KeyPressEventArgs e)
@@ -235,9 +371,17 @@ namespace PosProject_psi
             }
         }
 
-        private void btnGain_Click(object sender, EventArgs e)
+        private void txtMoney_KeyDown(object sender, KeyEventArgs e)
         {
-            new SalesStatus().Show();
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
+            }
+        }
+
+        private void itemGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            txtProdInfo.Text = "";
         }
     }
 }
