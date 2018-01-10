@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,6 +54,10 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.btnWait = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtReturnMoney = new System.Windows.Forms.TextBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -62,7 +66,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPordInfo = new System.Windows.Forms.TextBox();
+            this.txtProdInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
             this.btnGarbage = new System.Windows.Forms.Button();
@@ -74,13 +78,11 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnProd = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // itemGrid
@@ -88,14 +90,14 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemGrid.ColumnHeadersHeight = 40;
             this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -107,6 +109,7 @@
             this.itemGrid.Size = new System.Drawing.Size(732, 301);
             this.itemGrid.TabIndex = 0;
             this.itemGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemGrid_CellClick);
+            this.itemGrid.SelectionChanged += new System.EventHandler(this.itemGrid_SelectionChanged);
             // 
             // panel1
             // 
@@ -408,6 +411,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -419,12 +423,49 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtPordInfo);
+            this.panel2.Controls.Add(this.txtProdInfo);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 423);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(850, 187);
             this.panel2.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Location = new System.Drawing.Point(314, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(184, 187);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(805, 142);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(43, 39);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "원";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.Location = new System.Drawing.Point(805, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 39);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "원";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.Location = new System.Drawing.Point(805, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 39);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "원";
             // 
             // txtReturnMoney
             // 
@@ -450,6 +491,7 @@
             this.txtMoney.Text = "0";
             this.txtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMoney.Click += new System.EventHandler(this.txtMoney_Click);
+            this.txtMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMoney_KeyDown);
             this.txtMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBacode_KeyPress);
             // 
             // txtPrice
@@ -475,7 +517,6 @@
             this.txtBacode.WordWrap = false;
             this.txtBacode.Click += new System.EventHandler(this.txtBacode_Click);
             this.txtBacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBacode_KeyDown);
-            this.txtBacode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBacode_KeyPress);
             // 
             // label9
             // 
@@ -513,13 +554,13 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "상품등록";
             // 
-            // txtPordInfo
+            // txtProdInfo
             // 
-            this.txtPordInfo.Location = new System.Drawing.Point(49, 0);
-            this.txtPordInfo.Multiline = true;
-            this.txtPordInfo.Name = "txtPordInfo";
-            this.txtPordInfo.Size = new System.Drawing.Size(442, 187);
-            this.txtPordInfo.TabIndex = 6;
+            this.txtProdInfo.Location = new System.Drawing.Point(49, 0);
+            this.txtProdInfo.Multiline = true;
+            this.txtProdInfo.Name = "txtProdInfo";
+            this.txtProdInfo.Size = new System.Drawing.Size(266, 187);
+            this.txtProdInfo.TabIndex = 6;
             // 
             // label5
             // 
@@ -674,33 +715,6 @@
             this.btnProd.UseVisualStyleBackColor = false;
             this.btnProd.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(805, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 39);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "원";
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(805, 92);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 39);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "원";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("휴먼매직체", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(805, 142);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 39);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "원";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -731,6 +745,7 @@
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -775,7 +790,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPordInfo;
+        private System.Windows.Forms.TextBox txtProdInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnProd;
@@ -784,6 +799,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
