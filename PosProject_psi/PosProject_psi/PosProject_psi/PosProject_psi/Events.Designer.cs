@@ -66,7 +66,7 @@
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(121, 53);
             this.btn_Add.TabIndex = 30;
-            this.btn_Add.Text = "등록";
+            this.btn_Add.Text = "등 록";
             this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -82,7 +82,7 @@
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(121, 53);
             this.btn_Del.TabIndex = 32;
-            this.btn_Del.Text = "삭제";
+            this.btn_Del.Text = "삭 제";
             this.btn_Del.UseVisualStyleBackColor = false;
             // 
             // btn_Modi
@@ -97,7 +97,7 @@
             this.btn_Modi.Name = "btn_Modi";
             this.btn_Modi.Size = new System.Drawing.Size(121, 53);
             this.btn_Modi.TabIndex = 31;
-            this.btn_Modi.Text = "수정";
+            this.btn_Modi.Text = "수 정";
             this.btn_Modi.UseVisualStyleBackColor = false;
             // 
             // txtEvents

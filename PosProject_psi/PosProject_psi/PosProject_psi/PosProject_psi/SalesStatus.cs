@@ -16,5 +16,25 @@ namespace PosProject_psi
         {
             InitializeComponent();
         }
+
+        private void TimesChart_Click(object sender, EventArgs e)
+        {
+            new TChart().Show();
+        }
+
+        private void DaysChart_Click(object sender, EventArgs e)
+        {
+            new DChart().Show();
+        }
+
+        private void MonthsChart_Click(object sender, EventArgs e)
+        {
+            new MChart().Show();
+        }
+
+        private void YearsChart_Click(object sender, EventArgs e)
+        {
+            new YChart().Show();
+        }
     }
 }

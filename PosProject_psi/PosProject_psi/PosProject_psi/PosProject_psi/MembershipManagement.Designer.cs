@@ -105,6 +105,7 @@
             this.btn_Modi.TabIndex = 28;
             this.btn_Modi.Text = "회원 수정";
             this.btn_Modi.UseVisualStyleBackColor = false;
+            this.btn_Modi.Click += new System.EventHandler(this.btn_Modi_Click);
             // 
             // groupBox1
             // 
