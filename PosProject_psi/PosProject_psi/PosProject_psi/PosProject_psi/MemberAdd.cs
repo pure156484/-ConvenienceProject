@@ -27,7 +27,7 @@ namespace CommonProject
 
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
-                using(var cmd = new SqlCommand("MemberAdd", con))
+                using (var cmd = new SqlCommand("MemberAdd", con))
                 {
                     // 실행할 쿼리문이 저장프로시저에 있다.
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -42,8 +42,6 @@ namespace CommonProject
                     if (i == 1)
                     {
                         MessageBox.Show("저장이 잘 되었습니다!");
-                        this.Hide();
-                        this.Close();
                         return;
                     }
                     else

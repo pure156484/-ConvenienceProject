@@ -8,44 +8,76 @@ namespace CommonProject
 {
     class Employee
     {
-        private string name;
+        private int employee_num;
 
-        public string Name
+        public int Employee_Num
         {
-            get { return name; }
-            set { name = value; }
+            get { return employee_num; }
+            set { employee_num = value; }
         }
 
-        private string position;
+        private string employee_name;
 
-        public string Position
+        public string Employee_Name
         {
-            get { return position; }
-            set { position = value; }
+            get { return employee_name; }
+            set { employee_name = value; }
         }
 
-        private string address;
+        private string employee_phone;
 
-        public string Address
+        public string Employee_Phone
         {
-            get { return address; }
-            set { address = value; }
+            get { return employee_phone; }
+            set { employee_phone = value; }
         }
 
-        private string mobile;
+        private string employee_position;
 
-        public string Mobile
+        public string Employee_Position
         {
-            get { return mobile; }
-            set { mobile = value; }
+            get { return employee_position; }
+            set { employee_position = value; }
         }
 
-        private string securitynum;
+        private string employee_address;
 
-        public string SecurityNum
+        public string Employee_Address
         {
-            get { return securitynum; }
-            set { securitynum = value; }
+            get { return employee_address; }
+            set { employee_address = value; }
+        }
+
+        private int employee_salary;
+
+        public int Employee_Salary
+        {
+            get { return employee_salary; }
+            set { employee_salary = value; }
+        }
+
+        private int employee_hours;
+
+        public int Employee_Hours
+        {
+            get { return employee_hours; }
+            set { employee_hours = value; }
+        }
+
+        private int myemployee_total_salary;
+
+        public int Employee_Total_Salary
+        {
+            get { return myemployee_total_salary; }
+            set { myemployee_total_salary = value; }
+        }
+
+        private string employee_pk;
+
+        public string Employee_Pk
+        {
+            get { return employee_pk; }
+            set { employee_pk = value; }
         }
     }
 }

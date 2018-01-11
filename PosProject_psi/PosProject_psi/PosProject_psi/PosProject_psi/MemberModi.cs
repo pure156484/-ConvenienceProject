@@ -15,7 +15,6 @@ namespace PosProject_psi
     public partial class MemberModi : Form
     {
         string x;
-
         public MemberModi()
         {
             InitializeComponent();
@@ -48,8 +47,6 @@ namespace PosProject_psi
                                 MessageBox.Show(x);
                                 this.txtModiUserName.Text = sdr["user_name"].ToString();
                                 this.txtBirth.Text = sdr["user_date"].ToString().Substring(0, 10);
-                                this.txtModiUserName.ReadOnly = false;
-                                this.txtBirth.ReadOnly = false;
                             }
                             sdr.Close();
                         }
@@ -82,8 +79,6 @@ namespace PosProject_psi
                     if (i == 1)
                     {
                         MessageBox.Show("정상적으로 수정 되었습니다.");
-                        this.Hide();
-                        this.Close();
                         return;
                     }
                     else
@@ -93,12 +88,6 @@ namespace PosProject_psi
                     }
                 }
             }
-        }
-
-        private void MemberModi_Load(object sender, EventArgs e)
-        {
-            this.txtBirth.ReadOnly = true;
-            this.txtModiUserName.ReadOnly = true;
         }
     }
 }

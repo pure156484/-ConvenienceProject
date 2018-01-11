@@ -15,9 +15,6 @@ namespace CommonProject
 {
     public partial class MembershipManagement : Form
     {
-        DataSet ds;
-        DataGridView myView;
-        DataTable memberTable;
         List<Users> list = new List<Users>();
 
         public MembershipManagement()
@@ -27,49 +24,44 @@ namespace CommonProject
 
         private void MembershipManagement_Load(object sender, EventArgs e)
         {
-            ResetGridView();
-        }
-
-        private void ResetGridView()
-        {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
-                con.Open(); 
+                con.Open();
+                MemberGridView.DataSource = null;
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = new SqlCommand("MemberLoad", con);
-
-                ds = new DataSet();
-                adapter.Fill(ds);
-                MemberView(ds);
-            }
-        }
-
-        private void MemberView(DataSet ds)
-        {
-            MemberGridView.Rows.Clear();
-
-            myView = new DataGridView();
-
-            MemberGridView.ColumnCount = 4;
-            MemberGridView.Columns[0].HeaderText = "NO";
-            MemberGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[1].HeaderText = "회원명";
-            MemberGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[2].HeaderText = "전화번호";
-            MemberGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[3].HeaderText = "생년월일";
-            MemberGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            memberTable = ds.Tables[0];
-            DataRowCollection rows = memberTable.Rows;
-            foreach (DataRow dr in rows)
-            {
-                string[] row =
+                using (var cmd = new SqlCommand("MemberLoad", con))
                 {
-                    dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString()
-                };
-                MemberGridView.Rows.Add(row);
+                    var sdr = cmd.ExecuteReader();
+                    if (!sdr.HasRows)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        while (sdr.Read())
+                        {
+                            list.Add(new Users()
+                            {
+                                UserNum = int.Parse(sdr["user_num"].ToString()),
+                                UserName = sdr["user_name"].ToString(),
+                                UserPhone = sdr["user_phone"].ToString(),
+                                UserDate = sdr["user_date"].ToString().Substring(0, 10)
+                            });
+                        }
+                        
+                        this.MemberGridView.DataSource = list;
+                        
+                        sdr.Close();
+                        MemberGridView.Columns[0].HeaderText = "NO";
+                        MemberGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        MemberGridView.Columns[1].HeaderText = "회원명";
+                        MemberGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        MemberGridView.Columns[2].HeaderText = "전화번호";
+                        MemberGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        MemberGridView.Columns[3].HeaderText = "생년월일";
+                        MemberGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                }
             }
         }
 
@@ -87,50 +79,6 @@ namespace CommonProject
             this.Hide();
             MembershipManagement msm = new MembershipManagement();
             this.Close();
-        }
-
-        private void MemberGridView_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_Del_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(this.MemberGridView.CurrentRow.Cells[1].Value.ToString() + " 를(을) 삭제 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
-                {
-                    using (var cmd = new SqlCommand("MemberDelete", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.AddWithValue("@user_name", this.MemberGridView.CurrentRow.Cells[1].Value.ToString());
-                        con.Open();
-
-                        int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
-                        if (i == 1)
-                        {
-                            MessageBox.Show("회원이 삭제 되었습니다.");
-                            ResetGridView();
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show("회원 삭제 실패하였습니다.");
-                            return;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("회원을 다시 선택해주세요");
-            }
-        }
-
-        private void btn_Confirm_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

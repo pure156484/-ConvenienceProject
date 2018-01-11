@@ -75,7 +75,7 @@
             this.btn_Refund.Name = "btn_Refund";
             this.btn_Refund.Size = new System.Drawing.Size(75, 62);
             this.btn_Refund.TabIndex = 50;
-            this.btn_Refund.Text = "환불";
+            this.btn_Refund.Text = "환 불";
             this.btn_Refund.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
@@ -96,7 +96,7 @@
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(68, 62);
             this.btn_Confirm.TabIndex = 1;
-            this.btn_Confirm.Text = "확인";
+            this.btn_Confirm.Text = "확 인";
             this.btn_Confirm.UseVisualStyleBackColor = false;
             // 
             // label3
