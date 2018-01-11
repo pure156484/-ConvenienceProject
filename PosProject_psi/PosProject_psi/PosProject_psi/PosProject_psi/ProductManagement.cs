@@ -87,6 +87,7 @@ namespace PosProject_psi
                 {
                     this.product_event.Items.Add(row.ItemArray[0].ToString());
                 }
+                this.product_event.Items.Add("없음");
 
                 //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)  // 쌤쌤
                 //{
@@ -149,8 +150,16 @@ namespace PosProject_psi
                     cmd.Parameters.AddWithValue("@ucounts", ucount);
                     //    MessageBox.Show((int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
 
-                 //   (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString();
-                    cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+                    //   (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString();
+                    if (product_event.Text == "없음")
+                    {
+                        cmd.Parameters.AddWithValue("@uevent", "");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+                    }
+                    
 
                     cmd.Parameters.AddWithValue("@uimage", bImg);
                     con.Open();
