@@ -134,13 +134,9 @@ namespace PosProject_psi
             }
             catch (FormatException)
             {
-<<<<<<< HEAD
-                MessageBox.Show("항목선택 후 수량을 입려해 주세요");
-=======
 
                 MessageBox.Show("수량을 입력해 주세요");
                 itemGrid.CurrentRow.Cells[4].Value = 1;
->>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
                 txtBacode.Text = "";
                 prodCount = "";
                 return;
@@ -463,11 +459,8 @@ namespace PosProject_psi
             }
             con.Close();
             rows.Clear();
-<<<<<<< HEAD
-=======
             string barcodeNum = itemGrid.CurrentRow.Cells[2].Value.ToString();
             ProdImage(barcodeNum);
->>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
         }
 
         private void txtBacode_KeyPress(object sender, KeyPressEventArgs e)
@@ -493,11 +486,10 @@ namespace PosProject_psi
             txtProdInfo.Text = "";
         }
 
-<<<<<<< HEAD
         private void btnGain_Click(object sender, EventArgs e)
         {
             new SalesStatus().Show();
-=======
+        }
         private void txtReturnMoney_Click(object sender, EventArgs e)
         {
             cursor = txtReturnMoney;
@@ -554,7 +546,6 @@ namespace PosProject_psi
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
                 cmd.ExecuteNonQuery();
             }     
->>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
         }
     }
 }

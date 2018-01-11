@@ -105,17 +105,8 @@ namespace PosProject_psi
         // 입력후 초기화
         private void componentInit()
         {
-<<<<<<< HEAD
             this.txtName.Text = txtMobile.Text = txtPosition.Text = txtAddr.Text = txtSalary.Text = txtHours.Text = txtTSalary.Text = txtBirth.Text = "";
             this.txtName.Focus();
         }
     }
 }
-
-        
-=======
-            this.txtName.Text = txtMobile.Text = txtPosition.Text;
-        }
-    }
-}
->>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
