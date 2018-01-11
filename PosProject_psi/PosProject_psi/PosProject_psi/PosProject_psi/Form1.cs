@@ -22,6 +22,7 @@ namespace PosProject_psi
         int price;
         TextBox cursor;
         string bacode;
+
         public MainForm()
         {
             InitializeComponent();
@@ -109,15 +110,14 @@ namespace PosProject_psi
 
         private void itemGrid_Click(object sender, EventArgs e) // 숫자 클릭시
         {
-                try
-                {
-                    cursor.Text += sender.ToString().Substring(sender.ToString().Length - 1);
-                }
-                catch (NullReferenceException)
-                {
+            try
+            {
+                cursor.Text += sender.ToString().Substring(sender.ToString().Length - 1);
+            }
+            catch (NullReferenceException)
+            {
                 prodCount += sender.ToString().Substring(sender.ToString().Length - 1);
             }
-            
         }
 
         private void button1_Click_1(object sender, EventArgs e) //수량 클릭시
@@ -129,7 +129,6 @@ namespace PosProject_psi
             }
             catch (FormatException)
             {
-
                 MessageBox.Show("항목선택 후 수량을 입려해 주세요");
                 txtBacode.Text = "";
                 prodCount = "";
@@ -163,7 +162,6 @@ namespace PosProject_psi
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-           
             InputInfo();
         }
 
@@ -202,26 +200,23 @@ namespace PosProject_psi
 
                     string[] row =
                     {
-                    noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1"
-                };
+                        noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1"
+                    };
                     itemGrid.Rows.Add(row);
                     price = int.Parse(er[2].ToString());
                     bacode = er[1].ToString();
                     txtProdInfo.Text += "<상품 명>\r\n";
                     txtProdInfo.Text += er[0] + "\r\n\r\n";
                 }
-                
             }
             else
             {
                 foreach (DataRow er in rows)
                 {
-
                     string[] row =
                     {
-                    noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1",er[3].ToString()
-                };
-
+                        noCount.ToString(),er[0].ToString(), er[1].ToString(), er[2].ToString(),"1",er[3].ToString()
+                    };
 
                     itemGrid.Rows.Add(row);
                     price = int.Parse(er[2].ToString());
@@ -306,7 +301,6 @@ namespace PosProject_psi
             }
             catch (NullReferenceException)
             {
-
                 txtBacode.Text = "";
             }
         }
@@ -342,7 +336,6 @@ namespace PosProject_psi
                     txtProdInfo.Text += "<상품 명>\r\n";
                     txtProdInfo.Text += er[0] + "\r\n\r\n";
                 }
-
             }
             else
             {
@@ -360,7 +353,6 @@ namespace PosProject_psi
             }
             con.Close();
             rows.Clear();
-
         }
 
         private void txtBacode_KeyPress(object sender, KeyPressEventArgs e)
@@ -382,6 +374,11 @@ namespace PosProject_psi
         private void itemGrid_SelectionChanged(object sender, EventArgs e)
         {
             txtProdInfo.Text = "";
+        }
+
+        private void btnGain_Click(object sender, EventArgs e)
+        {
+            new SalesStatus().Show();
         }
     }
 }
