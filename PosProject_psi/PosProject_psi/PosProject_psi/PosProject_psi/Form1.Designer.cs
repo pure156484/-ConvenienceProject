@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,14 +90,14 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemGrid.ColumnHeadersHeight = 40;
             this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -201,7 +201,6 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("굴림", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -470,19 +469,15 @@
             // 
             // txtReturnMoney
             // 
-            this.txtReturnMoney.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtReturnMoney.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtReturnMoney.Location = new System.Drawing.Point(635, 141);
             this.txtReturnMoney.Multiline = true;
             this.txtReturnMoney.Name = "txtReturnMoney";
-            this.txtReturnMoney.ReadOnly = true;
             this.txtReturnMoney.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtReturnMoney.Size = new System.Drawing.Size(164, 39);
             this.txtReturnMoney.TabIndex = 14;
             this.txtReturnMoney.Text = "0";
             this.txtReturnMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtReturnMoney.Click += new System.EventHandler(this.txtReturnMoney_Click);
-            this.txtReturnMoney.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReturnMoney_KeyDown);
             // 
             // txtMoney
             // 
@@ -600,7 +595,7 @@
             this.btnGarbage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGarbage.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGarbage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGarbage.Location = new System.Drawing.Point(849, 371);
+            this.btnGarbage.Location = new System.Drawing.Point(346, 371);
             this.btnGarbage.Name = "btnGarbage";
             this.btnGarbage.Size = new System.Drawing.Size(150, 46);
             this.btnGarbage.TabIndex = 7;
@@ -635,7 +630,7 @@
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(150, 46);
             this.btnEvent.TabIndex = 7;
-            this.btnEvent.Text = "행사관리";
+            this.btnEvent.Text = "행사상품";
             this.btnEvent.UseVisualStyleBackColor = false;
             this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
             // 
@@ -652,7 +647,6 @@
             this.btnGain.TabIndex = 4;
             this.btnGain.Text = "매출현황";
             this.btnGain.UseVisualStyleBackColor = false;
-            this.btnGain.Click += new System.EventHandler(this.btnGain_Click);
             // 
             // btnOrder
             // 
@@ -662,7 +656,7 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOrder.Location = new System.Drawing.Point(179, 371);
+            this.btnOrder.Location = new System.Drawing.Point(849, 371);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(150, 46);
             this.btnOrder.TabIndex = 8;
@@ -713,7 +707,7 @@
             this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProd.Location = new System.Drawing.Point(346, 371);
+            this.btnProd.Location = new System.Drawing.Point(179, 371);
             this.btnProd.Name = "btnProd";
             this.btnProd.Size = new System.Drawing.Size(150, 46);
             this.btnProd.TabIndex = 11;
@@ -727,6 +721,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
+            this.Controls.Add(this.btnProd);
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnEmploy);
             this.Controls.Add(this.btnOrder);
@@ -740,7 +735,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.itemGrid);
-            this.Controls.Add(this.btnProd);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POS";

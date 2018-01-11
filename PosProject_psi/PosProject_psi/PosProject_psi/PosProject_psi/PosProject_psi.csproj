@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoClosingMessageBox.cs" />
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -75,13 +74,7 @@
     <Compile Include="EmployeeModi.Designer.cs">
       <DependentUpon>EmployeeModi.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventsModi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventsModi.Designer.cs">
-      <DependentUpon>EventsModi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Event.cs" />
+    <Compile Include="EventsList.cs" />
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventsAdd.resx">
       <DependentUpon>EventsAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EventsModi.resx">
-      <DependentUpon>EventsModi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
