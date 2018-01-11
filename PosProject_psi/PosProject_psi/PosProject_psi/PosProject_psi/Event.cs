@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PosProject_psi
 {
-    class EventsList
+    class Event
     {
         private int event_num;
 

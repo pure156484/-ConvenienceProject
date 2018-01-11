@@ -600,7 +600,7 @@
             this.btnGarbage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGarbage.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnGarbage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGarbage.Location = new System.Drawing.Point(346, 371);
+            this.btnGarbage.Location = new System.Drawing.Point(849, 371);
             this.btnGarbage.Name = "btnGarbage";
             this.btnGarbage.Size = new System.Drawing.Size(150, 46);
             this.btnGarbage.TabIndex = 7;
@@ -635,7 +635,7 @@
             this.btnEvent.Name = "btnEvent";
             this.btnEvent.Size = new System.Drawing.Size(150, 46);
             this.btnEvent.TabIndex = 7;
-            this.btnEvent.Text = "행사상품";
+            this.btnEvent.Text = "행사관리";
             this.btnEvent.UseVisualStyleBackColor = false;
             this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
             // 
@@ -652,6 +652,7 @@
             this.btnGain.TabIndex = 4;
             this.btnGain.Text = "매출현황";
             this.btnGain.UseVisualStyleBackColor = false;
+            this.btnGain.Click += new System.EventHandler(this.btnGain_Click);
             // 
             // btnOrder
             // 
@@ -661,7 +662,7 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOrder.Location = new System.Drawing.Point(849, 371);
+            this.btnOrder.Location = new System.Drawing.Point(179, 371);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(150, 46);
             this.btnOrder.TabIndex = 8;
@@ -712,7 +713,7 @@
             this.btnProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnProd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProd.Location = new System.Drawing.Point(179, 371);
+            this.btnProd.Location = new System.Drawing.Point(346, 371);
             this.btnProd.Name = "btnProd";
             this.btnProd.Size = new System.Drawing.Size(150, 46);
             this.btnProd.TabIndex = 11;
@@ -726,7 +727,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
-            this.Controls.Add(this.btnProd);
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnEmploy);
             this.Controls.Add(this.btnOrder);
@@ -740,6 +740,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.itemGrid);
+            this.Controls.Add(this.btnProd);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POS";
