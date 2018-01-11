@@ -106,6 +106,12 @@
     <Compile Include="GarbageProd.Designer.cs">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailSend.Designer.cs">
+      <DependentUpon>MailSend.cs</DependentUpon>
+    </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailSend.resx">
+      <DependentUpon>MailSend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>

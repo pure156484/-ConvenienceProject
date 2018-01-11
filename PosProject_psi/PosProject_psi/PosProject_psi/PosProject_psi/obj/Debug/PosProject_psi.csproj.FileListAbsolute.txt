@@ -48,3 +48,11 @@ C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProj
 C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
 C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MemberModi.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.DChart.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EmployeeModi.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EventsModi.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MChart.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.SalesStatus.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.TChart.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.YChart.resources
+C:\Users\gd3-20\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MailSend.resources

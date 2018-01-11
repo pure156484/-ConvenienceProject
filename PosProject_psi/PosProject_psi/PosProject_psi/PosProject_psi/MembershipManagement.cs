@@ -80,5 +80,24 @@ namespace CommonProject
             MembershipManagement msm = new MembershipManagement();
             this.Close();
         }
+
+        private void btn_Confirm_Click(object sender, EventArgs e)
+        {
+            bool flag = false;
+            for (int i = 0; i < MemberGridView.RowCount; i++)
+            {
+                if (MemberGridView.Rows[i].Cells[2].Value.ToString() == txtSearch.Text)
+                {
+                    MemberGridView.CurrentCell = MemberGridView.Rows[i].Cells[0];
+                    flag = true;
+
+                }
+            }
+
+            if (!flag)
+            {
+                MessageBox.Show("없는 전화번호입니다.");
+            }
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace PosProject_psi
             }
             return con;
         }
-        
+
         private void Reset()
         {
             product_grid.DataSource = null;
@@ -81,10 +81,10 @@ namespace PosProject_psi
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
- // 저장
+        // 저장
         private void btn_enroll_Click(object sender, EventArgs e)
         {
             string ubarcode = this.product_barcode.Text.Trim();
@@ -93,21 +93,21 @@ namespace PosProject_psi
             string uunit_price = this.product__unit_price.Text.Trim();
             string ucust_price = this.product_cust_price.Text.Trim();
             string ucount = this.product_count.Text.Trim();
-            
-            
+
+
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
-             
+
                 using (var cmd = new SqlCommand("ConvenienceItems", con))
                 {
-                    
+
                     cmd.CommandType = CommandType.StoredProcedure;
-                  
+
                     cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
                     cmd.Parameters.AddWithValue("@uname", uname);
                     ImageConverter converter = new ImageConverter();
                     byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
-                    
+
                     switch (uselect)
                     {
                         case "제과":
@@ -122,7 +122,7 @@ namespace PosProject_psi
                     }
                     cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                     cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
-                    
+
                     cmd.Parameters.AddWithValue("@ucounts", ucount);
                     cmd.Parameters.AddWithValue("@uimage", bImg);
                     con.Open();
@@ -141,7 +141,7 @@ namespace PosProject_psi
                     }
                 }
             }
-           
+
         }
 
         private void btn_image_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ namespace PosProject_psi
             product__image = null;
         }
 
- // 그리드 뷰 클릭하면 정보 출력
+        // 그리드 뷰 클릭하면 정보 출력
         private void product_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //product_barcode.Text = product_grid.CurrentRow.Cells[0].Value.ToString();
@@ -187,10 +187,10 @@ namespace PosProject_psi
             //product_cust_price.Text = product_grid.CurrentRow.Cells[4].Value.ToString();
             //product__image.Image = new Bitmap(new MemoryStream((byte[])product_grid.CurrentRow.Cells[5].Value));
             //product_count.Text = product_grid.CurrentRow.Cells[6].Value.ToString();
-            
+
         }
 
- // 수정
+        // 수정
         private void btn_modified_Click(object sender, EventArgs e)
         {
             string ubarcode = this.product_barcode.Text.Trim();
@@ -233,7 +233,7 @@ namespace PosProject_psi
 
                     adapter.UpdateCommand = cmd;
 
-                  //  adapter.Update(ds);
+                    //  adapter.Update(ds);
                     int i = cmd.ExecuteNonQuery();
                     if (i == 1)
                     {
@@ -250,7 +250,7 @@ namespace PosProject_psi
             }
         }
 
- // 삭제
+        // 삭제
         private void btn_delete_Click(object sender, EventArgs e)
         {
             string ubarcode = this.product_barcode.Text.Trim();
@@ -269,29 +269,29 @@ namespace PosProject_psi
 
                     adapter.DeleteCommand = cmd;
 
-                   // adapter.SelectCommand(ds);
+                    // adapter.SelectCommand(ds);
                     int i = cmd.ExecuteNonQuery();
                     if (i == 1)
                     {
                         MessageBox.Show("삭제 되었습니다.");
                         ComponentInit();
-                     //   Reset();
+                        //   Reset();
                         return;
                     }
                     else
                     {
                         MessageBox.Show("삭제 실패");
-                        
+
                         return;
                     }
                 }
             }
-            
+
         }
 
         private void product_grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             product_barcode.Text = product_grid.CurrentRow.Cells[0].Value.ToString();
             product_name.Text = product_grid.CurrentRow.Cells[1].Value.ToString();
             switch (product_grid.CurrentRow.Cells[2].Value.ToString())
@@ -317,7 +317,7 @@ namespace PosProject_psi
             }
             catch (System.InvalidCastException)
             {
-               
+
             }
 
 
@@ -325,7 +325,7 @@ namespace PosProject_psi
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
