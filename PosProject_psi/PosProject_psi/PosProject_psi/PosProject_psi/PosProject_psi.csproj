@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoClosingMessageBox.cs" />
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
