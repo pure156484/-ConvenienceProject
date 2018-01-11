@@ -34,7 +34,9 @@
             this.btn_modified = new System.Windows.Forms.Button();
             this.btn_enroll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.product_count = new System.Windows.Forms.TextBox();
+            this.product_select = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.product__unit_price = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,6 +49,7 @@
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -64,6 +67,7 @@
             this.product_grid.RowTemplate.Height = 23;
             this.product_grid.Size = new System.Drawing.Size(756, 209);
             this.product_grid.TabIndex = 33;
+            this.product_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_grid_CellClick);
             // 
             // btn_exit
             // 
@@ -79,6 +83,7 @@
             this.btn_exit.TabIndex = 32;
             this.btn_exit.Text = "닫 기";
             this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_delete
             // 
@@ -94,6 +99,7 @@
             this.btn_delete.TabIndex = 31;
             this.btn_delete.Text = "삭 제";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_modified
             // 
@@ -109,6 +115,7 @@
             this.btn_modified.TabIndex = 30;
             this.btn_modified.Text = "수 정";
             this.btn_modified.UseVisualStyleBackColor = false;
+            this.btn_modified.Click += new System.EventHandler(this.btn_modified_Click);
             // 
             // btn_enroll
             // 
@@ -124,10 +131,13 @@
             this.btn_enroll.TabIndex = 29;
             this.btn_enroll.Text = "등 록";
             this.btn_enroll.UseVisualStyleBackColor = false;
+            this.btn_enroll.Click += new System.EventHandler(this.btn_enroll_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.product_count);
+            this.groupBox1.Controls.Add(this.product_select);
             this.groupBox1.Controls.Add(this.btn_exit);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.btn_delete);
@@ -147,29 +157,54 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox1
+            // label3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(105, 108);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 20);
-            this.comboBox1.TabIndex = 18;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.label3.Location = new System.Drawing.Point(6, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "수량";
+            // 
+            // product_count
+            // 
+            this.product_count.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.product_count.Location = new System.Drawing.Point(105, 185);
+            this.product_count.Multiline = true;
+            this.product_count.Name = "product_count";
+            this.product_count.Size = new System.Drawing.Size(192, 20);
+            this.product_count.TabIndex = 34;
+            // 
+            // product_select
+            // 
+            this.product_select.FormattingEnabled = true;
+            this.product_select.Items.AddRange(new object[] {
+            "제과",
+            "라면",
+            "음료"});
+            this.product_select.Location = new System.Drawing.Point(105, 83);
+            this.product_select.Name = "product_select";
+            this.product_select.Size = new System.Drawing.Size(192, 20);
+            this.product_select.TabIndex = 18;
+            this.product_select.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label6.Location = new System.Drawing.Point(6, 199);
+            this.label6.Location = new System.Drawing.Point(6, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 16;
-            this.label6.Text = "단가";
+            this.label6.Text = "가격";
             // 
             // product__unit_price
             // 
             this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product__unit_price.Location = new System.Drawing.Point(105, 195);
+            this.product__unit_price.Location = new System.Drawing.Point(105, 151);
             this.product__unit_price.Multiline = true;
             this.product__unit_price.Name = "product__unit_price";
             this.product__unit_price.Size = new System.Drawing.Size(192, 20);
@@ -180,16 +215,16 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(6, 152);
+            this.label5.Location = new System.Drawing.Point(6, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 14;
-            this.label5.Text = "가격";
+            this.label5.Text = "단가";
             // 
             // product_cust_price
             // 
             this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_cust_price.Location = new System.Drawing.Point(105, 149);
+            this.product_cust_price.Location = new System.Drawing.Point(105, 117);
             this.product_cust_price.Multiline = true;
             this.product_cust_price.Name = "product_cust_price";
             this.product_cust_price.Size = new System.Drawing.Size(192, 20);
@@ -211,7 +246,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(5, 62);
+            this.label2.Location = new System.Drawing.Point(5, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 1;
@@ -222,7 +257,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label4.Location = new System.Drawing.Point(6, 107);
+            this.label4.Location = new System.Drawing.Point(6, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 3;
@@ -240,7 +275,7 @@
             // product_barcode
             // 
             this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_barcode.Location = new System.Drawing.Point(105, 59);
+            this.product_barcode.Location = new System.Drawing.Point(105, 49);
             this.product_barcode.Multiline = true;
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 20);
@@ -260,6 +295,7 @@
             this.btn_image.TabIndex = 27;
             this.btn_image.Text = "이미지 추가";
             this.btn_image.UseVisualStyleBackColor = false;
+            this.btn_image.Click += new System.EventHandler(this.btn_image_Click);
             // 
             // label7
             // 
@@ -277,8 +313,13 @@
             this.product__image.Location = new System.Drawing.Point(430, 33);
             this.product__image.Name = "product__image";
             this.product__image.Size = new System.Drawing.Size(338, 161);
+            this.product__image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.product__image.TabIndex = 26;
             this.product__image.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // ProductManagement
             // 
@@ -324,6 +365,9 @@
         private System.Windows.Forms.TextBox product__unit_price;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox product_cust_price;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox product_select;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox product_count;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

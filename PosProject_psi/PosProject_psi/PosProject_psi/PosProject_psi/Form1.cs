@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,11 @@ namespace PosProject_psi
     {
         SqlDataAdapter adapter;
         DataSet ds;
+        SqlDataAdapter picAdapter;
+        DataSet picDs;
         SqlConnection sqlcon = null;
+        SqlConnection picSqlcon = null;
+        int eventNum;
         int noCount = 1;
         string prodCount;
         int price;
@@ -129,15 +134,56 @@ namespace PosProject_psi
             }
             catch (FormatException)
             {
+<<<<<<< HEAD
                 MessageBox.Show("항목선택 후 수량을 입려해 주세요");
+=======
+
+                MessageBox.Show("수량을 입력해 주세요");
+                itemGrid.CurrentRow.Cells[4].Value = 1;
+>>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
                 txtBacode.Text = "";
                 prodCount = "";
                 return;
             }
-            price = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) / int.Parse(prodCount);
+
+            BonusEvent();
+
+            //price = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) / int.Parse(prodCount);
             //txtPrice.Text = itemGrid.CurrentRow.Cells[3].Value.ToString();
-            GiveMoney();  
+            GiveMoney();
             prodCount = "";
+        }
+
+        private void BonusEvent()
+        {
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("EventBonus", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@eventNum", eventNum);
+            con.Open();
+
+            adapter = DbMan.DbAdap(adapter);
+            adapter.SelectCommand = cmd;
+            ds = DbMan.DbDs(ds);
+            adapter.Fill(ds);
+            DataTable pro = ds.Tables[0];
+            DataRowCollection rows = pro.Rows;
+            
+            foreach (DataRow er in rows)
+            {
+                if (er[0].ToString() == "")
+                {
+                    return;
+                }
+                else
+                {
+                    int bonus = int.Parse(itemGrid.CurrentRow.Cells[4].Value.ToString()) / (int.Parse(er[0].ToString()) + 1);
+                    if (bonus >= 1)
+                    {
+                        itemGrid.CurrentRow.Cells[3].Value = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) - (price * bonus);
+                    }
+                }
+            }
         }
 
         private void GiveMoney()
@@ -163,6 +209,21 @@ namespace PosProject_psi
         private void btnOK_Click(object sender, EventArgs e)
         {
             InputInfo();
+            
+            if (cursor == txtReturnMoney)
+            {
+                if (int.Parse(txtReturnMoney.Text) >= 0)
+                {
+                    AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
+                    itemGrid.Rows.Clear();
+                    txtBacode.Clear();
+                    txtMoney.Clear();
+                    txtPrice.Clear();
+                    txtProdInfo.Clear();
+                    txtReturnMoney.Clear();
+                    pictureBox1.Image = null;
+                }
+            }
         }
 
         private void InputInfo()
@@ -207,6 +268,7 @@ namespace PosProject_psi
                     bacode = er[1].ToString();
                     txtProdInfo.Text += "<상품 명>\r\n";
                     txtProdInfo.Text += er[0] + "\r\n\r\n";
+                    
                 }
             }
             else
@@ -229,18 +291,14 @@ namespace PosProject_psi
                     txtProdInfo.Text += er[4] + "~\r\n" + er[5] + "\r\n\r\n";
                     txtProdInfo.Text += "<이벤트 내용>\r\n";
                     txtProdInfo.Text += er[6] + "\r\n\r\n";
+                    eventNum = int.Parse(er[9].ToString());
                 }
+               
             }
-            //var er = cmd.ExecuteReader();
-            //while (er.Read())
-            //{
-            //    itemGrid.Rows.Add(noCount, er.GetString(0), er.GetString(1), er.GetInt32(2), 1);
-            //    price = er.GetInt32(2);
-            //    bacode = er.GetString(1);
-            //    txtProdInfo.Text += "<상품 명>\r\n";
-            //    txtProdInfo.Text += er.GetString(0) + "\r\n";
-
-            //}
+            string barcodeNum = txtBacode.Text;
+            ProdImage(barcodeNum);
+            //DiscountEvent();
+            
             for (int i = 0; i < itemGrid.Rows.Count-1; i++)
             {
                 if(itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
@@ -274,8 +332,59 @@ namespace PosProject_psi
             }
             prodCount = "";
             rows.Clear();
+            BonusEvent();
         }
 
+        //private void DiscountEvent()
+        //{
+        //    var con = DbMan.Dbcon(sqlcon);
+        //    var cmd = new SqlCommand("EventDiscount", con);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.AddWithValue("@eventNum", eventNum);
+        //    con.Open();
+
+        //    adapter = DbMan.DbAdap(adapter);
+        //    adapter.SelectCommand = cmd;
+        //    ds = DbMan.DbDs(ds);
+        //    adapter.Fill(ds);
+        //    DataTable pro = ds.Tables[0];
+        //    DataRowCollection rows = pro.Rows;
+
+        //}
+
+        private void ProdImage(string barcodeNum)
+        {
+            pictureBox1.Image = null;
+            var con = DbMan.Dbcon(picSqlcon);
+            var cmd = new SqlCommand("ReturnImage", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@barcode", barcodeNum);
+            con.Open();
+
+            picAdapter = DbMan.DbAdap(picAdapter);
+            picAdapter.SelectCommand = cmd;
+            picDs = DbMan.DbDs(picDs);
+            picAdapter.Fill(picDs);
+            DataTable pro = picDs.Tables[0];
+            DataRowCollection rows = pro.Rows;
+            foreach (DataRow er in rows)
+            {
+                object pic = er[0];
+                if(pic.GetType().ToString() == "System.DBNull")
+                {
+                    return;
+                }
+                else
+                {
+                    pictureBox1.Image = new Bitmap(new MemoryStream((byte[])pic));
+                }
+            }
+            con.Close();
+            rows.Clear();
+            picDs = null;
+            picAdapter = null;
+            pro.Clear();
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             itemGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -307,6 +416,7 @@ namespace PosProject_psi
 
         private void itemGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            button1.Enabled = true;
             txtProdInfo.Text = "";
             cursor = null;
             var con = DbMan.Dbcon(sqlcon);
@@ -353,6 +463,11 @@ namespace PosProject_psi
             }
             con.Close();
             rows.Clear();
+<<<<<<< HEAD
+=======
+            string barcodeNum = itemGrid.CurrentRow.Cells[2].Value.ToString();
+            ProdImage(barcodeNum);
+>>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
         }
 
         private void txtBacode_KeyPress(object sender, KeyPressEventArgs e)
@@ -368,7 +483,9 @@ namespace PosProject_psi
             if (e.KeyCode == Keys.Enter)
             {
                 txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
+                txtReturnMoney.Focus();
             }
+            
         }
 
         private void itemGrid_SelectionChanged(object sender, EventArgs e)
@@ -376,9 +493,68 @@ namespace PosProject_psi
             txtProdInfo.Text = "";
         }
 
+<<<<<<< HEAD
         private void btnGain_Click(object sender, EventArgs e)
         {
             new SalesStatus().Show();
+=======
+        private void txtReturnMoney_Click(object sender, EventArgs e)
+        {
+            cursor = txtReturnMoney;
+            txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
+        }
+
+        private void txtReturnMoney_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (int.Parse(txtReturnMoney.Text) >= 0)
+                {
+                    AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
+                    itemGrid.Rows.Clear();
+                    txtBacode.Clear();
+                    txtMoney.Clear();
+                    txtPrice.Clear();
+                    txtProdInfo.Clear();
+                    txtReturnMoney.Clear();
+                    pictureBox1.Image = null;
+                    ProdMinus();
+                    SellProdInsert();
+                }
+                else
+                {
+                    AutoClosingMessageBox.Show("미결제 항목이 있습니다", "GD편의점", 2000);
+                }
+            }
+        }
+
+        private void SellProdInsert()
+        {
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("SellProduct", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
+            {
+                cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
+                cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        private void ProdMinus()
+        {
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("SellProduct", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
+            {
+                cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
+                cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
+                cmd.ExecuteNonQuery();
+            }     
+>>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
         }
     }
 }

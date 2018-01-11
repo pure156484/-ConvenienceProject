@@ -104,6 +104,7 @@ namespace PosProject_psi
             }
         }
 
+<<<<<<< HEAD
         // 행사 수정 버튼
         private void btn_Modi_Click(object sender, EventArgs e)
         {
@@ -136,6 +137,11 @@ namespace PosProject_psi
                         return;
                     }
                 }
+=======
+                ds = new DataSet();
+                adapter.Fill(ds);
+                //EmployeeView(ds);
+>>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
             }
         }
 

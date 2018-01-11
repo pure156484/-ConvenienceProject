@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoClosingMessageBox.cs" />
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -135,6 +136,7 @@
     <Compile Include="OrderInventoryForm.Designer.cs">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="productAdd.cs" />
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
     </Compile>

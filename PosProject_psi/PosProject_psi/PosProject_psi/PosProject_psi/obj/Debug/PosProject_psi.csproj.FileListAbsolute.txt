@@ -20,6 +20,7 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MemberModi.resources
+<<<<<<< HEAD
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csprojResolveAssemblyReference.cache
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.DChart.resources
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EmployeeAdd.resources
@@ -49,3 +50,11 @@ C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\Pos
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.exe
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
 C:\Users\gdn3-17\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EventsModi.resources
+=======
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.DChart.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.EmployeeModi.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.MChart.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.SalesStatus.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.TChart.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.YChart.resources
+>>>>>>> 71d2e025228c80d2f529018f66611de089d5ec62
