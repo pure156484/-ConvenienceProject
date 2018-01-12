@@ -21,35 +21,61 @@ namespace CommonProject
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            string name = this.txtName.Text;
-            string mobile = this.txtMobile.Text.Trim().Replace(" ", "");
-            string date = this.txtBirth.Text;
-
-            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
+            if (CheckName())
             {
-                using (var cmd = new SqlCommand("MemberAdd", con))
+                string name = this.txtName.Text;
+                string mobile = this.txtMobile.Text.Trim().Replace(" ", "");
+                string date = this.txtBirth.Text;
+
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
-                    // 실행할 쿼리문이 저장프로시저에 있다.
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // 저장프로시저 실행에 필요한 파라메터를 지정
-                    cmd.Parameters.AddWithValue("@user_name", name);
-                    cmd.Parameters.AddWithValue("@user_phone", mobile);
-                    cmd.Parameters.AddWithValue("@user_date", date);
-                    con.Open();
-
-                    int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
-                    if (i == 1)
+                    using (var cmd = new SqlCommand("MemberAdd", con))
                     {
-                        MessageBox.Show("저장이 잘 되었습니다!");
-                        return;
+                        // 실행할 쿼리문이 저장프로시저에 있다.
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // 저장프로시저 실행에 필요한 파라메터를 지정
+                        cmd.Parameters.AddWithValue("@user_name", name);
+                        cmd.Parameters.AddWithValue("@user_phone", mobile);
+                        cmd.Parameters.AddWithValue("@user_date", date);
+                        con.Open();
+
+                        int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
+                        if (i == 1)
+                        {
+                            MessageBox.Show("저장이 잘 되었습니다!");
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("저장 실패");
+                            return;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("저장 실패");
-                        return;
-                    }
-                }
+                } 
+            }
+        }
+
+        private bool CheckName()
+        {
+            if (this.txtName.Text == "")
+            {
+                MessageBox.Show("이름이 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtMobile.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtBirth.Text == "")
+            {
+                MessageBox.Show("생일이 입력 되지 않았습니다.");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

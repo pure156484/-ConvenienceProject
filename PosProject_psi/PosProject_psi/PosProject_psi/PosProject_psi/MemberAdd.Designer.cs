@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBirth = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Confirm = new System.Windows.Forms.Button();
-            this.txtMobile = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtMobile = new System.Windows.Forms.MaskedTextBox();
+            this.txtBirth = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
-            // 
-            // txtBirth
-            // 
-            this.txtBirth.Location = new System.Drawing.Point(138, 133);
-            this.txtBirth.Name = "txtBirth";
-            this.txtBirth.Size = new System.Drawing.Size(100, 21);
-            this.txtBirth.TabIndex = 41;
             // 
             // label3
             // 
@@ -70,13 +63,6 @@
             this.btn_Confirm.Text = "등록하기";
             this.btn_Confirm.UseVisualStyleBackColor = false;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Location = new System.Drawing.Point(138, 88);
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(100, 21);
-            this.txtMobile.TabIndex = 38;
             // 
             // txtName
             // 
@@ -107,6 +93,22 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "회원명";
             // 
+            // txtMobile
+            // 
+            this.txtMobile.Location = new System.Drawing.Point(138, 89);
+            this.txtMobile.Mask = "000-9000-0000";
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(100, 21);
+            this.txtMobile.TabIndex = 42;
+            // 
+            // txtBirth
+            // 
+            this.txtBirth.Location = new System.Drawing.Point(138, 135);
+            this.txtBirth.Mask = "0000-00-00";
+            this.txtBirth.Name = "txtBirth";
+            this.txtBirth.Size = new System.Drawing.Size(100, 21);
+            this.txtBirth.TabIndex = 43;
+            // 
             // MemberAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -114,9 +116,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.txtBirth);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Confirm);
-            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,8 +135,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button btn_Confirm;
-        internal System.Windows.Forms.TextBox txtBirth;
-        internal System.Windows.Forms.TextBox txtMobile;
         internal System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.MaskedTextBox txtMobile;
+        private System.Windows.Forms.MaskedTextBox txtBirth;
     }
 }
