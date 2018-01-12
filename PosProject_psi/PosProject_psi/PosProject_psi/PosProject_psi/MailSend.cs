@@ -111,27 +111,27 @@ namespace PosProject_psi
         {
             try
             {
-                MailAddress fromAddr = new MailAddress("iotgd2017069@gmail.com", "구디편의점", Encoding.UTF8);
+                MailAddress fromAddr = new MailAddress("cs_test@outlook.kr", "구디 편의점", Encoding.UTF8);
 
-                MailAddress toAddr = new MailAddress("iotgd2017069@gmail.com");
+                MailAddress toAddr = new MailAddress("cs_test@outlook.kr");
 
-                SmtpClient client = new SmtpClient("smtp.naver.com", 587);
+                SmtpClient client = new SmtpClient("smtp-mail.outlook.com", 587);
                 //client.Host = "smtp.naver.com";
                 //client.Port = 465;
 
                 MailMessage msg = new MailMessage(fromAddr, toAddr);
 
-                string sp = "";
-                sp += "======= 요청 직원 정보 =======\n";
-                sp += "이름: " + emp_name + "\n";
-                sp += "전화번호: " + emp_phone + "\n";
-                sp += "직책: " + emp_positon + "\n";
-                sp += "==========================\n\n";
-                sp += txtContents.Text;
+                string empInfo = "";
+                empInfo += "====== 요청 직원 정보 =====\n";
+                empInfo += "이름: " + emp_name + "\n";
+                empInfo += "전화번호: " + emp_phone + "\n";
+                empInfo += "직책: " + emp_positon + "\n";
+                empInfo += "======================\n\n";
+                empInfo += txtContents.Text;
 
                 msg.Subject = txtTitle.Text;
                 msg.SubjectEncoding = Encoding.UTF8;
-                msg.Body = sp;
+                msg.Body = empInfo;
                 msg.BodyEncoding = Encoding.UTF8;
 
                 if (fileName == null)
@@ -145,10 +145,11 @@ namespace PosProject_psi
                     msg.Attachments.Add(attachment);
                 }
 
+                client.UseDefaultCredentials = false;
                 client.EnableSsl = true;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 //client.Credentials = new NetworkCredential("abc@abc.com", "abc");
-                client.Credentials = new NetworkCredential("smtp.gmail.com", "iotgd0829!");
+                client.Credentials = new NetworkCredential("cs_test@outlook.kr", "1q2w3e4r5t!");
 
                 client.Send(msg);
                 MessageBox.Show("메일 전송하였습니다.");
@@ -161,7 +162,15 @@ namespace PosProject_psi
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            2
+            if (MessageBox.Show("취소를 누르시면 입력하신 내용이 모두 초기화 됩니다.\r계속 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Abort;
+                txtTitle.Text = txtContents.Text = txtFileName.Text = cboEmployee.Text = "";
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
