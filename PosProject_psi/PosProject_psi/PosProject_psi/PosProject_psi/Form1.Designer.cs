@@ -618,8 +618,9 @@
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(150, 46);
             this.btnDiscount.TabIndex = 7;
-            this.btnDiscount.Text = "할인";
+            this.btnDiscount.Text = "포인트";
             this.btnDiscount.UseVisualStyleBackColor = false;
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // btnEvent
             // 

@@ -627,5 +627,11 @@ namespace PosProject_psi
                 AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
             
         }
+
+        private void btnDiscount_Click(object sender, EventArgs e)
+        {
+            PointManagement point = new PointManagement();
+            point.Show();
+        }
     }
 }

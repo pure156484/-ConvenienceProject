@@ -34,6 +34,8 @@
             this.btn_modified = new System.Windows.Forms.Button();
             this.btn_enroll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.product_event = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.product_count = new System.Windows.Forms.TextBox();
             this.product_select = new System.Windows.Forms.ComboBox();
@@ -50,8 +52,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label8 = new System.Windows.Forms.Label();
-            this.product_event = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -160,6 +160,25 @@
             this.groupBox1.Size = new System.Drawing.Size(412, 234);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // product_event
+            // 
+            this.product_event.FormattingEnabled = true;
+            this.product_event.Location = new System.Drawing.Point(105, 207);
+            this.product_event.Name = "product_event";
+            this.product_event.Size = new System.Drawing.Size(192, 20);
+            this.product_event.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.label8.Location = new System.Drawing.Point(6, 210);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 16);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "이벤트";
             // 
             // label3
             // 
@@ -325,31 +344,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label8.Location = new System.Drawing.Point(6, 210);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 16);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "이벤트";
-            // 
-            // product_event
-            // 
-            this.product_event.FormattingEnabled = true;
-            this.product_event.Location = new System.Drawing.Point(105, 207);
-            this.product_event.Name = "product_event";
-            this.product_event.Size = new System.Drawing.Size(192, 20);
-            this.product_event.TabIndex = 36;
-            // 
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(780, 456);
+            this.ClientSize = new System.Drawing.Size(780, 454);
             this.Controls.Add(this.product_grid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_image);

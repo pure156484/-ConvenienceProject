@@ -142,6 +142,12 @@
     <Compile Include="OrderInventoryForm.Designer.cs">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PointManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointManagement.Designer.cs">
+      <DependentUpon>PointManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="productAdd.cs" />
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderInventoryForm.resx">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointManagement.resx">
+      <DependentUpon>PointManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement.resx">
       <DependentUpon>ProductManagement.cs</DependentUpon>

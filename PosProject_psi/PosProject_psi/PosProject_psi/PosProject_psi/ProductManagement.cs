@@ -90,7 +90,7 @@ namespace PosProject_psi
                     adapter.SelectCommand = cmd;
                     ds = new DataSet();
                     adapter.Fill(ds);
-                    product_event.Items.Clear();
+                    product_event.Items.Clear();     // 콤보박스에 겹치는 현상 제거
                     DataRowCollection dataRow = ds.Tables[0].Rows;
                     foreach (DataRow row in dataRow)
                     {
