@@ -158,5 +158,10 @@ namespace PosProject_psi
                 MessageBox.Show("메일을 전송 할 수 없습니다.");
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            2
+        }
     }
 }
