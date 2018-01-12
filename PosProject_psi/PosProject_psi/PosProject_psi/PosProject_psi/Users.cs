@@ -47,5 +47,16 @@ namespace PosProject_psi
             get { return userDate; }
             set { userDate = value; }
         }
+
+        /// <summary>
+        /// 회원 포인트
+        /// </summary>
+        private int userPoint;
+        public int UserPoint
+        {
+            get { return userPoint; }
+            set { userPoint = value; }
+        }
+
     }
 }

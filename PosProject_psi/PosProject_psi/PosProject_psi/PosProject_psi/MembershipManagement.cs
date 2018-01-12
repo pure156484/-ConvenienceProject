@@ -45,7 +45,8 @@ namespace CommonProject
                                 UserNum = int.Parse(sdr["user_num"].ToString()),
                                 UserName = sdr["user_name"].ToString(),
                                 UserPhone = sdr["user_phone"].ToString(),
-                                UserDate = sdr["user_date"].ToString().Substring(0, 10)
+                                UserDate = sdr["user_date"].ToString().Substring(0, 10),
+                                UserPoint = int.Parse(sdr["user_point"].ToString())
                             });
                         }
                         
@@ -60,6 +61,8 @@ namespace CommonProject
                         MemberGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         MemberGridView.Columns[3].HeaderText = "생년월일";
                         MemberGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        MemberGridView.Columns[4].HeaderText = "포인트";
+                        MemberGridView.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                 }
             }
