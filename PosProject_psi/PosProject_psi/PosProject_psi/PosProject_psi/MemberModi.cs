@@ -108,7 +108,9 @@ namespace PosProject_psi
                 MessageBox.Show("전화번호가 입력 되지 않았습니다.");
                 return false;
             }
-            else if (this.txtBirth.Text == "")
+            else if (this.txtBirth.Text == ""
+                
+                )
             {
                 MessageBox.Show("생일이 입력 되지 않았습니다.");
                 return false;
