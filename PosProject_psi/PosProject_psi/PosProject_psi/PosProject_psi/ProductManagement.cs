@@ -85,9 +85,9 @@ namespace PosProject_psi
 
                 foreach (DataRow row in dataRow)
                 {
-                    this.product_event.Items.Add(row.ItemArray[0].ToString());
+                    //this.product_event.Items.Add(row.ItemArray[0].ToString());
                 }
-                this.product_event.Items.Add("없음");
+                //this.product_event.Items.Add("없음");
 
                 //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)  // 쌤쌤
                 //{
@@ -151,14 +151,14 @@ namespace PosProject_psi
                     //    MessageBox.Show((int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
 
                     //   (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString();
-                    if (product_event.Text == "없음")
-                    {
-                        cmd.Parameters.AddWithValue("@uevent", "");
-                    }
-                    else
-                    {
-                        cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
-                    }
+                    //if (product_event.Text == "없음")
+                    //{
+                    //    cmd.Parameters.AddWithValue("@uevent", "");
+                    //}
+                    //else
+                    //{
+                    //    cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+                    //}
                     
 
                     cmd.Parameters.AddWithValue("@uimage", bImg);
@@ -194,9 +194,9 @@ namespace PosProject_psi
 
         private void ComponentInit()
         {
-            product_barcode.Text = product_name.Text = product_select.Text = product__unit_price.Text = product_cust_price.Text =
-               product_event.Text = product_count.Text = "";
-            product__image = null;
+            //product_barcode.Text = product_name.Text = product_select.Text = product__unit_price.Text = product_cust_price.Text =
+               //product_event.Text = product_count.Text = "";
+            //product__image = null;
         }
 
  // 그리드 뷰 클릭하면 정보 출력
@@ -263,7 +263,7 @@ namespace PosProject_psi
                             break;
                     }
                     //  cmd.Parameters.AddWithValue("@uselects", uselect);
-                    cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
+                    //cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
                     cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                     cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                     cmd.Parameters.AddWithValue("@uimage", bImg);
@@ -350,7 +350,7 @@ namespace PosProject_psi
 
             product__unit_price.Text = product_grid.CurrentRow.Cells[3].Value.ToString();
             product_cust_price.Text = product_grid.CurrentRow.Cells[4].Value.ToString();
-            product_event.Text = product_grid.CurrentRow.Cells[6].Value.ToString();
+            //product_event.Text = product_grid.CurrentRow.Cells[6].Value.ToString();
             
             product_count.Text = product_grid.CurrentRow.Cells[7].Value.ToString();
 
