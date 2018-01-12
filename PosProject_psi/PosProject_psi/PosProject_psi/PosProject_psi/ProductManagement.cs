@@ -41,61 +41,65 @@ namespace PosProject_psi
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
-                string query = "select * from Product";
-                con.Open();
+                using (var cmd = new SqlCommand("ConvenienceLoad", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = new SqlCommand(query, con);
-                con.Close();
+                    //  string query = "select * from Product";
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = cmd;
+                    con.Close();
 
-                ds = new DataSet();
-                adapter.Fill(ds);
-                this.product_grid.DataSource = ds.Tables[0];
+                    ds = new DataSet();
+                    adapter.Fill(ds);
+                    this.product_grid.DataSource = ds.Tables[0];
 
-                product_grid.Columns[0].HeaderText = "바코드";
-                product_grid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[1].HeaderText = "제품";
-                product_grid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[2].HeaderText = "종류";
-                product_grid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[3].HeaderText = "원가";
-                product_grid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[4].HeaderText = "가격";
-                product_grid.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                //   product_grid.Columns[5].HeaderText = "이미지";
-                // product_grid.Columns[5].Visible = false;
-                product_grid.Columns[5].HeaderText = "이미지";
-                product_grid.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[6].HeaderText = "이벤트";
-                product_grid.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                product_grid.Columns[7].HeaderText = "수량";
-                product_grid.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[0].HeaderText = "바코드";
+                    product_grid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[1].HeaderText = "제품";
+                    product_grid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[2].HeaderText = "종류";
+                    product_grid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[3].HeaderText = "원가";
+                    product_grid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[4].HeaderText = "가격";
+                    product_grid.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    //   product_grid.Columns[5].HeaderText = "이미지";
+                    // product_grid.Columns[5].Visible = false;
+                    product_grid.Columns[5].HeaderText = "이미지";
+                    product_grid.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[6].HeaderText = "이벤트";
+                    product_grid.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    product_grid.Columns[7].HeaderText = "수량";
+                    product_grid.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
             }
             //// 그리드 뷰에 출력
             string uevent = this.product_count.Text.Trim();
             /// 콤보박스에 이벤트 종류 출력
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
-                
                 using (var cmd = new SqlCommand("ConvenienceEvent", con))
                 {
-
                     con.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@uevent", uevent);
 
-                    
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     adapter.SelectCommand = cmd;
                     ds = new DataSet();
                     adapter.Fill(ds);
-
+                    product_event.Items.Clear();
                     DataRowCollection dataRow = ds.Tables[0].Rows;
                     foreach (DataRow row in dataRow)
                     {
+                        
                         this.product_event.Items.Add(row.ItemArray[0].ToString());
                     }
                     this.product_event.Items.Add("없음");
+                    dataRow.Clear();
+                    
                     con.Close();
                 }
              //   string query = "select event_name from Event";
@@ -129,6 +133,7 @@ namespace PosProject_psi
             string ucust_price = this.product_cust_price.Text.Trim();
             string ucount = this.product_count.Text.Trim();
             string uevent = this.product_count.Text.Trim();
+
 
             if (product_event.Text == "없음")
             {
@@ -171,9 +176,9 @@ namespace PosProject_psi
                         //}
 
 
-                        if (bImg != null)
+                        if (bImg == null)
                         {
-                            cmd.Parameters.AddWithValue("@uimage", bImg); 
+                            cmd.Parameters.AddWithValue("@uimage", bImg);
                         }
                         else
                         {
@@ -209,7 +214,10 @@ namespace PosProject_psi
 
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
+                    //    if ()// 중복때 예외안나게 고쳐야함
+                        {
+                            cmd.Parameters.AddWithValue("@ubarcode", ubarcode); 
+                        }
                         cmd.Parameters.AddWithValue("@uname", uname);
                         ImageConverter converter = new ImageConverter();
                         byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
@@ -240,7 +248,7 @@ namespace PosProject_psi
                         }
 
 
-                        if (bImg != null)
+                        if (bImg == null)
                         {
                             cmd.Parameters.AddWithValue("@uimage", bImg);
                         }
@@ -266,6 +274,7 @@ namespace PosProject_psi
                     }
                 }
             }
+            
         }
 
         private void btn_image_Click(object sender, EventArgs e)
