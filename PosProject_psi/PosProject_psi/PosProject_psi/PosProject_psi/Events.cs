@@ -14,7 +14,7 @@ namespace PosProject_psi
 {
     public partial class Events : Form
     {
-        //List<EventsList> list = new List<EventsList>();
+        List<EventsList> list = new List<EventsList>();
         DataSet ds;
 
         public Events()

@@ -48,13 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoClosingMessageBox.cs" />
-    <Compile Include="CardPay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CardPay.Designer.cs">
-      <DependentUpon>CardPay.cs</DependentUpon>
-    </Compile>
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -81,13 +74,7 @@
     <Compile Include="EmployeeModi.Designer.cs">
       <DependentUpon>EmployeeModi.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventsModi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventsModi.Designer.cs">
-      <DependentUpon>EventsModi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Event.cs" />
+    <Compile Include="EventsList.cs" />
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,12 +129,6 @@
     <Compile Include="OrderInventoryForm.Designer.cs">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PointManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PointManagement.Designer.cs">
-      <DependentUpon>PointManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="productAdd.cs" />
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
@@ -193,9 +174,6 @@
     <Compile Include="YChart.Designer.cs">
       <DependentUpon>YChart.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CardPay.resx">
-      <DependentUpon>CardPay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DChart.resx">
       <DependentUpon>DChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventsAdd.resx">
       <DependentUpon>EventsAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EventsModi.resx">
-      <DependentUpon>EventsModi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -237,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderInventoryForm.resx">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PointManagement.resx">
-      <DependentUpon>PointManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManagement.resx">
       <DependentUpon>ProductManagement.cs</DependentUpon>
@@ -293,12 +265,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_icons_settings_15645291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_maestro_card_payment_358103.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_maestro_card_payment_358103 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
