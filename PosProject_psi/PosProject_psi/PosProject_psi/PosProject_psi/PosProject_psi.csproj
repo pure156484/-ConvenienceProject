@@ -49,12 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoClosingMessageBox.cs" />
-    <Compile Include="CardPay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CardPay.Designer.cs">
-      <DependentUpon>CardPay.cs</DependentUpon>
-    </Compile>
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -106,11 +100,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Garbage.cs" />
     <Compile Include="GarbageProd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GarbageProd.Designer.cs">
       <DependentUpon>GarbageProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailSend.Designer.cs">
+      <DependentUpon>MailSend.cs</DependentUpon>
     </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
@@ -187,9 +188,6 @@
     <Compile Include="YChart.Designer.cs">
       <DependentUpon>YChart.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CardPay.resx">
-      <DependentUpon>CardPay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DChart.resx">
       <DependentUpon>DChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailSend.resx">
+      <DependentUpon>MailSend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>
@@ -284,12 +285,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_icons_settings_15645291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_maestro_card_payment_358103.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_maestro_card_payment_358103 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,7 +15,6 @@ namespace PosProject_psi
 {
     public partial class MainForm : Form
     {
-        
         SqlDataAdapter adapter;
         DataSet ds;
         SqlDataAdapter picAdapter;
@@ -158,6 +157,7 @@ namespace PosProject_psi
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@eventNum", eventNum);
             con.Open();
+
             adapter = DbMan.DbAdap(adapter);
             adapter.SelectCommand = cmd;
             ds = DbMan.DbDs(ds);
@@ -210,8 +210,6 @@ namespace PosProject_psi
             {
                 if (int.Parse(txtReturnMoney.Text) >= 0)
                 {
-                    SellProdInsert();
-                    ProdMinus();
                     AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
                     itemGrid.Rows.Clear();
                     txtBacode.Clear();
@@ -291,7 +289,7 @@ namespace PosProject_psi
                     txtProdInfo.Text += er[6] + "\r\n\r\n";
                     eventNum = int.Parse(er[9].ToString());
                 }
-
+               
             }
             string barcodeNum = txtBacode.Text;
             ProdImage(barcodeNum);
@@ -301,12 +299,10 @@ namespace PosProject_psi
             {
                 if(itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
                 {
-                   
                     itemGrid.Rows[i].Cells[4].Value = int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()) + 1;
                     itemGrid.Rows[i].Cells[3].Value = (price * int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString())).ToString(); //qq
                     itemGrid.Rows.Remove(itemGrid.Rows[itemGrid.Rows.Count - 1]);
                     noCount--;
-
                 }
             }
             //try
@@ -332,7 +328,7 @@ namespace PosProject_psi
             }
             prodCount = "";
             rows.Clear();
-            //BonusEvent();
+            BonusEvent();
         }
 
         //private void DiscountEvent()
@@ -506,8 +502,6 @@ namespace PosProject_psi
             {
                 if (int.Parse(txtReturnMoney.Text) >= 0)
                 {
-                    ProdMinus();
-                    SellProdInsert();
                     AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
                     itemGrid.Rows.Clear();
                     txtBacode.Clear();
@@ -516,6 +510,8 @@ namespace PosProject_psi
                     txtProdInfo.Clear();
                     txtReturnMoney.Clear();
                     pictureBox1.Image = null;
+                    ProdMinus();
+                    SellProdInsert();
                 }
                 else
                 {
@@ -526,106 +522,30 @@ namespace PosProject_psi
 
         private void SellProdInsert()
         {
-            
-            for (int i = 0; i < itemGrid.Rows.Count; i++)
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("SellProduct", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
             {
-                var con = DbMan.Dbcon(sqlcon);
-                var cmd = new SqlCommand("SellLMoneyInsert", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                con.Open();
-                cmd.Parameters.AddWithValue("@selldate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
-                cmd.Parameters.AddWithValue("@count", itemGrid.Rows[i].Cells[4].Value.ToString());
                 cmd.ExecuteNonQuery();
-                con.Close();
             }
         }
 
         private void ProdMinus()
         {
-            
-            for (int i = 0; i < itemGrid.Rows.Count; i++)
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("SellProduct", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
             {
-                var con = DbMan.Dbcon(sqlcon);
-                var cmd = new SqlCommand("SellProduct", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                con.Open();
                 cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
                 cmd.ExecuteNonQuery();
             }     
-        }
-
-        private void btnCard_Click(object sender, EventArgs e)
-        {
-            CardPay cp = new CardPay();
-            if (txtPrice.Text != "0")
-            {  
-                cp.Show();
-                this.Hide();
-                cp.txtMoney.Text = this.txtPrice.Text;
-                cp.btnOK.Click += BtnOK_Click;
-                cp.btnCancel.Click += BtnCancel_Click;
-            }
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            CardPay cp = new CardPay();
-            cp.Close();
-            this.Show();
-        }
-
-        private void BtnOK_Click(object sender, EventArgs e)
-        {
-            CardPay cp = new CardPay();
-            if (cp.txtCardNum.Text =="" || cp.txtYear.Text == "" || cp.txtMonth.Text == "")
-            {
-                MessageBox.Show("카드 정보를 모두 입력해주세요");
-                return;
-            }
-            else if(cp.txtCardCom.Text =="")
-            {
-                MessageBox.Show("카드 정보를 조회해 주세요.");
-            }
-            else
-            {
-                CardPayDB();
-                ProdMinus();
-                itemGrid.Rows.Clear();
-                txtBacode.Clear();
-                txtMoney.Clear();
-                txtPrice.Clear();
-                txtProdInfo.Clear();
-                txtReturnMoney.Clear();
-                pictureBox1.Image = null;
-                cp.Close();
-                this.Show();
-            }           
-        }
-
-        private void CardPayDB()
-        {
-            CardPay cp = new CardPay();
-            int j = 0;
-            for (int i = 0; i < itemGrid.Rows.Count; i++)
-            {
-                MessageBox.Show(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01");
-                var con = DbMan.Dbcon(sqlcon);
-                var cmd = new SqlCommand("SellCardInsert", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                con.Open();
-                cmd.Parameters.AddWithValue("@selldate", DateTime.Now);
-                cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
-                cmd.Parameters.AddWithValue("@count", itemGrid.Rows[i].Cells[4].Value.ToString());
-                cmd.Parameters.AddWithValue("@cardCom", cp.txtCardCom.Text);
-                cmd.Parameters.AddWithValue("@cardDate", DateTime.Parse(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01"));
-                //DateTime.Parse(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01")
-                cmd.Parameters.AddWithValue("@cardNum", cp.txtCardNum.Text);
-                j = cmd.ExecuteNonQuery();
-            }
-                AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
-            
         }
     }
 }
