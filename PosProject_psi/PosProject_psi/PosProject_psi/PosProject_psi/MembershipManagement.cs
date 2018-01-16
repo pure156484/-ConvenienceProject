@@ -51,21 +51,19 @@ namespace CommonProject
 
             myView = new DataGridView();
 
-            MemberGridView.ColumnCount = 7;
+            MemberGridView.ColumnCount = 6;
             MemberGridView.Columns[0].HeaderText = "NO";
             MemberGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             MemberGridView.Columns[1].HeaderText = "회원명";
             MemberGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[2].HeaderText = "전화번호";
+            MemberGridView.Columns[2].HeaderText = "연령대";
             MemberGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[3].HeaderText = "연령대";
+            MemberGridView.Columns[3].HeaderText = "생년월일";
             MemberGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[4].HeaderText = "생년월일";
+            MemberGridView.Columns[4].HeaderText = "성별";
             MemberGridView.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[5].HeaderText = "성별";
+            MemberGridView.Columns[5].HeaderText = "포인트";
             MemberGridView.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MemberGridView.Columns[6].HeaderText = "포인트";
-            MemberGridView.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             memberTable = ds.Tables[0];
             DataRowCollection rows = memberTable.Rows;
@@ -73,7 +71,7 @@ namespace CommonProject
             {
                 string[] row =
                 {
-                    dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString().Substring(0,10), dr[5].ToString(), dr[6].ToString()
+                    dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString().Substring(0,10), dr[4].ToString(), dr[5].ToString()
                 };
                 MemberGridView.Rows.Add(row);
             }
