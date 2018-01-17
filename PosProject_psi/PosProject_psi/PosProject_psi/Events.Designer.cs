@@ -32,7 +32,7 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Del = new System.Windows.Forms.Button();
             this.btn_Modi = new System.Windows.Forms.Button();
-            this.txtEvents = new System.Windows.Forms.TextBox();
+            this.EventsInfo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Confirm = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -53,6 +53,7 @@
             this.EventsGridView.RowTemplate.Height = 23;
             this.EventsGridView.Size = new System.Drawing.Size(477, 352);
             this.EventsGridView.TabIndex = 0;
+            this.EventsGridView.Click += new System.EventHandler(this.EventsGridView_Click);
             // 
             // btn_Add
             // 
@@ -66,7 +67,7 @@
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(121, 53);
             this.btn_Add.TabIndex = 30;
-            this.btn_Add.Text = "등 록";
+            this.btn_Add.Text = "행사 등록";
             this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -82,8 +83,9 @@
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(121, 53);
             this.btn_Del.TabIndex = 32;
-            this.btn_Del.Text = "삭 제";
+            this.btn_Del.Text = "행사 삭제";
             this.btn_Del.UseVisualStyleBackColor = false;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Modi
             // 
@@ -97,16 +99,17 @@
             this.btn_Modi.Name = "btn_Modi";
             this.btn_Modi.Size = new System.Drawing.Size(121, 53);
             this.btn_Modi.TabIndex = 31;
-            this.btn_Modi.Text = "수 정";
+            this.btn_Modi.Text = "행사 수정";
             this.btn_Modi.UseVisualStyleBackColor = false;
+            this.btn_Modi.Click += new System.EventHandler(this.btn_Modi_Click);
             // 
-            // txtEvents
+            // EventsInfo
             // 
-            this.txtEvents.Location = new System.Drawing.Point(495, 47);
-            this.txtEvents.Multiline = true;
-            this.txtEvents.Name = "txtEvents";
-            this.txtEvents.Size = new System.Drawing.Size(273, 317);
-            this.txtEvents.TabIndex = 50;
+            this.EventsInfo.Location = new System.Drawing.Point(495, 47);
+            this.EventsInfo.Multiline = true;
+            this.EventsInfo.Name = "EventsInfo";
+            this.EventsInfo.Size = new System.Drawing.Size(273, 317);
+            this.EventsInfo.TabIndex = 50;
             // 
             // groupBox1
             // 
@@ -119,7 +122,7 @@
             this.groupBox1.Size = new System.Drawing.Size(189, 65);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "상품명으로 검색";
+            this.groupBox1.Text = "행사명으로 검색";
             // 
             // btn_Confirm
             // 
@@ -134,6 +137,7 @@
             this.btn_Confirm.TabIndex = 1;
             this.btn_Confirm.Text = "확인";
             this.btn_Confirm.UseVisualStyleBackColor = false;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // txtSearch
             // 
@@ -165,7 +169,7 @@
             this.Controls.Add(this.btn_Del);
             this.Controls.Add(this.btn_Modi);
             this.Controls.Add(this.EventsGridView);
-            this.Controls.Add(this.txtEvents);
+            this.Controls.Add(this.EventsInfo);
             this.Name = "Events";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "행사 상품";
@@ -184,7 +188,7 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.Button btn_Modi;
-        private System.Windows.Forms.TextBox txtEvents;
+        private System.Windows.Forms.TextBox EventsInfo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.TextBox txtSearch;
