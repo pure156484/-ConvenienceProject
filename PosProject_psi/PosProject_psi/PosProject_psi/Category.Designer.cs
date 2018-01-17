@@ -89,6 +89,7 @@
             this.btn_delete.TabIndex = 39;
             this.btn_delete.Text = "삭 제";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_add
             // 
@@ -104,6 +105,7 @@
             this.btn_add.TabIndex = 40;
             this.btn_add.Text = "등 록";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // category_grid
             // 

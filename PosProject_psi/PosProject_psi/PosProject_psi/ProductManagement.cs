@@ -46,7 +46,6 @@ namespace PosProject_psi
                     con.Open();
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    //  string query = "select * from Product";
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     adapter.SelectCommand = cmd;
                     con.Close();
@@ -104,13 +103,6 @@ namespace PosProject_psi
                     
                     con.Close();
                 }
-             //   string query = "select event_name from Event";
-                
-
-                //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)  // 쌤쌤
-                //{
-                //    this.product_event.Items.Add(ds.Tables[0].Rows[i].ItemArray[0].ToString());
-                //}
             }
         }
 
@@ -119,13 +111,41 @@ namespace PosProject_psi
         {
             product__image.Image = Properties.Resources.no_image;
             Rests();
+            SeclctProd();
+
+        }
+
+        private void SeclctProd()
+        {
+            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
+            {
+                using (var cmd = new SqlCommand("CategoryCombo", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = cmd;
+                    con.Close();
+
+                    ds = new DataSet();
+                    adapter.Fill(ds);
+                    DataRowCollection dataRow = ds.Tables[0].Rows;
+                    foreach (DataRow row in dataRow)
+                    {
+                        this.product_select.Items.Add(row[0].ToString());
+                    }
+
+
+                }
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
 
+           
+        }
  // 저장
         private void btn_enroll_Click(object sender, EventArgs e)
         {
@@ -158,18 +178,19 @@ namespace PosProject_psi
                             ImageConverter converter = new ImageConverter();
                             byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
 
-                            switch (uselect)
-                            {
-                                case "제과":
-                                    cmd.Parameters.AddWithValue("@uselects", 1);
-                                    break;
-                                case "라면":
-                                    cmd.Parameters.AddWithValue("@uselects", 2);
-                                    break;
-                                case "음료":
-                                    cmd.Parameters.AddWithValue("@uselects", 3);
-                                    break;
-                            }
+                            //switch (uselect)
+                            //{
+                            //    case "제과":
+                            //        cmd.Parameters.AddWithValue("@uselects", 1);
+                            //        break;
+                            //    case "라면":
+                            //        cmd.Parameters.AddWithValue("@uselects", 2);
+                            //        break;
+                            //    case "음료":
+                            //        cmd.Parameters.AddWithValue("@uselects", 3);
+                            //        break;
+                            //}
+                            cmd.Parameters.AddWithValue("@uselects", uselect);
                             cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                             cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                             cmd.Parameters.AddWithValue("@ucounts", ucount);
@@ -236,18 +257,19 @@ namespace PosProject_psi
                             ImageConverter converter = new ImageConverter();
                             byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
 
-                            switch (uselect)
-                            {
-                                case "제과":
-                                    cmd.Parameters.AddWithValue("@uselects", 1);
-                                    break;
-                                case "라면":
-                                    cmd.Parameters.AddWithValue("@uselects", 2);
-                                    break;
-                                case "음료":
-                                    cmd.Parameters.AddWithValue("@uselects", 3);
-                                    break;
-                            }
+                            //switch (uselect)
+                            //{
+                            //    case "제과":
+                            //        cmd.Parameters.AddWithValue("@uselects", 1);
+                            //        break;
+                            //    case "라면":
+                            //        cmd.Parameters.AddWithValue("@uselects", 2);
+                            //        break;
+                            //    case "음료":
+                            //        cmd.Parameters.AddWithValue("@uselects", 3);
+                            //        break;
+                            //}
+                            cmd.Parameters.AddWithValue("@uselects", uselect);
                             if (uunit_price != null)
                             {
                                 cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
@@ -345,30 +367,7 @@ namespace PosProject_psi
  // 그리드 뷰 클릭하면 정보 출력
         private void product_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //product_barcode.Text = product_grid.CurrentRow.Cells[0].Value.ToString();
-            //product_name.Text = product_grid.CurrentRow.Cells[1].Value.ToString();
-            ////switch (int.Parse(product_select.Text))
-            ////{
-            ////    case 1:
-            ////        product_select.Text = "제과";
-            ////        product_select.Text = product_grid.CurrentRow.Cells[2].Value.ToString();
-            ////        break;
-            ////    case 2:
-            ////        product_select.Text = "라면";
-            ////        product_select.Text = product_grid.CurrentRow.Cells[2].Value.ToString();
-            ////        break;
-            ////    case 3:
-            ////        product_select.Text = "음료";
-            ////        product_select.Text = product_grid.CurrentRow.Cells[2].Value.ToString();
-            ////        break;
-            ////}
-            //product_select.Text = product_grid.CurrentRow.Cells[2].Value.ToString();
 
-            //product__unit_price.Text = product_grid.CurrentRow.Cells[3].Value.ToString();
-            //product_cust_price.Text = product_grid.CurrentRow.Cells[4].Value.ToString();
-            //product__image.Image = new Bitmap(new MemoryStream((byte[])product_grid.CurrentRow.Cells[5].Value));
-            //product_count.Text = product_grid.CurrentRow.Cells[6].Value.ToString();
-            
         }
 
  // 수정
@@ -395,19 +394,19 @@ namespace PosProject_psi
 
                         cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
                         cmd.Parameters.AddWithValue("@uname", uname);
-                        switch (uselect)
-                        {
-                            case "제과":
-                                cmd.Parameters.AddWithValue("@uselects", 1);
-                                break;
-                            case "라면":
-                                cmd.Parameters.AddWithValue("@uselects", 2);
-                                break;
-                            case "음료":
-                                cmd.Parameters.AddWithValue("@uselects", 3);
-                                break;
-                        }
-                        //  cmd.Parameters.AddWithValue("@uselects", uselect);
+                        //switch (uselect)
+                        //{
+                        //    case "제과":
+                        //        cmd.Parameters.AddWithValue("@uselects", 1);
+                        //        break;
+                        //    case "라면":
+                        //        cmd.Parameters.AddWithValue("@uselects", 2);
+                        //        break;
+                        //    case "음료":
+                        //        cmd.Parameters.AddWithValue("@uselects", 3);
+                        //        break;
+                        //}
+                          cmd.Parameters.AddWithValue("@uselects", uselect);
                      //   cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
                         cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                         cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
@@ -463,19 +462,19 @@ namespace PosProject_psi
 
                         cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
                         cmd.Parameters.AddWithValue("@uname", uname);
-                        switch (uselect)
-                        {
-                            case "제과":
-                                cmd.Parameters.AddWithValue("@uselects", 1);
-                                break;
-                            case "라면":
-                                cmd.Parameters.AddWithValue("@uselects", 2);
-                                break;
-                            case "음료":
-                                cmd.Parameters.AddWithValue("@uselects", 3);
-                                break;
-                        }
-                        //  cmd.Parameters.AddWithValue("@uselects", uselect);
+                        //switch (uselect)
+                        //{
+                        //    case "제과":
+                        //        cmd.Parameters.AddWithValue("@uselects", 1);
+                        //        break;
+                        //    case "라면":
+                        //        cmd.Parameters.AddWithValue("@uselects", 2);
+                        //        break;
+                        //    case "음료":
+                        //        cmd.Parameters.AddWithValue("@uselects", 3);
+                        //        break;
+                        //}
+                          cmd.Parameters.AddWithValue("@uselects", uselect);
                         cmd.Parameters.AddWithValue("@uevent", (int.Parse(product_event.SelectedIndex.ToString()) + 1).ToString());
                         cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                         cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
@@ -535,20 +534,16 @@ namespace PosProject_psi
                     ImageConverter converter = new ImageConverter();
                     byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
 
                     adapter.DeleteCommand = cmd;
 
-                   // adapter.SelectCommand(ds);
                     int i = cmd.ExecuteNonQuery();
                     if (i == 1)
                     {
                         MessageBox.Show("삭제 되었습니다.");
                         Rests();
                         ComponentInit();
-                     //   Reset();
                         return;
                     }
                     else
@@ -568,19 +563,19 @@ namespace PosProject_psi
             
             product_barcode.Text = product_grid.CurrentRow.Cells[0].Value.ToString();
             product_name.Text = product_grid.CurrentRow.Cells[1].Value.ToString();
-            switch (product_grid.CurrentRow.Cells[2].Value.ToString())
-            {
-                case "1":
-                    product_select.Text = "제과";
-                    break;
-                case "2":
-                    product_select.Text = "라면";
-                    break;
-                case "3":
-                    product_select.Text = "음료";
-                    break;
-            }
-
+            //switch (product_grid.CurrentRow.Cells[2].Value.ToString())
+            //{
+            //    case "1":
+            //        product_select.Text = "제과";
+            //        break;
+            //    case "2":
+            //        product_select.Text = "라면";
+            //        break;
+            //    case "3":
+            //        product_select.Text = "음료";
+            //        break;
+            //}
+            product_select.Text = product_grid.CurrentRow.Cells[2].Value.ToString();
             product__unit_price.Text = product_grid.CurrentRow.Cells[3].Value.ToString();
             product_cust_price.Text = product_grid.CurrentRow.Cells[4].Value.ToString();
             product_event.Text = product_grid.CurrentRow.Cells[6].Value.ToString();

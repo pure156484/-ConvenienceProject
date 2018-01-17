@@ -35,6 +35,7 @@
             this.btn_modified = new System.Windows.Forms.Button();
             this.btn_enroll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.product_event = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -164,6 +164,17 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.Location = new System.Drawing.Point(49, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(19, 23);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // product_event
             // 
             this.product_event.FormattingEnabled = true;
@@ -206,10 +217,6 @@
             // product_select
             // 
             this.product_select.FormattingEnabled = true;
-            this.product_select.Items.AddRange(new object[] {
-            "제과",
-            "라면",
-            "음료"});
             this.product_select.Location = new System.Drawing.Point(105, 79);
             this.product_select.Name = "product_select";
             this.product_select.Size = new System.Drawing.Size(192, 20);
@@ -347,17 +354,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.Location = new System.Drawing.Point(49, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 23);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProductManagement
             // 
