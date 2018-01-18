@@ -51,7 +51,6 @@ namespace PosProject_psi
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //this.Close();
             new GarbageProd().Show();
         }
 
@@ -381,6 +380,7 @@ namespace PosProject_psi
             picAdapter = null;
             pro.Clear();
         }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             itemGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

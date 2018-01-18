@@ -156,6 +156,7 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales.cs" />
     <Compile Include="SalesStatus.cs">
       <SubType>Form</SubType>
     </Compile>
