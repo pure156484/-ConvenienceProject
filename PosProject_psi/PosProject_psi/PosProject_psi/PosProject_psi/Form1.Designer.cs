@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,14 +90,14 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.itemGrid.ColumnHeadersHeight = 40;
             this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -203,9 +203,10 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("굴림", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(168, 20);
+            this.button1.Location = new System.Drawing.Point(168, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 46);
             this.button1.TabIndex = 5;
@@ -217,9 +218,10 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnClear.Location = new System.Drawing.Point(6, 20);
+            this.btnClear.Location = new System.Drawing.Point(6, 17);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(156, 46);
             this.btnClear.TabIndex = 4;
@@ -231,9 +233,10 @@
             // 
             this.btnOK.BackColor = System.Drawing.Color.White;
             this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOK.Location = new System.Drawing.Point(168, 256);
+            this.btnOK.Location = new System.Drawing.Point(168, 253);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 46);
             this.btnOK.TabIndex = 3;
@@ -245,9 +248,10 @@
             // 
             this.btn9.BackColor = System.Drawing.Color.White;
             this.btn9.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn9.FlatAppearance.BorderSize = 0;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn9.Location = new System.Drawing.Point(168, 197);
+            this.btn9.Location = new System.Drawing.Point(168, 194);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(75, 46);
             this.btn9.TabIndex = 3;
@@ -259,9 +263,10 @@
             // 
             this.btn6.BackColor = System.Drawing.Color.White;
             this.btn6.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn6.FlatAppearance.BorderSize = 0;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6.Location = new System.Drawing.Point(168, 138);
+            this.btn6.Location = new System.Drawing.Point(168, 135);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(75, 46);
             this.btn6.TabIndex = 3;
@@ -273,9 +278,10 @@
             // 
             this.btn3.BackColor = System.Drawing.Color.White;
             this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn3.FlatAppearance.BorderSize = 0;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn3.Location = new System.Drawing.Point(168, 79);
+            this.btn3.Location = new System.Drawing.Point(168, 76);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(75, 46);
             this.btn3.TabIndex = 3;
@@ -287,9 +293,10 @@
             // 
             this.btn0.BackColor = System.Drawing.Color.White;
             this.btn0.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn0.FlatAppearance.BorderSize = 0;
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn0.Location = new System.Drawing.Point(87, 256);
+            this.btn0.Location = new System.Drawing.Point(87, 253);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(75, 46);
             this.btn0.TabIndex = 3;
@@ -301,9 +308,10 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(6, 256);
+            this.btnCancel.Location = new System.Drawing.Point(6, 253);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 46);
             this.btnCancel.TabIndex = 3;
@@ -315,9 +323,10 @@
             // 
             this.btn8.BackColor = System.Drawing.Color.White;
             this.btn8.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn8.FlatAppearance.BorderSize = 0;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn8.Location = new System.Drawing.Point(87, 197);
+            this.btn8.Location = new System.Drawing.Point(87, 194);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(75, 46);
             this.btn8.TabIndex = 3;
@@ -329,9 +338,10 @@
             // 
             this.btn7.BackColor = System.Drawing.Color.White;
             this.btn7.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn7.FlatAppearance.BorderSize = 0;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn7.Location = new System.Drawing.Point(6, 197);
+            this.btn7.Location = new System.Drawing.Point(6, 194);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(75, 46);
             this.btn7.TabIndex = 3;
@@ -343,9 +353,10 @@
             // 
             this.btn5.BackColor = System.Drawing.Color.White;
             this.btn5.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn5.FlatAppearance.BorderSize = 0;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5.Location = new System.Drawing.Point(87, 138);
+            this.btn5.Location = new System.Drawing.Point(87, 135);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(75, 46);
             this.btn5.TabIndex = 3;
@@ -357,9 +368,10 @@
             // 
             this.btn4.BackColor = System.Drawing.Color.White;
             this.btn4.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4.Location = new System.Drawing.Point(6, 138);
+            this.btn4.Location = new System.Drawing.Point(6, 135);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(75, 46);
             this.btn4.TabIndex = 3;
@@ -371,9 +383,10 @@
             // 
             this.btn2.BackColor = System.Drawing.Color.White;
             this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn2.FlatAppearance.BorderSize = 0;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn2.Location = new System.Drawing.Point(87, 79);
+            this.btn2.Location = new System.Drawing.Point(87, 76);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(75, 46);
             this.btn2.TabIndex = 3;
@@ -385,9 +398,10 @@
             // 
             this.btn1.BackColor = System.Drawing.Color.White;
             this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btn1.FlatAppearance.BorderSize = 0;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn1.Location = new System.Drawing.Point(5, 79);
+            this.btn1.Location = new System.Drawing.Point(5, 76);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(75, 46);
             this.btn1.TabIndex = 3;
@@ -399,6 +413,7 @@
             // 
             this.btnWait.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnWait.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnWait.FlatAppearance.BorderSize = 0;
             this.btnWait.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWait.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnWait.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -434,7 +449,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.Location = new System.Drawing.Point(314, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(314, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -561,7 +576,7 @@
             // 
             // txtProdInfo
             // 
-            this.txtProdInfo.Location = new System.Drawing.Point(49, 0);
+            this.txtProdInfo.Location = new System.Drawing.Point(49, -2);
             this.txtProdInfo.Multiline = true;
             this.txtProdInfo.Name = "txtProdInfo";
             this.txtProdInfo.Size = new System.Drawing.Size(266, 187);

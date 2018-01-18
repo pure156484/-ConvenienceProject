@@ -18,7 +18,6 @@ namespace PosProject_psi
         DataSet ds;
         DataGridView myView;
         DataTable EventsTable;
-
         public Events()
         {
             InitializeComponent();
@@ -31,7 +30,7 @@ namespace PosProject_psi
         }
 
         // 그리드뷰 초기화
-        private void ResetGridView()
+        public void ResetGridView()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
@@ -75,7 +74,9 @@ namespace PosProject_psi
         // 행사 등록 버튼
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            new EventsAdd().Show();
+            EventsAdd ea = new EventsAdd();
+            ea.Owner = this;
+            ea.Show();
         }
 
         // 클릭시 텍스트 박스에 띄우기
@@ -99,6 +100,10 @@ namespace PosProject_psi
                         EventsInfo.Text += sdr[2] + " ~ " + sdr[3] + "\r\n\r\n";
                         EventsInfo.Text += "<행사정보>\r\n";
                         EventsInfo.Text += sdr[4] + "\r\n\r\n";
+                        EventsInfo.Text += "<행사증정>\r\n";
+                        EventsInfo.Text += sdr[5] + "\r\n\r\n";
+                        EventsInfo.Text += "<행사할인>\r\n";
+                        EventsInfo.Text += sdr[6] + "\r\n\r\n";
                     }
                 }
             }
@@ -107,7 +112,9 @@ namespace PosProject_psi
         // 행사 수정 버튼
         private void btn_Modi_Click(object sender, EventArgs e)
         {
-            new EventsModi().Show();
+            EventsModi em = new EventsModi();
+            em.Owner = this;
+            em.Show();
         }
 
         // 행사 삭제 버튼
@@ -119,7 +126,7 @@ namespace PosProject_psi
             {
                 using (var cmd = new SqlCommand("DelEvents", con))
                 {
-                    cmd.Parameters.AddWithValue("@event_name", this.EventsGridView.CurrentRow.Cells[1].Value.ToString());
+                    cmd.Parameters.AddWithValue("@event_num", this.EventsGridView.CurrentRow.Cells[0].Value.ToString());
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     con.Open();
@@ -154,7 +161,8 @@ namespace PosProject_psi
             }
             if (!flag)
             {
-                MessageBox.Show("없는 행사입니다.");
+                this.EventsInfo.Text = null;
+                MessageBox.Show("행사가 존재하지 않습니다.");
             }
 
             EventsInfo.Text = "";
