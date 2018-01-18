@@ -461,7 +461,7 @@ namespace PosProject_psi
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
                 con.Open();
-                dateTimePicker1.Value.ToShortDateString();
+                MessageBox.Show(dateTimePicker1.Value.ToShortDateString());
 
                 var cmd = new SqlCommand("SalesTimePicker", con);
                 cmd.CommandType = CommandType.StoredProcedure;
