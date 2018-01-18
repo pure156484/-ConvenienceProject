@@ -53,12 +53,12 @@ namespace PosProject_psi
             set { count = value; }
         }
 
-        //private Bitmap img;
-        //public Bitmap Img
-        //{
-        //    get { return img; }
-        //    set { img = value; }
-        //}
+        private Bitmap img;
+        public Bitmap Img
+        {
+            get { return img; }
+            set { img = value; }
+        }
 
         private int event_num;
         public int Event_num
