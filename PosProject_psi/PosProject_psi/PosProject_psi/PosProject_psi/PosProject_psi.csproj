@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoClosingMessageBox.cs" />
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -75,13 +74,7 @@
     <Compile Include="EmployeeModi.Designer.cs">
       <DependentUpon>EmployeeModi.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventsModi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventsModi.Designer.cs">
-      <DependentUpon>EventsModi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Event.cs" />
+    <Compile Include="EventsList.cs" />
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +156,12 @@
     <Compile Include="SalesStatus.Designer.cs">
       <DependentUpon>SalesStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellAge.Designer.cs">
+      <DependentUpon>SellAge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,9 +199,6 @@
     <EmbeddedResource Include="EventsAdd.resx">
       <DependentUpon>EventsAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventsModi.resx">
-      <DependentUpon>EventsModi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesStatus.resx">
       <DependentUpon>SalesStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellAge.resx">
+      <DependentUpon>SellAge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
