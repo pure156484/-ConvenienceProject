@@ -15,6 +15,14 @@ namespace PosProject_psi
 {
     public partial class MainForm : Form
     {
+        // point 받는 객체
+        private int val;
+        public int Val
+        {
+            get { return val; }
+            set { val = value; }
+        }
+
         SellAge sa = new SellAge();
         int eventPrice;
         CardPay cp;
@@ -136,7 +144,7 @@ namespace PosProject_psi
 
         private void txtBacode_KeyDown(object sender, KeyEventArgs e)
         {
-            if( e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 InputInfo();
                 BonusEvent();
@@ -194,7 +202,7 @@ namespace PosProject_psi
             adapter.Fill(ds);
             DataTable pro = ds.Tables[0];
             DataRowCollection rows = pro.Rows;
-            
+
             foreach (DataRow er in rows)
             {
                 if (er[0].ToString() == "")
@@ -214,7 +222,7 @@ namespace PosProject_psi
                         //MessageBox.Show(EventDr.Index.ToString());
                         EventDr.Cells[3].Value = int.Parse(EventDr.Cells[3].Value.ToString()) - (price * bonus);
                     }
-                    
+
                 }
             }
         }
@@ -242,7 +250,7 @@ namespace PosProject_psi
         private void btnOK_Click(object sender, EventArgs e)
         {
             InputInfo();
-            
+
             if (cursor == txtReturnMoney)
             {
                 if (int.Parse(txtReturnMoney.Text) >= 0)
@@ -264,7 +272,7 @@ namespace PosProject_psi
         private void InputInfo()
         {
             txtProdInfo.Text = "";
-            if (cursor == txtMoney) 
+            if (cursor == txtMoney)
             {
                 txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
             }
@@ -303,7 +311,7 @@ namespace PosProject_psi
                     bacode = er[1].ToString();
                     txtProdInfo.Text += "<상품 명>\r\n";
                     txtProdInfo.Text += er[0] + "\r\n\r\n";
-                    eventPrice = price; 
+                    eventPrice = price;
                 }
             }
             else
@@ -335,11 +343,11 @@ namespace PosProject_psi
             string barcodeNum = txtBacode.Text;
             ProdImage(barcodeNum);
             //DiscountEvent();
-            for (int i = 0; i < itemGrid.Rows.Count-1; i++)
+            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
             {
-                if(itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
+                if (itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
                 {
-                   
+
                     itemGrid.Rows[i].Cells[4].Value = int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()) + 1;
                     itemGrid.Rows[i].Cells[3].Value = (price * int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString())).ToString(); //qq
                     itemGrid.Rows.Remove(itemGrid.Rows[itemGrid.Rows.Count - 1]);
@@ -352,7 +360,7 @@ namespace PosProject_psi
                     {
                         itemGrid.Rows[f].Selected = false;
                     }
-                    itemGrid.Rows[itemGrid.RowCount-1].Selected = true;
+                    itemGrid.Rows[itemGrid.RowCount - 1].Selected = true;
                 }
             }
 
@@ -425,7 +433,7 @@ namespace PosProject_psi
             foreach (DataRow er in rows)
             {
                 object pic = er[0];
-                if(pic.GetType().ToString() == "System.DBNull")
+                if (pic.GetType().ToString() == "System.DBNull")
                 {
                     return;
                 }
@@ -443,11 +451,12 @@ namespace PosProject_psi
         private void btnCancel_Click(object sender, EventArgs e)
         {
             itemGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            if(MessageBox.Show("해당 품목을 삭제 하시겠습니까?", "알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 품목을 삭제 하시겠습니까?", "알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MessageBox.Show("해당 항목이 삭제되었습니다.");
                 itemGrid.Rows.Remove(itemGrid.CurrentRow);
                 itemGrid.Refresh();
+                pictureBox1.Image = null;
                 GiveMoney();
                 noCount -= 1;
                 for (int i = 0; i < itemGrid.Rows.Count; i++)
@@ -566,7 +575,7 @@ namespace PosProject_psi
                 txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
                 txtReturnMoney.Focus();
             }
-            
+
         }
 
         private void itemGrid_SelectionChanged(object sender, EventArgs e)
@@ -610,7 +619,7 @@ namespace PosProject_psi
 
         private void SellProdInsert()
         {
-            
+
             for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
                 var con = DbMan.Dbcon(sqlcon);
@@ -630,7 +639,7 @@ namespace PosProject_psi
 
         private void ProdMinus()
         {
-            
+
             for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
                 var con = DbMan.Dbcon(sqlcon);
@@ -640,13 +649,13 @@ namespace PosProject_psi
                 cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
                 cmd.ExecuteNonQuery();
-            }     
+            }
         }
 
         private void btnCard_Click(object sender, EventArgs e)
         {
             if (txtPrice.Text != "0")
-            {  
+            {
                 cp = new CardPay();
                 cp.StartPosition = this.StartPosition;
                 cp.Show();
@@ -671,7 +680,7 @@ namespace PosProject_psi
                 MessageBox.Show("카드 정보를 모두 입력해주세요");
                 return;
             }
-            else if (cp.txtCardCom.Text =="")
+            else if (cp.txtCardCom.Text == "")
             {
                 MessageBox.Show("카드 정보를 조회해 주세요.");
             }
@@ -688,7 +697,7 @@ namespace PosProject_psi
                 pictureBox1.Image = null;
                 cp.Close();
                 this.Show();
-            }           
+            }
         }
 
         private void CardPayDB()
@@ -696,7 +705,6 @@ namespace PosProject_psi
             int j = 0;
             for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
-                MessageBox.Show(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01");
                 var con = DbMan.Dbcon(sqlcon);
                 var cmd = new SqlCommand("SellCardInsert", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -713,8 +721,18 @@ namespace PosProject_psi
                 cmd.Parameters.AddWithValue("@gender", this.lblGender.Text);
                 j = cmd.ExecuteNonQuery();
             }
-                AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
-            
+            AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PointManagement main = new PointManagement();
+            main.Val = int.Parse(this.txtPrice.Text);
+            int a;
+            a = int.Parse(this.txtPrice.Text);
+
+            main.Show();
         }
     }
 }

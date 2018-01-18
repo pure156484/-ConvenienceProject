@@ -105,6 +105,7 @@
             // 
             // EventsInfo
             // 
+            this.EventsInfo.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.EventsInfo.Location = new System.Drawing.Point(495, 47);
             this.EventsInfo.Multiline = true;
             this.EventsInfo.Name = "EventsInfo";
