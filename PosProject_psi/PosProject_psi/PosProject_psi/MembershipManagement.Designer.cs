@@ -68,6 +68,7 @@
             this.btn_Confirm.TabIndex = 1;
             this.btn_Confirm.Text = "확인";
             this.btn_Confirm.UseVisualStyleBackColor = false;
+            //this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // txtSearch
             // 
@@ -90,6 +91,7 @@
             this.btn_Del.TabIndex = 29;
             this.btn_Del.Text = "회원 삭제";
             this.btn_Del.UseVisualStyleBackColor = false;
+            //this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Modi
             // 
@@ -132,6 +134,7 @@
             this.MemberGridView.RowTemplate.Height = 23;
             this.MemberGridView.Size = new System.Drawing.Size(756, 352);
             this.MemberGridView.TabIndex = 25;
+            //this.MemberGridView.Click += new System.EventHandler(this.MemberGridView_Click);
             // 
             // MembershipManagement
             // 

@@ -83,6 +83,36 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap if_maestro_card_payment_358103 {
+            get {
+                object obj = ResourceManager.GetObject("if_maestro_card_payment_358103", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_maestro_card_payment_358103__1_ {
+            get {
+                object obj = ResourceManager.GetObject("if_maestro_card_payment_358103 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_search_298865 {
+            get {
+                object obj = ResourceManager.GetObject("if_search_298865", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap if_setting_46837 {
             get {
                 object obj = ResourceManager.GetObject("if_setting_46837", resourceCulture);

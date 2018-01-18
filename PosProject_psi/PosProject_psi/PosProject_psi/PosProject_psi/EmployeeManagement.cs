@@ -15,10 +15,11 @@ namespace CommonProject
 {
     public partial class EmployeeManagement : Form
     {
+        List<Employee> list = new List<Employee>();
         DataSet ds;
         DataGridView myView;
         DataTable employeeTable;
-        
+
         public EmployeeManagement()
         {
             InitializeComponent();
@@ -26,12 +27,25 @@ namespace CommonProject
 
         // 직원 정보 그리드뷰에 띄우기
         private void EmployeeManagement_Load(object sender, EventArgs e)
-        {    
+        {
             ResetGridView();
+
+            // 그리드뷰 디자인
+            for (int i = 1; i < EmployeeGridView.Rows.Count; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    EmployeeGridView.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(214, 236, 250);
+                }
+                else
+                {
+                    EmployeeGridView.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
         }
 
         // 그리드뷰 초기화
-        public void ResetGridView()
+        private void ResetGridView()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
@@ -55,18 +69,26 @@ namespace CommonProject
 
             EmployeeGridView.ColumnCount = 9;
             EmployeeGridView.Columns[0].HeaderText = "NO";
+            EmployeeGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[1].HeaderText = "직원명";
+            EmployeeGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[2].HeaderText = "전화번호";
+            EmployeeGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[3].HeaderText = "직책";
+            EmployeeGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[4].HeaderText = "주소";
+            EmployeeGridView.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[5].HeaderText = "시급";
+            EmployeeGridView.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[6].HeaderText = "노동시간";
+            EmployeeGridView.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[7].HeaderText = "월급";
+            EmployeeGridView.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EmployeeGridView.Columns[8].HeaderText = "주민번호";
+            EmployeeGridView.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             employeeTable = ds.Tables[0];
             DataRowCollection rows = employeeTable.Rows;
-
             foreach (DataRow dr in rows)
             {
                 string[] row =
@@ -76,21 +98,23 @@ namespace CommonProject
                 EmployeeGridView.Rows.Add(row);
             }
         }
-        
+
         // 직원 등록 버튼
         private void btn_Add_Click_1(object sender, EventArgs e)
         {
-            EmployeeAdd ea = new EmployeeAdd();
-            ea.Owner = this;
-            ea.Show();
+            new EmployeeAdd().Show();
+            this.Hide();
+            EmployeeManagement em = new EmployeeManagement();
+            this.Close();
         }
 
         // 직원 수정 버튼
         private void btn_Modi_Click(object sender, EventArgs e)
         {
-            EmployeeModi em = new EmployeeModi();
-            em.Owner = this;
-            em.Show();
+            new EmployeeModi().Show();
+            this.Hide();
+            EmployeeManagement em = new EmployeeManagement();
+            this.Close();
         }
 
         // 직원 삭제 버튼
@@ -137,7 +161,7 @@ namespace CommonProject
 
             if (!flag)
             {
-                MessageBox.Show("직원이 존재하지 않습니다.");
+                MessageBox.Show("없는 전화번호입니다.");
             }
         }
     }

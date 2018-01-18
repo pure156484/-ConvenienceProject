@@ -15,10 +15,11 @@ namespace CommonProject
 {
     public partial class EmployeeManagement : Form
     {
+        List<Employee> list = new List<Employee>();
         DataSet ds;
         DataGridView myView;
         DataTable employeeTable;
-        
+
         public EmployeeManagement()
         {
             InitializeComponent();
@@ -26,12 +27,12 @@ namespace CommonProject
 
         // 직원 정보 그리드뷰에 띄우기
         private void EmployeeManagement_Load(object sender, EventArgs e)
-        {    
+        {
             ResetGridView();
         }
 
         // 그리드뷰 초기화
-        public void ResetGridView()
+        private void ResetGridView()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
@@ -66,7 +67,6 @@ namespace CommonProject
 
             employeeTable = ds.Tables[0];
             DataRowCollection rows = employeeTable.Rows;
-
             foreach (DataRow dr in rows)
             {
                 string[] row =
@@ -76,21 +76,17 @@ namespace CommonProject
                 EmployeeGridView.Rows.Add(row);
             }
         }
-        
+
         // 직원 등록 버튼
         private void btn_Add_Click_1(object sender, EventArgs e)
         {
-            EmployeeAdd ea = new EmployeeAdd();
-            ea.Owner = this;
-            ea.Show();
+            new EmployeeAdd().Show();
         }
 
         // 직원 수정 버튼
         private void btn_Modi_Click(object sender, EventArgs e)
         {
-            EmployeeModi em = new EmployeeModi();
-            em.Owner = this;
-            em.Show();
+            new EmployeeModi().Show();
         }
 
         // 직원 삭제 버튼
@@ -137,7 +133,7 @@ namespace CommonProject
 
             if (!flag)
             {
-                MessageBox.Show("직원이 존재하지 않습니다.");
+                MessageBox.Show("없는 전화번호입니다.");
             }
         }
     }

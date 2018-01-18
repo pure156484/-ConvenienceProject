@@ -20,7 +20,6 @@ namespace PosProject_psi
             }
             else
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString);
                 return con;
             }
         }
@@ -34,7 +33,6 @@ namespace PosProject_psi
             }
             else
             {
-                con = new DataSet();
                 return con;
             }
         }
@@ -48,7 +46,6 @@ namespace PosProject_psi
             }
             else
             {
-                con = new SqlDataAdapter();
                 return con;
             }
         }
