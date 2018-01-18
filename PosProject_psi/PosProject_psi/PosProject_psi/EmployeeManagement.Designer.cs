@@ -153,6 +153,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.TextBox txtSearch;
-        public System.Windows.Forms.DataGridView EmployeeGridView;
+        internal System.Windows.Forms.DataGridView EmployeeGridView;
     }
 }
