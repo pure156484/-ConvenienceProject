@@ -54,10 +54,6 @@
             this.btn_image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.product__image = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-=======
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -81,80 +77,11 @@
             this.product_grid.TabIndex = 38;
             this.product_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_grid_CellClick);
             // 
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-            // btn_exit
-            // 
-            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_exit.FlatAppearance.BorderSize = 0;
-            this.btn_exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_exit.Location = new System.Drawing.Point(311, 170);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(95, 46);
-            this.btn_exit.TabIndex = 32;
-            this.btn_exit.Text = "닫 기";
-            this.btn_exit.UseVisualStyleBackColor = false;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_delete.Location = new System.Drawing.Point(311, 118);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(95, 46);
-            this.btn_delete.TabIndex = 31;
-            this.btn_delete.Text = "삭 제";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_modified
-            // 
-            this.btn_modified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_modified.FlatAppearance.BorderSize = 0;
-            this.btn_modified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_modified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modified.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_modified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_modified.Location = new System.Drawing.Point(311, 66);
-            this.btn_modified.Name = "btn_modified";
-            this.btn_modified.Size = new System.Drawing.Size(95, 46);
-            this.btn_modified.TabIndex = 30;
-            this.btn_modified.Text = "수 정";
-            this.btn_modified.UseVisualStyleBackColor = false;
-            this.btn_modified.Click += new System.EventHandler(this.btn_modified_Click);
-            // 
-            // btn_enroll
-            // 
-            this.btn_enroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_enroll.FlatAppearance.BorderSize = 0;
-            this.btn_enroll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_enroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enroll.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_enroll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_enroll.Location = new System.Drawing.Point(311, 14);
-            this.btn_enroll.Name = "btn_enroll";
-            this.btn_enroll.Size = new System.Drawing.Size(95, 46);
-            this.btn_enroll.TabIndex = 29;
-            this.btn_enroll.Text = "등 록";
-            this.btn_enroll.UseVisualStyleBackColor = false;
-            this.btn_enroll.Click += new System.EventHandler(this.btn_enroll_Click);
-            // 
-            // groupBox1
-            // 
-=======
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.product_event);
             this.groupBox1.Controls.Add(this.label8);
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.product_count);
             this.groupBox1.Controls.Add(this.product_select);
@@ -171,17 +98,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.product_name);
             this.groupBox1.Controls.Add(this.product_barcode);
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-            this.groupBox1.Location = new System.Drawing.Point(12, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(412, 229);
-            this.groupBox1.TabIndex = 28;
-=======
             this.groupBox1.Location = new System.Drawing.Point(12, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(412, 234);
             this.groupBox1.TabIndex = 37;
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
             this.groupBox1.TabStop = false;
             // 
             // button1
@@ -219,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(6, 198);
+            this.label3.Location = new System.Drawing.Point(6, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 16);
             this.label3.TabIndex = 33;
@@ -228,7 +148,7 @@
             // product_count
             // 
             this.product_count.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_count.Location = new System.Drawing.Point(105, 195);
+            this.product_count.Location = new System.Drawing.Point(105, 175);
             this.product_count.Multiline = true;
             this.product_count.Name = "product_count";
             this.product_count.Size = new System.Drawing.Size(192, 20);
@@ -237,15 +157,7 @@
             // product_select
             // 
             this.product_select.FormattingEnabled = true;
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-            this.product_select.Items.AddRange(new object[] {
-            "제과",
-            "라면",
-            "음료"});
-            this.product_select.Location = new System.Drawing.Point(105, 87);
-=======
             this.product_select.Location = new System.Drawing.Point(105, 79);
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
             this.product_select.Name = "product_select";
             this.product_select.Size = new System.Drawing.Size(192, 20);
             this.product_select.TabIndex = 18;
@@ -272,7 +184,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label6.Location = new System.Drawing.Point(6, 162);
+            this.label6.Location = new System.Drawing.Point(6, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 16;
@@ -297,7 +209,7 @@
             // product__unit_price
             // 
             this.product__unit_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product__unit_price.Location = new System.Drawing.Point(105, 159);
+            this.product__unit_price.Location = new System.Drawing.Point(105, 143);
             this.product__unit_price.Multiline = true;
             this.product__unit_price.Name = "product__unit_price";
             this.product__unit_price.Size = new System.Drawing.Size(192, 20);
@@ -324,7 +236,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(6, 126);
+            this.label5.Location = new System.Drawing.Point(6, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 14;
@@ -349,7 +261,7 @@
             // product_cust_price
             // 
             this.product_cust_price.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_cust_price.Location = new System.Drawing.Point(105, 123);
+            this.product_cust_price.Location = new System.Drawing.Point(105, 111);
             this.product_cust_price.Multiline = true;
             this.product_cust_price.Name = "product_cust_price";
             this.product_cust_price.Size = new System.Drawing.Size(192, 20);
@@ -371,7 +283,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(5, 52);
+            this.label2.Location = new System.Drawing.Point(5, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 1;
@@ -382,7 +294,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label4.Location = new System.Drawing.Point(6, 90);
+            this.label4.Location = new System.Drawing.Point(6, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 3;
@@ -400,7 +312,7 @@
             // product_barcode
             // 
             this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_barcode.Location = new System.Drawing.Point(105, 51);
+            this.product_barcode.Location = new System.Drawing.Point(105, 47);
             this.product_barcode.Multiline = true;
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 20);
@@ -443,13 +355,6 @@
             this.product__image.TabIndex = 35;
             this.product__image.TabStop = false;
             // 
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-=======
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -501,16 +406,5 @@
         private System.Windows.Forms.Button btn_image;
         private System.Windows.Forms.PictureBox product__image;
         private System.Windows.Forms.Label label7;
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox product__unit_price;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox product_cust_price;
-        private System.Windows.Forms.ComboBox product_select;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox product_count;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-=======
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/ProductManagement.Designer.cs
     }
 }

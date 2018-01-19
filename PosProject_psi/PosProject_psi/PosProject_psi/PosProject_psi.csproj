@@ -49,8 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoClosingMessageBox.cs" />
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
-=======
     <Compile Include="CardPay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,7 +61,6 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -115,18 +112,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Garbage.cs" />
     <Compile Include="GarbageProd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GarbageProd.Designer.cs">
       <DependentUpon>GarbageProd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MailSend.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MailSend.Designer.cs">
-      <DependentUpon>MailSend.cs</DependentUpon>
     </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
@@ -216,15 +206,12 @@
     <Compile Include="YChart.Designer.cs">
       <DependentUpon>YChart.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
-=======
     <EmbeddedResource Include="CardPay.resx">
       <DependentUpon>CardPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
     <EmbeddedResource Include="DChart.resx">
       <DependentUpon>DChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,9 +238,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MailSend.resx">
-      <DependentUpon>MailSend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>
@@ -329,11 +313,8 @@
   <ItemGroup>
     <None Include="Resources\if_icons_settings_15645291.png" />
   </ItemGroup>
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
-=======
   <ItemGroup>
     <None Include="Resources\no_image.png" />
   </ItemGroup>
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi.csproj
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

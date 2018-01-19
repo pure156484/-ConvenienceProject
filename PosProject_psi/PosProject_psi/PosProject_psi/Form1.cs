@@ -15,8 +15,6 @@ namespace PosProject_psi
 {
     public partial class MainForm : Form
     {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-=======
         // point 받는 객체
         private int val;
         public int Val
@@ -28,7 +26,6 @@ namespace PosProject_psi
         SellAge sa = new SellAge();
         int eventPrice;
         CardPay cp;
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
         SqlDataAdapter adapter;
         DataSet ds;
         SqlDataAdapter picAdapter;
@@ -199,7 +196,6 @@ namespace PosProject_psi
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@eventNum", eventNum);
             con.Open();
-
             adapter = DbMan.DbAdap(adapter);
             adapter.SelectCommand = cmd;
             ds = DbMan.DbDs(ds);
@@ -259,6 +255,8 @@ namespace PosProject_psi
             {
                 if (int.Parse(txtReturnMoney.Text) >= 0)
                 {
+                    SellProdInsert();
+                    ProdMinus();
                     AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
                     itemGrid.Rows.Clear();
                     txtBacode.Clear();
@@ -339,7 +337,7 @@ namespace PosProject_psi
                     eventNum = int.Parse(er[9].ToString());
                     eventPrice = price;
                 }
-               
+
             }
             EventDr = itemGrid.CurrentRow;
             string barcodeNum = txtBacode.Text;
@@ -349,16 +347,11 @@ namespace PosProject_psi
             {
                 if (itemGrid.Rows[i].Cells[2].Value.ToString() == bacode)
                 {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-=======
 
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
                     itemGrid.Rows[i].Cells[4].Value = int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()) + 1;
                     itemGrid.Rows[i].Cells[3].Value = (price * int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString())).ToString(); //qq
                     itemGrid.Rows.Remove(itemGrid.Rows[itemGrid.Rows.Count - 1]);
                     noCount--;
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-=======
                     itemGrid.Rows[i].Selected = true;
                 }
                 else
@@ -377,7 +370,6 @@ namespace PosProject_psi
                 if (itemGrid.Rows[f].Selected == true)
                 {
                     EventDr = itemGrid.Rows[f];
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
                 }
             }
             //try
@@ -403,7 +395,7 @@ namespace PosProject_psi
             }
             prodCount = "";
             rows.Clear();
-            BonusEvent();
+            //BonusEvent();
         }
 
         //private void DiscountEvent()
@@ -607,6 +599,8 @@ namespace PosProject_psi
             {
                 if (int.Parse(txtReturnMoney.Text) >= 0)
                 {
+                    ProdMinus();
+                    SellProdInsert();
                     AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
                     itemGrid.Rows.Clear();
                     txtBacode.Clear();
@@ -615,8 +609,6 @@ namespace PosProject_psi
                     txtProdInfo.Clear();
                     txtReturnMoney.Clear();
                     pictureBox1.Image = null;
-                    ProdMinus();
-                    SellProdInsert();
                 }
                 else
                 {
@@ -627,50 +619,38 @@ namespace PosProject_psi
 
         private void SellProdInsert()
         {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-            var con = DbMan.Dbcon(sqlcon);
-            var cmd = new SqlCommand("SellProduct", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            con.Open();
-            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
-=======
 
             for (int i = 0; i < itemGrid.Rows.Count; i++)
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
             {
-                cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("SellLMoneyInsert", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                cmd.Parameters.AddWithValue("@selldate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-=======
                 cmd.Parameters.AddWithValue("@count", itemGrid.Rows[i].Cells[4].Value.ToString());
                 cmd.Parameters.AddWithValue("@age", lblAge.Text);
                 cmd.Parameters.AddWithValue("@gender", lblGender.Text);
                 cmd.Parameters.AddWithValue("@empnum", 49);
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
                 cmd.ExecuteNonQuery();
+                con.Close();
             }
         }
 
         private void ProdMinus()
         {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-            var con = DbMan.Dbcon(sqlcon);
-            var cmd = new SqlCommand("SellProduct", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            con.Open();
-            for (int i = 0; i < itemGrid.Rows.Count - 1; i++)
-=======
 
             for (int i = 0; i < itemGrid.Rows.Count; i++)
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
             {
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("SellProduct", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
                 cmd.Parameters.AddWithValue("@prodcount", int.Parse(itemGrid.Rows[i].Cells[4].Value.ToString()));
                 cmd.Parameters.AddWithValue("@barcode", itemGrid.Rows[i].Cells[2].Value.ToString());
                 cmd.ExecuteNonQuery();
             }
         }
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
-=======
 
         private void btnCard_Click(object sender, EventArgs e)
         {
@@ -754,6 +734,5 @@ namespace PosProject_psi
 
             main.Show();
         }
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.cs
     }
 }

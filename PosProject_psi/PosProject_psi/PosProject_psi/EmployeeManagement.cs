@@ -80,25 +80,17 @@ namespace CommonProject
         // 직원 등록 버튼
         private void btn_Add_Click_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/EmployeeManagement.cs
-            new EmployeeAdd().Show();
-=======
             EmployeeAdd ea = new EmployeeAdd();
             ea.Owner = this;
             ea.Show();
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/EmployeeManagement.cs
         }
 
         // 직원 수정 버튼
         private void btn_Modi_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/EmployeeManagement.cs
-            new EmployeeModi().Show();
-=======
             EmployeeModi em = new EmployeeModi();
             em.Owner = this;
             em.Show();
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/EmployeeManagement.cs
         }
 
         // 직원 삭제 버튼

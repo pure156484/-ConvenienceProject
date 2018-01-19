@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
             this.itemGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAge = new System.Windows.Forms.Label();
@@ -85,11 +81,8 @@
             this.btnCustomer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnProd = new System.Windows.Forms.Button();
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-=======
             this.btnCard = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,16 +95,6 @@
             this.itemGrid.AllowUserToAddRows = false;
             this.itemGrid.AllowUserToDeleteRows = false;
             this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-=======
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -120,7 +103,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
             this.itemGrid.ColumnHeadersHeight = 40;
             this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -149,7 +131,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 52);
+            this.panel1.Size = new System.Drawing.Size(732, 52);
             this.panel1.TabIndex = 1;
             // 
             // lblAge
@@ -484,7 +466,7 @@
             this.btnWait.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWait.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnWait.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnWait.Location = new System.Drawing.Point(833, 6);
+            this.btnWait.Location = new System.Drawing.Point(750, 6);
             this.btnWait.Name = "btnWait";
             this.btnWait.Size = new System.Drawing.Size(110, 52);
             this.btnWait.TabIndex = 4;
@@ -583,10 +565,12 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPrice.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtPrice.Location = new System.Drawing.Point(635, 47);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPrice.Size = new System.Drawing.Size(164, 39);
             this.txtPrice.TabIndex = 12;
@@ -788,8 +772,6 @@
             this.btnProd.UseVisualStyleBackColor = false;
             this.btnProd.Click += new System.EventHandler(this.button10_Click);
             // 
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-=======
             // btnCard
             // 
             this.btnCard.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -822,18 +804,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-=======
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnCard);
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
             this.Controls.Add(this.btnCustomer);
             this.Controls.Add(this.btnEmploy);
             this.Controls.Add(this.btnOrder);
@@ -911,15 +889,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
-=======
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Button btnCard;
         private System.Windows.Forms.Button button2;
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/Form1.Designer.cs
     }
 }
 

@@ -83,13 +83,8 @@ namespace PosProject_psi
                         cmd.Parameters.AddWithValue("@employee_total_salary", this.txtTSalary.Text);
                         cmd.Parameters.AddWithValue("@employee_pk", this.txtBirth.Text);
 
-<<<<<<< HEAD:PosProject_psi/PosProject_psi/PosProject_psi/PosProject_psi/EmployeeModi.cs
-                    con.Open();
-                    componentInit();
-=======
                         con.Open();
                         componentInit();
->>>>>>> master:PosProject_psi/PosProject_psi/PosProject_psi/EmployeeModi.cs
 
                         int i = cmd.ExecuteNonQuery();
                         if (i == 1)
@@ -108,13 +103,6 @@ namespace PosProject_psi
                 } 
             }
         
-        // 입력후 초기화
-        private void componentInit()
-        {
-            this.txtName.Text = txtMobile.Text = txtPosition.Text = txtAddr.Text = txtSalary.Text = txtHours.Text = txtTSalary.Text = txtBirth.Text = "";
-            this.txtName.Focus();
-        }
-
         // 입력후 초기화
         private void componentInit()
         {
