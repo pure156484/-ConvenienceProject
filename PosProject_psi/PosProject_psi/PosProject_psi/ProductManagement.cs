@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -7,7 +8,9 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +23,7 @@ namespace PosProject_psi
         string imgFileName;
         byte[] bImg = null;
         byte[] img = null;
+        Bitmap DownloadImage;
         List<productAdd> list = new List<productAdd>();
         public ProductManagement()
         {
@@ -174,21 +178,28 @@ namespace PosProject_psi
                             cmd.Parameters.AddWithValue("@ubarcode", ubarcode);
                             cmd.Parameters.AddWithValue("@uname", uname);
                             ImageConverter converter = new ImageConverter();
-                            byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
+                            if (DownloadImage != null)
+                            {
+                                byte[] bImg = (byte[])converter.ConvertTo(DownloadImage, typeof(byte[]));
+                            }
+                            else
+                            {
+                                byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
+                            }
 
-                            //switch (uselect)
-                            //{
-                            //    case "제과":
-                            //        cmd.Parameters.AddWithValue("@uselects", 1);
-                            //        break;
-                            //    case "라면":
-                            //        cmd.Parameters.AddWithValue("@uselects", 2);
-                            //        break;
-                            //    case "음료":
-                            //        cmd.Parameters.AddWithValue("@uselects", 3);
-                            //        break;
-                            //}
-                            cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
+                                //switch (uselect)
+                                //{
+                                //    case "제과":
+                                //        cmd.Parameters.AddWithValue("@uselects", 1);
+                                //        break;
+                                //    case "라면":
+                                //        cmd.Parameters.AddWithValue("@uselects", 2);
+                                //        break;
+                                //    case "음료":
+                                //        cmd.Parameters.AddWithValue("@uselects", 3);
+                                //        break;
+                                //}
+                                cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
                             cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                             cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                             cmd.Parameters.AddWithValue("@ucounts", ucount);
@@ -253,21 +264,28 @@ namespace PosProject_psi
                             //}
                             cmd.Parameters.AddWithValue("@uname", uname);
                             ImageConverter converter = new ImageConverter();
-                            byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
+                            if (DownloadImage != null)
+                            {
+                                byte[] bImg = (byte[])converter.ConvertTo(DownloadImage, typeof(byte[]));
+                            }
+                            else
+                            {
+                                byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
+                            }
 
-                            //switch (uselect)
-                            //{
-                            //    case "제과":
-                            //        cmd.Parameters.AddWithValue("@uselects", 1);
-                            //        break;
-                            //    case "라면":
-                            //        cmd.Parameters.AddWithValue("@uselects", 2);
-                            //        break;
-                            //    case "음료":
-                            //        cmd.Parameters.AddWithValue("@uselects", 3);
-                            //        break;
-                            //}
-                            cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
+                                    //switch (uselect)
+                                    //{
+                                    //    case "제과":
+                                    //        cmd.Parameters.AddWithValue("@uselects", 1);
+                                    //        break;
+                                    //    case "라면":
+                                    //        cmd.Parameters.AddWithValue("@uselects", 2);
+                                    //        break;
+                                    //    case "음료":
+                                    //        cmd.Parameters.AddWithValue("@uselects", 3);
+                                    //        break;
+                                    //}
+                                    cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
                             if (uunit_price != null)
                             {
                                 cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
@@ -648,6 +666,59 @@ namespace PosProject_psi
         private void ProductManagement_ImeModeChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_image_search_Click(object sender, EventArgs e)
+        {
+            if (CheckBarcodeNull())
+            {
+                string barcode_search = null;
+                barcode_search = this.product_barcode.Text;
+                var html = @"http://www.cvslove.com/product/product_view.asp?pcode=" + barcode_search;
+
+                HtmlWeb web = new HtmlWeb();
+
+                var htmlDoc = web.Load(html);
+
+                var node = htmlDoc.DocumentNode.SelectSingleNode("//center/img");
+
+                string barcode_search_image_url = node.OuterHtml;
+                string barcode_search_image = null;
+
+                Regex rxImages = new Regex("<img.+?src=[\"'](.+?)[\"'].+?>",
+                RegexOptions.IgnoreCase & RegexOptions.IgnorePatternWhitespace);
+                MatchCollection mc = rxImages.Matches(barcode_search_image_url);
+                foreach (Match m in mc)
+                {
+                    barcode_search_image += m.Groups[1].Value;
+                }
+                try
+                {
+                    product__image.Load(barcode_search_image);
+
+                    WebClient Downloader = new WebClient();
+                    Stream ImageStream = Downloader.OpenRead(barcode_search_image);
+                    DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("등록 된 상품 이미지가 없습니다. \n이미지 업로드 버튼을 통해 등록해주세요.");
+                }
+            }
+        }
+
+        private bool CheckBarcodeNull()
+        {
+            if (this.product_barcode.Text == "")
+            {
+                product__image.Image = Properties.Resources.no_image;
+                MessageBox.Show("바코드를 입력해주세요.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
