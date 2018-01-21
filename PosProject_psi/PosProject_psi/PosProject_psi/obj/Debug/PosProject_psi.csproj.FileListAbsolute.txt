@@ -185,3 +185,6 @@ C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosP
 C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\HtmlAgilityPack.dll
 C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\HtmlAgilityPack.xml
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\Interop.SoHotLib.dll
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.ResolveComReference.cache
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\Interop.SoHotLib.dll
