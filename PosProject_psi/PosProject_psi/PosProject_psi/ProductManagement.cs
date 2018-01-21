@@ -668,42 +668,74 @@ namespace PosProject_psi
 
         }
 
-        private void btn_image_search_Click(object sender, EventArgs e)
+        private void btn_barcode_search_Click(object sender, EventArgs e)
         {
             if (CheckBarcodeNull())
             {
-                string barcode_search = null;
-                barcode_search = this.product_barcode.Text;
-                var html = @"http://www.cvslove.com/product/product_view.asp?pcode=" + barcode_search;
+                barcode_image();
+                barcode_info();
+            }
+        }
 
-                HtmlWeb web = new HtmlWeb();
+        private void barcode_info()
+        {
+            var html = @"http://www.cvslove.com/product/product_view.asp?pcode=" + this.product_barcode.Text;
 
-                var htmlDoc = web.Load(html);
+            HtmlWeb web = new HtmlWeb();
 
-                var node = htmlDoc.DocumentNode.SelectSingleNode("//center/img");
+            web.OverrideEncoding = Encoding.Default;
 
-                string barcode_search_image_url = node.OuterHtml;
-                string barcode_search_image = null;
+            var htmlDoc = web.Load(html);
 
-                Regex rxImages = new Regex("<img.+?src=[\"'](.+?)[\"'].+?>",
-                RegexOptions.IgnoreCase & RegexOptions.IgnorePatternWhitespace);
-                MatchCollection mc = rxImages.Matches(barcode_search_image_url);
-                foreach (Match m in mc)
+            var node = htmlDoc.DocumentNode.SelectSingleNode("//center//form");
+
+            string[] result = Regex.Split(node.InnerText, "\r\n");
+            for (int i = 0; i < result.Length; i++)
+            {
+                switch (i)
                 {
-                    barcode_search_image += m.Groups[1].Value;
+                    case 11:
+                        this.product_name.Text = result[i].Trim();
+                        break;
+                    case 27:
+                        string product_price = Regex.Replace(result[i].Trim(), @"\D", "");
+                        this.product__unit_price.Text = product_price;
+                        break;
                 }
-                try
-                {
-                    product__image.Load(barcode_search_image);
+            }
+        }
 
-                    WebClient Downloader = new WebClient();
-                    Stream ImageStream = Downloader.OpenRead(barcode_search_image);
-                    DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("등록 된 상품 이미지가 없습니다. \n이미지 업로드 버튼을 통해 등록해주세요.");
-                }
+        private void barcode_image()
+        {
+            var html = @"http://www.cvslove.com/product/product_view.asp?pcode=" + this.product_barcode.Text;
+
+            HtmlWeb web = new HtmlWeb();
+
+            var htmlDoc = web.Load(html);
+
+            var node = htmlDoc.DocumentNode.SelectSingleNode("//center/img");
+
+            string barcode_search_image_url = node.OuterHtml;
+            string barcode_search_image = null;
+
+            Regex rxImages = new Regex("<img.+?src=[\"'](.+?)[\"'].+?>",
+            RegexOptions.IgnoreCase & RegexOptions.IgnorePatternWhitespace);
+            MatchCollection mc = rxImages.Matches(barcode_search_image_url);
+            foreach (Match m in mc)
+            {
+                barcode_search_image += m.Groups[1].Value;
+            }
+            try
+            {
+                product__image.Load(barcode_search_image);
+
+                WebClient Downloader = new WebClient();
+                Stream ImageStream = Downloader.OpenRead(barcode_search_image);
+                DownloadImage = Bitmap.FromStream(ImageStream) as Bitmap;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("상품 정보가 없습니다. \n상품 정보를 입력하여 등록해주세요.");
             }
         }
 
@@ -713,6 +745,11 @@ namespace PosProject_psi
             {
                 product__image.Image = Properties.Resources.no_image;
                 MessageBox.Show("바코드를 입력해주세요.");
+                return false;
+            }
+            else if (this.product_barcode.Text.Length > 14 && this.product_barcode.Text.Length < 18)
+            {
+                MessageBox.Show("바코드 길이가 맞지 않습니다.");
                 return false;
             }
             else

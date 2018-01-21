@@ -32,7 +32,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.product_grid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_image_search = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_barcode_search = new System.Windows.Forms.Button();
+            this.product_barcode = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.product_event = new System.Windows.Forms.ComboBox();
             this.btn_image = new System.Windows.Forms.Button();
@@ -49,10 +51,8 @@
             this.btn_enroll = new System.Windows.Forms.Button();
             this.product_cust_price = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.product_name = new System.Windows.Forms.TextBox();
-            this.product_barcode = new System.Windows.Forms.TextBox();
             this.product__image = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -81,7 +81,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btn_image_search);
+            this.groupBox1.Controls.Add(this.btn_barcode_search);
             this.groupBox1.Controls.Add(this.product_barcode);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.product_event);
@@ -109,22 +109,43 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             // 
-            // btn_image_search
+            // label2
             // 
-            this.btn_image_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
-            this.btn_image_search.FlatAppearance.BorderSize = 0;
-            this.btn_image_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
-            this.btn_image_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_image_search.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_image_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_image_search.Location = new System.Drawing.Point(359, 19);
-            this.btn_image_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_image_search.Name = "btn_image_search";
-            this.btn_image_search.Size = new System.Drawing.Size(233, 57);
-            this.btn_image_search.TabIndex = 38;
-            this.btn_image_search.Text = "이미지 검색";
-            this.btn_image_search.UseVisualStyleBackColor = false;
-            this.btn_image_search.Click += new System.EventHandler(this.btn_image_search_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.label2.Location = new System.Drawing.Point(6, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "바코드";
+            // 
+            // btn_barcode_search
+            // 
+            this.btn_barcode_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(142)))));
+            this.btn_barcode_search.FlatAppearance.BorderSize = 0;
+            this.btn_barcode_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(180)))));
+            this.btn_barcode_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_barcode_search.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_barcode_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.btn_barcode_search.Location = new System.Drawing.Point(359, 19);
+            this.btn_barcode_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_barcode_search.Name = "btn_barcode_search";
+            this.btn_barcode_search.Size = new System.Drawing.Size(233, 57);
+            this.btn_barcode_search.TabIndex = 38;
+            this.btn_barcode_search.Text = "바코드 상품 검색";
+            this.btn_barcode_search.UseVisualStyleBackColor = false;
+            this.btn_barcode_search.Click += new System.EventHandler(this.btn_barcode_search_Click);
+            // 
+            // product_barcode
+            // 
+            this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.product_barcode.Location = new System.Drawing.Point(120, 20);
+            this.product_barcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.product_barcode.Multiline = true;
+            this.product_barcode.Name = "product_barcode";
+            this.product_barcode.Size = new System.Drawing.Size(219, 24);
+            this.product_barcode.TabIndex = 9;
             // 
             // button1
             // 
@@ -327,17 +348,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "상품명";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(6, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "바코드";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -358,16 +368,6 @@
             this.product_name.Name = "product_name";
             this.product_name.Size = new System.Drawing.Size(219, 24);
             this.product_name.TabIndex = 8;
-            // 
-            // product_barcode
-            // 
-            this.product_barcode.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.product_barcode.Location = new System.Drawing.Point(120, 20);
-            this.product_barcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.product_barcode.Multiline = true;
-            this.product_barcode.Name = "product_barcode";
-            this.product_barcode.Size = new System.Drawing.Size(219, 24);
-            this.product_barcode.TabIndex = 9;
             // 
             // product__image
             // 
@@ -428,6 +428,6 @@
         private System.Windows.Forms.TextBox product_barcode;
         private System.Windows.Forms.Button btn_image;
         private System.Windows.Forms.PictureBox product__image;
-        private System.Windows.Forms.Button btn_image_search;
+        private System.Windows.Forms.Button btn_barcode_search;
     }
 }
