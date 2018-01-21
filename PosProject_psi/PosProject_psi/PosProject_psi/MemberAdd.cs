@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PosProject_psi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -14,6 +15,9 @@ namespace CommonProject
 {
     public partial class MemberAdd : Form
     {
+        SqlConnection sqlcon;
+        SqlDataAdapter adapter;
+
         public MemberAdd()
         {
             InitializeComponent();
@@ -25,6 +29,8 @@ namespace CommonProject
             {
                 string name = this.txtName.Text;
 
+                #region 싱글톤 이전 버전
+                /*
                 using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
                     using (var cmd = new SqlCommand("MemberAdd", con))
@@ -52,11 +58,35 @@ namespace CommonProject
                         }
                     }
                 }
+                */
+                #endregion
+
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("MemberAdd", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_name", name);
+                cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+                cmd.Parameters.AddWithValue("@user_date", birth.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@user_gender", this.cboGender.Text);
+                con.Open();
+                int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
+                if (i == 1)
+                {
+                    MessageBox.Show("저장이 잘 되었습니다!");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("저장 실패");
+                    return;
+                }
             }
         }
 
         private bool CheckPhone()
         {
+            #region 싱글톤 이전 버전
+            /*
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
                 using (var cmd = new SqlCommand("[MemberAddPhoneSelect]", con))
@@ -81,6 +111,28 @@ namespace CommonProject
                         return true;
                     }
                 }
+            }
+            */
+            #endregion
+
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("MemberAddPhoneSelect", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+            con.Open();
+            var sdr = cmd.ExecuteReader();
+            if (sdr.HasRows)
+            {
+                MessageBox.Show("중복되는 휴대폰번호가 있습니다.");
+                sdr.Close();
+                con.Close();
+                return false;
+            }
+            else
+            {
+                sdr.Close();
+                con.Close();
+                return true;
             }
         }
 
