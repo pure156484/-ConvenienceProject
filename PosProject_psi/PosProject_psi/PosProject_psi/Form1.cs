@@ -73,6 +73,35 @@ namespace PosProject_psi
             sa.btn20m.Click += BtnAge_Click;
             sa.btn30m.Click += BtnAge_Click;
             sa.btn50m.Click += BtnAge_Click;
+
+            if (CheckGarbage())
+            {
+                GarbageAlert ga = new GarbageAlert();
+                ga.StartPosition = this.StartPosition;
+                ga.TopMost = true;
+                ga.Show(); 
+            }
+        }
+
+        private bool CheckGarbage()
+        {
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("GarbageCheck", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            var sdr = cmd.ExecuteReader();
+            if (sdr.HasRows)
+            {
+                sdr.Close();
+                con.Close();
+                return true;
+            }
+            else
+            {
+                sdr.Close();
+                con.Close();
+                return false;
+            }
         }
 
         private void BtnAge_Click(object sender, EventArgs e)
@@ -727,12 +756,23 @@ namespace PosProject_psi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PointManagement main = new PointManagement();
-            main.Val = int.Parse(this.txtPrice.Text);
-            int a;
-            a = int.Parse(this.txtPrice.Text);
+            // MessageBox.Show(this.txtPrice.ToString());
+            PointManagement pome = new PointManagement();
+            pome.Vals = int.Parse(this.txtPrice.Text);
 
-            main.Show();
+            int a;
+            // a = int.Parse(this.txtPrice.Text);
+            // MessageBox.Show(a.ToString());
+            pome.ShowDialog();
+
+            a = pome.Vals;
+            txtPrice.Text = a.ToString();
+
+            // MessageBox.Show(pome.Vals + "원");
+            // txtPrice.Text = int.Parse();
+
+
+            // txtPrice.Text
         }
     }
 }

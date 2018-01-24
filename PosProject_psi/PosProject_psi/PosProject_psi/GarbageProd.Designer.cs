@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.itemGrid = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.garbageView_Before = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.picProduct = new System.Windows.Forms.PictureBox();
+            this.product_Info = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnWait = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,52 +45,71 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.garbageView_After = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.garbageView_Before)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.garbageView_After)).BeginInit();
             this.SuspendLayout();
             // 
-            // itemGrid
+            // garbageView_Before
             // 
-            this.itemGrid.AllowUserToAddRows = false;
-            this.itemGrid.AllowUserToDeleteRows = false;
-            this.itemGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.itemGrid.ColumnHeadersHeight = 40;
-            this.itemGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.itemGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.itemGrid.Location = new System.Drawing.Point(12, 60);
-            this.itemGrid.Name = "itemGrid";
-            this.itemGrid.ReadOnly = true;
-            this.itemGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.itemGrid.RowTemplate.Height = 23;
-            this.itemGrid.Size = new System.Drawing.Size(850, 327);
-            this.itemGrid.TabIndex = 1;
+            this.garbageView_Before.AllowUserToAddRows = false;
+            this.garbageView_Before.AllowUserToDeleteRows = false;
+            this.garbageView_Before.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.garbageView_Before.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.garbageView_Before.ColumnHeadersHeight = 40;
+            this.garbageView_Before.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.garbageView_Before.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.garbageView_Before.Location = new System.Drawing.Point(7, 32);
+            this.garbageView_Before.Name = "garbageView_Before";
+            this.garbageView_Before.ReadOnly = true;
+            this.garbageView_Before.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.garbageView_Before.RowTemplate.Height = 23;
+            this.garbageView_Before.Size = new System.Drawing.Size(836, 146);
+            this.garbageView_Before.TabIndex = 1;
+            this.garbageView_Before.Click += new System.EventHandler(this.garbageView_Before_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.picProduct);
+            this.panel2.Controls.Add(this.product_Info);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(12, 405);
+            this.panel2.Location = new System.Drawing.Point(11, 449);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(661, 187);
             this.panel2.TabIndex = 6;
             // 
-            // textBox1
+            // picProduct
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(610, 187);
-            this.textBox1.TabIndex = 6;
+            this.picProduct.BackColor = System.Drawing.SystemColors.Window;
+            this.picProduct.Location = new System.Drawing.Point(473, 1);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(184, 186);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProduct.TabIndex = 13;
+            this.picProduct.TabStop = false;
+            // 
+            // product_Info
+            // 
+            this.product_Info.Location = new System.Drawing.Point(49, 0);
+            this.product_Info.Multiline = true;
+            this.product_Info.Name = "product_Info";
+            this.product_Info.Size = new System.Drawing.Size(610, 187);
+            this.product_Info.TabIndex = 6;
             // 
             // label5
             // 
@@ -106,12 +127,13 @@
             this.btnWait.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWait.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnWait.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnWait.Location = new System.Drawing.Point(728, 430);
+            this.btnWait.Location = new System.Drawing.Point(727, 474);
             this.btnWait.Name = "btnWait";
             this.btnWait.Size = new System.Drawing.Size(110, 52);
             this.btnWait.TabIndex = 8;
             this.btnWait.Text = "등록";
             this.btnWait.UseVisualStyleBackColor = false;
+            this.btnWait.Click += new System.EventHandler(this.btnWait_Click);
             // 
             // panel1
             // 
@@ -186,7 +208,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(728, 522);
+            this.button1.Location = new System.Drawing.Point(727, 566);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 52);
             this.button1.TabIndex = 8;
@@ -197,34 +219,90 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.garbageView_Before);
+            this.groupBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 72);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(848, 183);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "폐기대기";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.garbageView_After);
+            this.groupBox2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 260);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(848, 183);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "폐기완료";
+            // 
+            // garbageView_After
+            // 
+            this.garbageView_After.AllowUserToAddRows = false;
+            this.garbageView_After.AllowUserToDeleteRows = false;
+            this.garbageView_After.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.garbageView_After.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.garbageView_After.ColumnHeadersHeight = 40;
+            this.garbageView_After.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.garbageView_After.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.garbageView_After.Location = new System.Drawing.Point(7, 32);
+            this.garbageView_After.Name = "garbageView_After";
+            this.garbageView_After.ReadOnly = true;
+            this.garbageView_After.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.garbageView_After.RowTemplate.Height = 23;
+            this.garbageView_After.Size = new System.Drawing.Size(836, 146);
+            this.garbageView_After.TabIndex = 1;
+            this.garbageView_After.Click += new System.EventHandler(this.garbageView_After_Click);
+            // 
             // GarbageProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 604);
+            this.ClientSize = new System.Drawing.Size(882, 643);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnWait);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.itemGrid);
             this.Name = "GarbageProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GarbageProd";
             this.Load += new System.EventHandler(this.GarbageProd_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.garbageView_Before)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.garbageView_After)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView itemGrid;
+        private System.Windows.Forms.DataGridView garbageView_Before;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox product_Info;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnWait;
         private System.Windows.Forms.Panel panel1;
@@ -235,5 +313,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView garbageView_After;
+        private System.Windows.Forms.PictureBox picProduct;
     }
 }

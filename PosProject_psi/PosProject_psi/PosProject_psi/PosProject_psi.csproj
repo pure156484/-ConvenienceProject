@@ -115,6 +115,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GarbageAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarbageAlert.Designer.cs">
+      <DependentUpon>GarbageAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="GarbageProd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GarbageAlert.resx">
+      <DependentUpon>GarbageAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +339,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_101_Warning_183416.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

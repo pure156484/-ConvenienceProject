@@ -13,7 +13,7 @@ namespace PosProject_psi
 {
     public partial class PointManagement : Form
     {
-        
+
         DataSet ds;
         public PointManagement()
         {
@@ -48,13 +48,13 @@ namespace PosProject_psi
                         }
                         con.Close();
                     }
-                } 
+                }
             }
         }
 
         private bool CheckPhoneTextNull()
         {
-            if(this.cboPhone1.Text == "")
+            if (this.cboPhone1.Text == "")
             {
                 MessageBox.Show("전화번호가 입력 되지 않았습니다.");
                 return false;
@@ -80,54 +80,67 @@ namespace PosProject_psi
             point_use_point.Text = "";
             point_use_point.Text = point_count.Text;
         }
-        private int val;
-        public int Val
+        private int vals;
+        public int Vals
         {
-            get { return val; }
-            set { val = value; }
+            get { return vals; }
+            set { vals = value; }
         }
-
+        int sel;
         private void btn_use_Click(object sender, EventArgs e)
         {
-            if (CheckPointTextNull() && CheckPointDb())
+            int points;
+            if (CheckPointTextNull())  //  && CheckPointDb()
             {
                 #region 우석이 코드
-                /*
+
                 MainForm main = new MainForm();
-                main.Val = int.Parse(this.point_use_point.Text);
-                int a;
-                a = int.Parse(this.point_use_point.Text);
-                main.Show();
-                */
+                //main.Val = int.Parse(this.point_use_point.Text);
+                //int a;
+                //a = int.Parse(this.point_use_point.Text);
+                //main.Show();
+
+                // main.Val = sel;
+
+                // MessageBox.Show("받은 값" + this.vals.ToString());
+                points = int.Parse(point_use_point.Text);
+                vals = vals - points;
+                //  MessageBox.Show(sel.ToString());
+
+                this.Hide();
+
                 #endregion
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
-                {
 
-                    using (var cmd = new SqlCommand("PointSub", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
-                        cmd.Parameters.AddWithValue("@user_point", point_use_point.Text);
+                //using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
+                //{
 
-                        con.Open();
+                //    using (var cmd = new SqlCommand("PointSub", con))
+                //    {
+                //        cmd.CommandType = CommandType.StoredProcedure;
 
-                        int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
-                        if (i == 1)
-                        {
-                            MessageBox.Show("포인트가 사용 하였습니다.");
-                            return;
-                        }
-                        else
-                        {
-                            MessageBox.Show("포인트 사용 실패 하였습니다.");
-                            return;
-                        }
-                    }
-                }
+                //        cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+                //        cmd.Parameters.AddWithValue("@user_point", point_use_point.Text);
+
+                //        con.Open();
+
+                //        int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
+                //        if (i == 1)
+                //        {
+                //            MessageBox.Show("포인트가 사용 하였습니다.");
+                //            return;
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("포인트 사용 실패 하였습니다.");
+                //            return;
+                //        }
+                //    }
+                //}
             }
         }
 
+        // 현우형 코드
         private bool CheckPointDb()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
@@ -160,7 +173,7 @@ namespace PosProject_psi
 
         private bool CheckPointTextNull()
         {
-            if (this.point_use_point.Text == "")
+            if (this.point_use_point.Text == "" && int.Parse(this.point_use_point.Text) == 0)
             {
                 MessageBox.Show("사용 포인트를 입력하지 않았습니다.");
                 return false;
@@ -174,6 +187,7 @@ namespace PosProject_psi
         private void PointManagement_Load(object sender, EventArgs e)
         {
             //this.point_pay.Text = Val.ToString();
+
         }
 
         private void btn_save_Click(object sender, EventArgs e)

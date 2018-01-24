@@ -63,6 +63,16 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap if_101_Warning_183416 {
+            get {
+                object obj = ResourceManager.GetObject("if_101_Warning_183416", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap if_icons_settings_1564529 {
             get {
                 object obj = ResourceManager.GetObject("if_icons_settings_1564529", resourceCulture);

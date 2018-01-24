@@ -18,6 +18,7 @@ namespace PosProject_psi
 {
     public partial class ProductManagement : Form
     {
+        string t = "";
         DataSet ds;
         private SqlConnection con = null;
         string imgFileName;
@@ -187,19 +188,19 @@ namespace PosProject_psi
                                 byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
                             }
 
-                                //switch (uselect)
-                                //{
-                                //    case "제과":
-                                //        cmd.Parameters.AddWithValue("@uselects", 1);
-                                //        break;
-                                //    case "라면":
-                                //        cmd.Parameters.AddWithValue("@uselects", 2);
-                                //        break;
-                                //    case "음료":
-                                //        cmd.Parameters.AddWithValue("@uselects", 3);
-                                //        break;
-                                //}
-                                cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
+                            //switch (uselect)
+                            //{
+                            //    case "제과":
+                            //        cmd.Parameters.AddWithValue("@uselects", 1);
+                            //        break;
+                            //    case "라면":
+                            //        cmd.Parameters.AddWithValue("@uselects", 2);
+                            //        break;
+                            //    case "음료":
+                            //        cmd.Parameters.AddWithValue("@uselects", 3);
+                            //        break;
+                            //}
+                            cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
                             cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
                             cmd.Parameters.AddWithValue("@ucust_price", ucust_price);
                             cmd.Parameters.AddWithValue("@ucounts", ucount);
@@ -273,19 +274,19 @@ namespace PosProject_psi
                                 byte[] bImg = (byte[])converter.ConvertTo(product__image.Image, typeof(byte[]));
                             }
 
-                                    //switch (uselect)
-                                    //{
-                                    //    case "제과":
-                                    //        cmd.Parameters.AddWithValue("@uselects", 1);
-                                    //        break;
-                                    //    case "라면":
-                                    //        cmd.Parameters.AddWithValue("@uselects", 2);
-                                    //        break;
-                                    //    case "음료":
-                                    //        cmd.Parameters.AddWithValue("@uselects", 3);
-                                    //        break;
-                                    //}
-                                    cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
+                            //switch (uselect)
+                            //{
+                            //    case "제과":
+                            //        cmd.Parameters.AddWithValue("@uselects", 1);
+                            //        break;
+                            //    case "라면":
+                            //        cmd.Parameters.AddWithValue("@uselects", 2);
+                            //        break;
+                            //    case "음료":
+                            //        cmd.Parameters.AddWithValue("@uselects", 3);
+                            //        break;
+                            //}
+                            cmd.Parameters.AddWithValue("@uselects", (int.Parse(product_select.SelectedIndex.ToString()) + 1).ToString());
                             if (uunit_price != null)
                             {
                                 cmd.Parameters.AddWithValue("@uunit_price", uunit_price);
