@@ -109,11 +109,13 @@ namespace PosProject_psi
             ProdStockView.Rows.Clear();
             switch (stockCbo.Text)
             {
-                case "상품명": SearchStockProdName();
+                case "상품명":
+                    SearchStockProdName();
                     break;
-                case "바코드": SearchStockBarcode();
+                case "바코드":
+                    SearchStockBarcode();
                     break;
-            } 
+            }
         }
 
         // 재고조회(바코드)
@@ -137,7 +139,7 @@ namespace PosProject_psi
                 ProdStockView.Rows.Add(false, ed[0].ToString(), ed[1].ToString(), ed[2].ToString(), ed[3].ToString(), ed[4].ToString());
             }
         }
-        
+
         // 재고조회(상품명)
         private void SearchStockProdName()
         {
@@ -153,12 +155,12 @@ namespace PosProject_psi
             adapter.Fill(ds);
             DataTable pro = ds.Tables[0];
             DataRowCollection rows = pro.Rows;
-            
+
             foreach (DataRow ed in rows)
             {
                 ProdStockView.Rows.Add(false, ed[0].ToString(), ed[1].ToString(), ed[2].ToString(), ed[3].ToString(), ed[4].ToString());
             }
-            
+
         }
 
         // 상품정보조회 버튼 클릭

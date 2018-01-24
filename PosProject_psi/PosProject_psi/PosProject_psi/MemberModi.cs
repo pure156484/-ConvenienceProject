@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PosProject_psi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -14,7 +15,11 @@ namespace PosProject_psi
 {
     public partial class MemberModi : Form
     {
-        string x;
+        DataSet ds;
+        SqlConnection sqlcon;
+        SqlDataAdapter adapter;
+        string users_pk;
+
         public MemberModi()
         {
             InitializeComponent();
@@ -22,15 +27,17 @@ namespace PosProject_psi
 
         private void btnUserNameSearch_Click(object sender, EventArgs e)
         {
-            if(txtMobile.Text != "")
+            if (CheckPhoneSearch())
             {
+                #region 싱글톤 이전 버전
+                /*
                 using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
                     using (var cmd = new SqlCommand("MemberModiPhoneSearch", con))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@user_phone", this.txtMobile.Text);
+                        cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
                         con.Open();
                         var sdr = cmd.ExecuteReader();
 
@@ -41,16 +48,53 @@ namespace PosProject_psi
                         }
                         else
                         {
+                            txtModiUserName.ReadOnly = false;
+                            //txtBirth.ReadOnly = false;
+
                             while (sdr.Read())
                             {
-                                x = sdr["user_num"].ToString();
-                                MessageBox.Show(x);
+                                users_pk = sdr["user_num"].ToString();
+                                this.txtModiUserName.Visible = true;
                                 this.txtModiUserName.Text = sdr["user_name"].ToString();
-                                this.txtBirth.Text = sdr["user_date"].ToString().Substring(0, 10);
+                                this.birth.Visible = true;
+                                this.birth.Text = sdr["user_date"].ToString().Substring(0, 10);
+                                this.cboGender.Visible = true;
+                                this.cboGender.Text = sdr["user_gender"].ToString();
                             }
                             sdr.Close();
                         }
                     }
+                }
+                */
+                #endregion 싱글톤 이전 버전
+
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("MemberModiPhoneSearch", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+                con.Open();
+                var sdr = cmd.ExecuteReader();
+
+                if (!sdr.HasRows)
+                {
+                    MessageBox.Show("휴대전화 번호를 다시 한 번 입력해주세요.");
+                    return;
+                }
+                else
+                {
+                    txtModiUserName.ReadOnly = false;
+
+                    while (sdr.Read())
+                    {
+                        users_pk = sdr["user_num"].ToString();
+                        this.txtModiUserName.Visible = true;
+                        this.txtModiUserName.Text = sdr["user_name"].ToString();
+                        this.birth.Visible = true;
+                        this.birth.Text = sdr["user_date"].ToString().Substring(0, 10);
+                        this.cboGender.Visible = true;
+                        this.cboGender.Text = sdr["user_gender"].ToString();
+                    }
+                    sdr.Close();
                 }
             }
             else
@@ -59,35 +103,128 @@ namespace PosProject_psi
             }
         }
 
+        private bool CheckPhoneSearch()
+        {
+            if (this.cboPhone1.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtPhone2.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtPhone3.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            using(var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
+            if (CheckPhone())
             {
-
-                using (var cmd = new SqlCommand("MemberModiAdd", con))
+                #region 싱글톤 이전 버전
+                /*
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@user_num", x);
-                    cmd.Parameters.AddWithValue("@user_name", this.txtModiUserName.Text);
-                    cmd.Parameters.AddWithValue("@user_phone", this.txtMobile.Text);
-                    cmd.Parameters.AddWithValue("@user_date", this.txtBirth.Text);
-
-                    con.Open();
-
-                    int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
-                    if (i == 1)
+                    using (var cmd = new SqlCommand("MemberModiAdd", con))
                     {
-                        MessageBox.Show("정상적으로 수정 되었습니다.");
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show("수정 실패하였습니다.");
-                        return;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@user_num", users_pk);
+                        cmd.Parameters.AddWithValue("@user_name", this.txtModiUserName.Text);
+                        cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+                        cmd.Parameters.AddWithValue("@user_date", birth.Value.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@user_gender", this.cboGender.Text);
+
+                        con.Open();
+
+                        int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
+                        if (i == 1)
+                        {
+                            MessageBox.Show("정상적으로 수정 되었습니다.");
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("수정 실패하였습니다.");
+                            return;
+                        }
                     }
                 }
+                */
+                #endregion
+
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("MemberModiAdd", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_num", users_pk);
+                cmd.Parameters.AddWithValue("@user_name", this.txtModiUserName.Text);
+                cmd.Parameters.AddWithValue("@user_phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+                cmd.Parameters.AddWithValue("@user_date", birth.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@user_gender", this.cboGender.Text);
+                con.Open();
+
+                int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다.
+                if (i == 1)
+                {
+                    MessageBox.Show("정상적으로 수정 되었습니다.");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("수정 실패하였습니다.");
+                    return;
+                }
             }
+        }
+
+        private bool CheckPhone()
+        {
+            if (this.txtModiUserName.Text == "")
+            {
+                MessageBox.Show("이름이 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.cboPhone1.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtPhone2.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.txtPhone3.Text == "")
+            {
+                MessageBox.Show("전화번호가 입력 되지 않았습니다.");
+                return false;
+            }
+            else if (this.birth.Text == "")
+            {
+                MessageBox.Show("생일이 입력 되지 않았습니다.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void MemberModi_Load(object sender, EventArgs e)
+        {
+            this.birth.Visible = false;
+            this.txtModiUserName.Visible = false;
+            this.cboGender.Visible = false;
         }
     }
 }
