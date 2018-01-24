@@ -121,6 +121,12 @@
     <Compile Include="GarbageProd.Designer.cs">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +339,21 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POSlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POSlogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc25_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc25_3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

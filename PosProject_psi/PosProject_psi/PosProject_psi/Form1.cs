@@ -16,11 +16,11 @@ namespace PosProject_psi
     public partial class MainForm : Form
     {
         // point 받는 객체
-        private int val;
-        public int Val
+        private string nam2;
+        public string Nam2
         {
-            get { return val; }
-            set { val = value; }
+            get { return nam2; }
+            set { nam2 = value; }
         }
 
         SellAge sa = new SellAge();
@@ -39,6 +39,7 @@ namespace PosProject_psi
         int price;
         TextBox cursor;
         string bacode;
+        string id;
 
         public MainForm()
         {
@@ -49,8 +50,24 @@ namespace PosProject_psi
             lblDate.Text = DateTime.Now.ToString();
         }
 
+        public MainForm(string id) : this()
+        {
+            this.id = id;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // 우석이 코드 
+            //Login lg = new Login();
+            //string receiveName;
+
+            //lbl_Name.Text = lg.Nam;
+            // = receiveName;
+          //  Login login = Owner as MainForm;
+            
+           // lbl_Name.Text= login.Nam;
+            lbl_Name.Text = id;
+
             sa.StartPosition = this.StartPosition;
             sa.TopMost = true;
             //this.Enabled = false;
