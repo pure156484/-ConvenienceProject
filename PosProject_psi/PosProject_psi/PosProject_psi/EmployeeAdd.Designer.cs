@@ -256,6 +256,7 @@
             this.Name = "EmployeeAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "직원 등록";
+            this.Load += new System.EventHandler(this.EmployeeAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

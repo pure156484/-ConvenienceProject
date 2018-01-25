@@ -228,3 +228,5 @@ C:\Users\gd3-18\Desktop\우석\PosProject_psi\bin\Debug\HtmlAgilityPack.xml
 C:\Users\gd3-18\Desktop\우석\PosProject_psi\bin\Debug\Interop.SoHotLib.dll
 C:\Users\gd3-18\Desktop\우석\PosProject_psi\obj\Debug\Interop.SoHotLib.dll
 C:\Users\gd3-18\Desktop\우석\PosProject_psi\obj\Debug\PosProject_psi.Login.resources
+C:\Users\gd3-18\Desktop\우석\PosProject_psi\obj\Debug\PosProject_psi.LoginFind.resources
+C:\Users\gd3-18\Desktop\우석\PosProject_psi\obj\Debug\PosProject_psi.LoginAlterPass.resources

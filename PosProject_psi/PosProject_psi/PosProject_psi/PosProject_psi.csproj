@@ -127,6 +127,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginAlterPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAlterPass.Designer.cs">
+      <DependentUpon>LoginAlterPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFind.Designer.cs">
+      <DependentUpon>LoginFind.cs</DependentUpon>
+    </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAlterPass.resx">
+      <DependentUpon>LoginAlterPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFind.resx">
+      <DependentUpon>LoginFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>

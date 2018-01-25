@@ -65,9 +65,9 @@ namespace PosProject_psi
                     product_grid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     product_grid.Columns[2].HeaderText = "종류";
                     product_grid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    product_grid.Columns[3].HeaderText = "가격";
+                    product_grid.Columns[3].HeaderText = "원가";
                     product_grid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    product_grid.Columns[4].HeaderText = "원가";
+                    product_grid.Columns[4].HeaderText = "가격";
                     product_grid.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     product_grid.Columns[6].HeaderText = "이벤트";
                     product_grid.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
