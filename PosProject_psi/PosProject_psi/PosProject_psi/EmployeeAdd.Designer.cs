@@ -30,7 +30,6 @@
         {
             this.txtBirth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtMobile = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtBirth
@@ -66,13 +66,6 @@
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 63;
             this.label5.Text = "주민번호";
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Location = new System.Drawing.Point(138, 35);
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(100, 21);
-            this.txtMobile.TabIndex = 62;
             // 
             // label4
             // 
@@ -228,12 +221,22 @@
             this.label9.TabIndex = 71;
             this.label9.Text = "비밀번호";
             // 
+            // txtMobile
+            // 
+            this.txtMobile.Location = new System.Drawing.Point(138, 35);
+            this.txtMobile.Mask = "000-9000-0000";
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(100, 21);
+            this.txtMobile.TabIndex = 73;
+            this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(284, 302);
+            this.ClientSize = new System.Drawing.Size(310, 302);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTSalary);
@@ -244,7 +247,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBirth);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddr);
             this.Controls.Add(this.txtPosition);
@@ -266,7 +268,6 @@
 
         private System.Windows.Forms.TextBox txtBirth;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.TextBox txtPosition;
@@ -283,5 +284,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtMobile;
     }
 }

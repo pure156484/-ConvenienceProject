@@ -30,8 +30,6 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_pk = new System.Windows.Forms.TextBox();
-            this.txt_phone = new System.Windows.Forms.TextBox();
             this.btn_Alter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_pass = new System.Windows.Forms.TextBox();
@@ -39,6 +37,10 @@
             this.txt_NewPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_NewPassCheck = new System.Windows.Forms.TextBox();
+            this.txt_phone = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_pk_2 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_pk_1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -63,20 +65,6 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "전화번호";
             // 
-            // txt_pk
-            // 
-            this.txt_pk.Location = new System.Drawing.Point(186, 75);
-            this.txt_pk.Name = "txt_pk";
-            this.txt_pk.Size = new System.Drawing.Size(133, 21);
-            this.txt_pk.TabIndex = 25;
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.Location = new System.Drawing.Point(186, 33);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(133, 21);
-            this.txt_phone.TabIndex = 24;
-            // 
             // btn_Alter
             // 
             this.btn_Alter.BackColor = System.Drawing.Color.Orange;
@@ -85,10 +73,10 @@
             this.btn_Alter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Alter.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Alter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Alter.Location = new System.Drawing.Point(117, 245);
+            this.btn_Alter.Location = new System.Drawing.Point(105, 244);
             this.btn_Alter.Name = "btn_Alter";
             this.btn_Alter.Size = new System.Drawing.Size(125, 49);
-            this.btn_Alter.TabIndex = 23;
+            this.btn_Alter.TabIndex = 6;
             this.btn_Alter.Text = "변경";
             this.btn_Alter.UseVisualStyleBackColor = false;
             this.btn_Alter.Click += new System.EventHandler(this.btn_Alter_Click);
@@ -108,8 +96,9 @@
             // 
             this.txt_pass.Location = new System.Drawing.Point(186, 117);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(133, 21);
-            this.txt_pass.TabIndex = 28;
+            this.txt_pass.PasswordChar = '*';
+            this.txt_pass.Size = new System.Drawing.Size(109, 21);
+            this.txt_pass.TabIndex = 3;
             // 
             // label2
             // 
@@ -126,8 +115,9 @@
             // 
             this.txt_NewPass.Location = new System.Drawing.Point(186, 159);
             this.txt_NewPass.Name = "txt_NewPass";
-            this.txt_NewPass.Size = new System.Drawing.Size(133, 21);
-            this.txt_NewPass.TabIndex = 30;
+            this.txt_NewPass.PasswordChar = '*';
+            this.txt_NewPass.Size = new System.Drawing.Size(109, 21);
+            this.txt_NewPass.TabIndex = 4;
             // 
             // label5
             // 
@@ -144,15 +134,57 @@
             // 
             this.txt_NewPassCheck.Location = new System.Drawing.Point(186, 201);
             this.txt_NewPassCheck.Name = "txt_NewPassCheck";
-            this.txt_NewPassCheck.Size = new System.Drawing.Size(133, 21);
-            this.txt_NewPassCheck.TabIndex = 32;
+            this.txt_NewPassCheck.PasswordChar = '*';
+            this.txt_NewPassCheck.Size = new System.Drawing.Size(109, 21);
+            this.txt_NewPassCheck.TabIndex = 5;
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.Location = new System.Drawing.Point(186, 33);
+            this.txt_phone.Mask = "000-9000-0000";
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(109, 21);
+            this.txt_phone.TabIndex = 0;
+            this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(230, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(11, 12);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "-";
+            // 
+            // txt_pk_2
+            // 
+            this.txt_pk_2.Location = new System.Drawing.Point(242, 74);
+            this.txt_pk_2.Mask = "0000000";
+            this.txt_pk_2.Name = "txt_pk_2";
+            this.txt_pk_2.PasswordChar = '*';
+            this.txt_pk_2.Size = new System.Drawing.Size(53, 21);
+            this.txt_pk_2.TabIndex = 2;
+            this.txt_pk_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_pk_1
+            // 
+            this.txt_pk_1.Location = new System.Drawing.Point(186, 74);
+            this.txt_pk_1.Mask = "000000";
+            this.txt_pk_1.Name = "txt_pk_1";
+            this.txt_pk_1.Size = new System.Drawing.Size(44, 21);
+            this.txt_pk_1.TabIndex = 1;
+            this.txt_pk_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LoginAlterPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(359, 315);
+            this.ClientSize = new System.Drawing.Size(334, 315);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_pk_2);
+            this.Controls.Add(this.txt_pk_1);
+            this.Controls.Add(this.txt_phone);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_NewPassCheck);
             this.Controls.Add(this.label2);
@@ -161,8 +193,6 @@
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_pk);
-            this.Controls.Add(this.txt_phone);
             this.Controls.Add(this.btn_Alter);
             this.Name = "LoginAlterPass";
             this.Text = "LoginAlterPass";
@@ -175,8 +205,6 @@
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_pk;
-        private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.Button btn_Alter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_pass;
@@ -184,5 +212,9 @@
         private System.Windows.Forms.TextBox txt_NewPass;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_NewPassCheck;
+        private System.Windows.Forms.MaskedTextBox txt_phone;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txt_pk_2;
+        private System.Windows.Forms.MaskedTextBox txt_pk_1;
     }
 }

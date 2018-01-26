@@ -96,7 +96,7 @@ namespace CommonProject
         private void SmsSend(string name, string phone)
         {
             SMSClass sms = new SMSClass();
-            string Message = name + "님 GD편의점에 가입을 축하드립니다.";
+            string Message = name + "님 BC25편의점에 가입을 축하드립니다.";
 
             sms.SetUser("hwjeong0612", "1q2w3e4r!");
 

@@ -583,7 +583,7 @@
             this.txtBacode.Name = "txtBacode";
             this.txtBacode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBacode.Size = new System.Drawing.Size(208, 41);
-            this.txtBacode.TabIndex = 11;
+            this.txtBacode.TabIndex = 0;
             this.txtBacode.WordWrap = false;
             this.txtBacode.Click += new System.EventHandler(this.txtBacode_Click);
             this.txtBacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBacode_KeyDown);

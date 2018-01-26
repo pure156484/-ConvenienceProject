@@ -22,7 +22,7 @@ namespace PosProject_psi
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string LoginPhone = txt_phone.Text.Trim();
-            string LoginPass = txt_pk.Text.Trim();
+            string LoginPass = txt_pk_1.Text + "-" + txt_pk_2.Text;
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
                 using (var cmd = new SqlCommand("LoginPassCheck", con))
@@ -48,36 +48,36 @@ namespace PosProject_psi
 
                     cmd.Parameters.AddWithValue("@employee_pass", newPasswd);
 
-                   
 
                     var sdr = cmd.ExecuteReader();
 
                     if (sdr.HasRows)
                     {
-                        // 맞다면
-                        //SMSClass sms = new SMSClass();
-                        //string Message = "보낼 메시지 입력";
+                        string phone = "01083237245";
 
-                        //sms.SetUser("아이디", "비밀번호");
+                        SMSClass sms = new SMSClass();
+                        string Message = "임시 비밀번호 입니다. 새 비밀번호로 바꿔주세요.\n" + newPasswd;
 
-                        //sms.Add("받는 폰번호", "보내는 폰번호(니폰)", Message, "", "", "", 0);
+                        sms.SetUser("banana52", "wjdxhd58");
 
-                        //if (!sms.Connect())
-                        //{
-                        //    //Console.WriteLine("메세지 전송오류\n" + phone);
-                        //    MessageBox.Show("메세지 전송오류\n" + phone);
-                        //}
+                        sms.Add(phone, "01083237245", Message, "", "", "", 0);
 
-                        //int resval = sms.Send();
-                        //if (resval == -1)
-                        //{
-                        //    //Console.WriteLine("전송중 오류발생\n" + phone);
-                        //    MessageBox.Show("전송중 오류발생\n" + phone);
-                        //}
+                        if (!sms.Connect())
+                        {
+                            //Console.WriteLine("메세지 전송오류\n" + phone);
+                            MessageBox.Show("메세지 전송오류\n" + phone);
+                        }
 
-                        //MessageBox.Show("전송이 완료되었습니다.");
+                        int resval = sms.Send();
+                        if (resval == -1)
+                        {
+                            //Console.WriteLine("전송중 오류발생\n" + phone);
+                            MessageBox.Show("전송중 오류발생\n" + phone);
+                        }
 
-                        //sms.Disconnect();
+                        MessageBox.Show("전송이 완료되었습니다.");
+
+                        sms.Disconnect();
 
 
                         sdr.Close();

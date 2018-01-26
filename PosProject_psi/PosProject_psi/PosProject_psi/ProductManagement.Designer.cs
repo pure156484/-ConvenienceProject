@@ -32,6 +32,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.product_grid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.product_company = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_barcode_search = new System.Windows.Forms.Button();
             this.product_barcode = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.product_name = new System.Windows.Forms.TextBox();
             this.product__image = new System.Windows.Forms.PictureBox();
-            this.product_company = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.product_grid)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product__image)).BeginInit();
@@ -106,6 +106,14 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             // 
+            // product_company
+            // 
+            this.product_company.FormattingEnabled = true;
+            this.product_company.Location = new System.Drawing.Point(105, 175);
+            this.product_company.Name = "product_company";
+            this.product_company.Size = new System.Drawing.Size(192, 20);
+            this.product_company.TabIndex = 5;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -140,9 +148,7 @@
             this.product_barcode.Multiline = true;
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 20);
-            this.product_barcode.TabIndex = 9;
-            this.product_barcode.TextChanged += new System.EventHandler(this.product_barcode_TextChanged);
-            this.product_barcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.product_barcode_KeyDown);
+            this.product_barcode.TabIndex = 0;
             // 
             // button1
             // 
@@ -161,7 +167,7 @@
             this.product_event.Location = new System.Drawing.Point(105, 207);
             this.product_event.Name = "product_event";
             this.product_event.Size = new System.Drawing.Size(192, 20);
-            this.product_event.TabIndex = 36;
+            this.product_event.TabIndex = 6;
             // 
             // btn_image
             // 
@@ -207,7 +213,7 @@
             this.product_select.Location = new System.Drawing.Point(105, 79);
             this.product_select.Name = "product_select";
             this.product_select.Size = new System.Drawing.Size(192, 20);
-            this.product_select.TabIndex = 18;
+            this.product_select.TabIndex = 2;
             this.product_select.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_exit
@@ -260,7 +266,7 @@
             this.product__unit_price.Multiline = true;
             this.product__unit_price.Name = "product__unit_price";
             this.product__unit_price.Size = new System.Drawing.Size(192, 20);
-            this.product__unit_price.TabIndex = 17;
+            this.product__unit_price.TabIndex = 4;
             // 
             // btn_modified
             // 
@@ -312,7 +318,7 @@
             this.product_cust_price.Multiline = true;
             this.product_cust_price.Name = "product_cust_price";
             this.product_cust_price.Size = new System.Drawing.Size(192, 20);
-            this.product_cust_price.TabIndex = 15;
+            this.product_cust_price.TabIndex = 3;
             // 
             // label1
             // 
@@ -343,7 +349,7 @@
             this.product_name.Multiline = true;
             this.product_name.Name = "product_name";
             this.product_name.Size = new System.Drawing.Size(192, 20);
-            this.product_name.TabIndex = 8;
+            this.product_name.TabIndex = 1;
             // 
             // product__image
             // 
@@ -354,14 +360,6 @@
             this.product__image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.product__image.TabIndex = 35;
             this.product__image.TabStop = false;
-            // 
-            // product_company
-            // 
-            this.product_company.FormattingEnabled = true;
-            this.product_company.Location = new System.Drawing.Point(105, 175);
-            this.product_company.Name = "product_company";
-            this.product_company.Size = new System.Drawing.Size(192, 20);
-            this.product_company.TabIndex = 39;
             // 
             // ProductManagement
             // 

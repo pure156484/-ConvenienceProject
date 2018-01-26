@@ -287,12 +287,6 @@ namespace PosProject_psi
             product__image.Image = Properties.Resources.no_image;
         }
 
-        // 그리드 뷰 클릭하면 정보 출력
-        private void product_grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         // 수정
         private void btn_modified_Click(object sender, EventArgs e)
         {
@@ -553,24 +547,5 @@ namespace PosProject_psi
             }
         }
 
-        private void product_barcode_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Return)
-            //{
-            //    barcode = product_barcode.Text;
-            //    product_barcode.Text = barcode;
-            //}
-        }
-
-        private void product_barcode_TextChanged(object sender, EventArgs e)
-        {
-            //if (product_barcode.Text.Length == 13)
-            //{
-            //    string str = product_barcode.Text;
-            //    product_barcode.Text = null;
-            //    str.Trim(' ');
-            //    product_barcode.Text = str; 
-            //}
-        }
     }
 }

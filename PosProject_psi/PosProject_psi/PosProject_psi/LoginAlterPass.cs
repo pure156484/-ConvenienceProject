@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoHotLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -21,7 +22,7 @@ namespace PosProject_psi
         private void btn_Alter_Click(object sender, EventArgs e)
         {
             string LoginPhone = txt_phone.Text.Trim();
-            string LoginPk = txt_pk.Text.Trim();
+            string LoginPk = txt_pk_1.Text + "-" + txt_pk_2.Text;
             string LoginPass = txt_pass.Text.Trim();
 
             string NewPass = txt_NewPass.Text.Trim();
@@ -47,22 +48,16 @@ namespace PosProject_psi
                         {
                             sdr.Close();
                             con.Close();
-
+                            MessageBox.Show("저장 되었습니다.");
                             this.Hide();
                         }
-                        //int i;
-                        //i = cmd.ExecuteNonQuery();
 
-                        //if (i == 1)
-                        //{
-                        //    MessageBox.Show("저장 되었습니다.");
-
-                        //}
                         else
                         {
-                            MessageBox.Show("핸드폰 번호 또는 주민번호를 다시 확인해주세요.");
+                            MessageBox.Show("입력하신 정보가 틀렸습니다. 다시 확인해주세요.");
                             return;
                         }
+
                     }
                 }
             }
