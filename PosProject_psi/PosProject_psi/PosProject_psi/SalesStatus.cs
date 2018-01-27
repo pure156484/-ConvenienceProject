@@ -20,6 +20,7 @@ namespace PosProject_psi
         DataTable memberTable;
         SqlConnection sqlcon;
         SqlDataAdapter adapter;
+        string dayValue = null;
 
         public SalesStatus()
         {
@@ -100,7 +101,7 @@ namespace PosProject_psi
         /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            string dayValue = dtpDaySearch.Value.ToString("yyyyMMdd");
+            dayValue = dtpDaySearch.Value.ToString("yyyyMMdd");
             var con = DbMan.Dbcon(sqlcon);
             var cmd = new SqlCommand("NewSellDateDay", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -114,7 +115,7 @@ namespace PosProject_psi
             {
                 SStatusGridView_Date_Setting(ds,0);
             }
-            else if (rboCard.Checked) // 현금 라디오 버튼 체크
+            else if (rboCard.Checked) // 카드 라디오 버튼 체크
             {
                 SStatusGridView_Date_Setting(ds,2);
             }
@@ -399,6 +400,45 @@ namespace PosProject_psi
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 dataGridView_ExportToExcel(sfd.FileName, SStatusGridView_GenderAge);
+            }
+        }
+
+        /// <summary>
+        /// 매출 현황 현금 라디오 버튼 체크 이벤트 발생
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rboMoney_Click(object sender, EventArgs e)
+        {
+            if (dayValue != null)
+            {
+                SStatusGridView_Date_Setting(ds, 1);
+            }
+        }
+
+        /// <summary>
+        /// 매출 현황 카드 라디오 버튼 체크 이벤트 발생
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rboCard_Click(object sender, EventArgs e)
+        {
+            if (dayValue != null)
+            {
+                SStatusGridView_Date_Setting(ds, 2);
+            }
+        }
+
+        /// <summary>
+        /// 매출 현황 전체 결제수단 라디오 버튼 체크 이벤트 발생
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void rboAll_Click(object sender, EventArgs e)
+        {
+            if (dayValue != null)
+            {
+                SStatusGridView_Date_Setting(ds, 0);
             }
         }
     }

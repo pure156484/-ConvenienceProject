@@ -142,6 +142,7 @@
             this.rboAll.TabStop = true;
             this.rboAll.Text = "전체보기";
             this.rboAll.UseVisualStyleBackColor = true;
+            this.rboAll.Click += new System.EventHandler(this.rboAll_Click);
             // 
             // SStatusGridView_Date
             // 
@@ -169,6 +170,7 @@
             this.rboMoney.TabIndex = 42;
             this.rboMoney.Text = "현금결제";
             this.rboMoney.UseVisualStyleBackColor = true;
+            this.rboMoney.Click += new System.EventHandler(this.rboMoney_Click);
             // 
             // groupBox2
             // 
@@ -249,6 +251,7 @@
             this.rboCard.TabIndex = 43;
             this.rboCard.Text = "카드결제";
             this.rboCard.UseVisualStyleBackColor = true;
+            this.rboCard.Click += new System.EventHandler(this.rboCard_Click);
             // 
             // groupBox1
             // 
