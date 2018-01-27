@@ -182,9 +182,9 @@ namespace PosProject_psi
 
         private void btnWait_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(this.garbageView_Before.CurrentRow.Cells[1].Value.ToString() + " 상품의 유효기간 " + this.garbageView_Before.CurrentRow.Cells[4].Value.ToString() + " 제품을 폐기 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                if (product_disposal != null)
+                if (MessageBox.Show(this.garbageView_Before.CurrentRow.Cells[1].Value.ToString() + " 상품의 유효기간 " + this.garbageView_Before.CurrentRow.Cells[4].Value.ToString() + " 제품을 폐기 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     var con = DbMan.Dbcon(sqlcon);
                     var cmd = new SqlCommand("Garbage_Delete", con);
@@ -203,12 +203,16 @@ namespace PosProject_psi
                         garbageView_After_Load();
                         MessageBox.Show("폐기 처리되었습니다.");
                         return;
-                    } 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("선택 된 폐기 항목이 없습니다.");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("선택 된 폐기 항목이 없습니다.");
+                MessageBox.Show("폐기대기에서 선택해 주세요.");
             }
         }
     }

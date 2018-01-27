@@ -228,3 +228,4 @@ C:\Users\정현우\Desktop\0122\PosProject_psi\PosProject_psi\obj\Debug\PosProje
 C:\Users\정현우\Desktop\0122\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.csproj.CoreCompileInputs.cache
 C:\Users\정현우\Desktop\0122\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.exe
 C:\Users\정현우\Desktop\0122\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.pdb
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.GarbageAlert.resources
