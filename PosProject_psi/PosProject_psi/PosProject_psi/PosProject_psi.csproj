@@ -69,6 +69,24 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDay.Designer.cs">
+      <DependentUpon>ChartDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMonth.Designer.cs">
+      <DependentUpon>ChartMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartYear.Designer.cs">
+      <DependentUpon>ChartYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbMan.cs" />
     <Compile Include="DChart.cs">
       <SubType>Form</SubType>
@@ -225,6 +243,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartDay.resx">
+      <DependentUpon>ChartDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMonth.resx">
+      <DependentUpon>ChartMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartYear.resx">
+      <DependentUpon>ChartYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DChart.resx">
       <DependentUpon>DChart.cs</DependentUpon>

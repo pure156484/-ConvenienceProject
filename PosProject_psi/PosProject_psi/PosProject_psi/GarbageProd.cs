@@ -119,6 +119,11 @@ namespace PosProject_psi
             lblDate.Text = DateTime.Now.Month + "월 " + DateTime.Now.Day + "일 " + DateTime.Now.ToLongTimeString();
         }
 
+        /// <summary>
+        /// 폐기 대기 그리드뷰 셀 클릭 이벤트
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void garbageView_Before_Click(object sender, EventArgs e)
         {
             try
@@ -149,6 +154,11 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 폐기 완료 그리드뷰 셀 클릭 이벤트
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void garbageView_After_Click(object sender, EventArgs e)
         {
             try
@@ -180,6 +190,11 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 폐기 등록 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnWait_Click(object sender, EventArgs e)
         {
             try

@@ -24,6 +24,12 @@ namespace CommonProject
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// 회원 등록 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             if (CheckName() && CheckPhone())
@@ -93,6 +99,11 @@ namespace CommonProject
             }
         }
 
+        /// <summary>
+        /// 회원 등록 완료 시 SMS 전송 이벤트
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="phone"></param>
         private void SmsSend(string name, string phone)
         {
             SMSClass sms = new SMSClass();
@@ -120,6 +131,10 @@ namespace CommonProject
             sms.Disconnect();
         }
 
+        /// <summary>
+        /// 휴대전화번호 유효성 검사
+        /// </summary>
+        /// <returns></returns>
         private bool CheckPhone()
         {
             #region 싱글톤 이전 버전
@@ -173,6 +188,10 @@ namespace CommonProject
             }
         }
 
+        /// <summary>
+        /// 이름 유효성 검사
+        /// </summary>
+        /// <returns></returns>
         private bool CheckName()
         {
             if (this.txtName.Text == "")
@@ -206,6 +225,11 @@ namespace CommonProject
             }
         }
 
+        /// <summary>
+        /// 회원 등록 로드
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MemberAdd_Load(object sender, EventArgs e)
         {
             birth.Value = new DateTime(1753, 01, 01);

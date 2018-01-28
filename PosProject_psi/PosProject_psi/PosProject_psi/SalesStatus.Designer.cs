@@ -368,6 +368,7 @@
             this.oldChart.TabIndex = 34;
             this.oldChart.Text = "연령대별";
             this.oldChart.UseVisualStyleBackColor = false;
+            this.oldChart.Click += new System.EventHandler(this.oldChart_Click);
             // 
             // genderChart
             // 

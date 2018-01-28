@@ -28,6 +28,11 @@ namespace PosProject_psi
             this.Close();
         }
 
+        /// <summary>
+        /// 폐기 알림 로드
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GarbageAlert_Load(object sender, EventArgs e)
         {
             var con = DbMan.Dbcon(sqlcon);
@@ -40,6 +45,10 @@ namespace PosProject_psi
             GarbageViewSetting(ds);
         }
 
+        /// <summary>
+        /// 폐기 예정 그리드뷰 설정
+        /// </summary>
+        /// <param name="ds"></param>
         private void GarbageViewSetting(DataSet ds)
         {
             GarbageView.Rows.Clear();
@@ -68,6 +77,11 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 폐기 메뉴 이동 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGarbageProd_Click(object sender, EventArgs e)
         {
             this.Hide();

@@ -27,70 +27,40 @@ namespace PosProject_psi
             InitializeComponent();
         }
         
-        // 일별 차트
+        /// <summary>
+        /// 일별 차트 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DaysChart_Click(object sender, EventArgs e)
         {
-
+            ChartDay cd = new ChartDay();
+            cd.StartPosition = this.StartPosition;
+            cd.Show();
         }
 
-        // 일별 차트
-        private void DchartView()
-        {
-           
-        }
-
-        // 일별 확인 버튼
-        private void btn_Con(object sender, EventArgs e)
-        {
-            
-        }
-        
-        // 일별 콤보박스 연도, 월
-        private void AllSearch()
-        {
-            
-        }
-
-        // 일별 다음 버튼
-        private void btn_Next(object sender, EventArgs e)
-        {
-            
-        }
-
-        // 일별 이전 버튼
-        private void btn_Pre(object sender, EventArgs e)
-        {
-           
-        }
-
-        // 월별 차트
+        /// <summary>
+        /// 월별 차트 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MonthsChart_Click(object sender, EventArgs e)
         {
-            
+            ChartMonth cm = new ChartMonth();
+            cm.StartPosition = this.StartPosition;
+            cm.Show();
         }
-
-        // 월별 차트
-        private void MchartView()
-        {
-           
-        }
-
-        // 월별 확인 버튼
-        private void btn_Con2(object sender, EventArgs e)
-        { 
-            
-        }
-
-        // 월별 콤보박스 연도
-        private void AllSearch2()
-        {
-           
-        }
-
-        // 월별 연도별 차트
+        
+        /// <summary>
+        /// 연도별 차트 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void YearsChart_Click(object sender, EventArgs e)
         {
-           
+            ChartYear cy = new ChartYear();
+            cy.StartPosition = this.StartPosition;
+            cy.Show();
         }
 
 
@@ -229,58 +199,59 @@ namespace PosProject_psi
         /// <param name="e"></param>
         private void btnAgeGender_Click(object sender, EventArgs e)
         {
-            string gender = "";
+            if (CheckCbo())
+            {
+                string gender = "";
 
-            if (cboGender.SelectedIndex == 0)
-            {
-                gender = "(남)";
+                if (cboGender.SelectedIndex == 0)
+                {
+                    gender = "(남)";
+                }
+                else if (cboGender.SelectedIndex == 1)
+                {
+                    gender = "(여)";
+                }
+
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("NewSellDateAgeGender_Search", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@gender", gender);
+                cmd.Parameters.AddWithValue("@age", this.cboAge.Text);
+                adapter = DbMan.DbAdap(adapter);
+                adapter.SelectCommand = cmd;
+                ds = DbMan.DbDs(ds);
+                adapter.Fill(ds);
+                SStatusGridView_GenderAge_Setting(ds); 
             }
-            else if (cboGender.SelectedIndex == 1)
+        }
+
+        /// <summary>
+        /// 성별/연령대 콤보박스 유효성 검사
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckCbo()
+        {
+            if (cboGender.Text == "")
             {
-                gender = "(여)";
+                MessageBox.Show("성별을 선택해 주세요.");
+                return false;
+            }
+            else if (cboAge.Text == "")
+            {
+                MessageBox.Show("나이를 선택해 주세요.");
+                return false;
             }
             else
             {
-                MessageBox.Show("성별을 다시 선택해주세요.");
+                return true;
             }
-
-            var con = DbMan.Dbcon(sqlcon);
-            var cmd = new SqlCommand("NewSellDateAgeGender_Search", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@gender", gender);
-            cmd.Parameters.AddWithValue("@age", this.cboAge.Text);
-            adapter = DbMan.DbAdap(adapter);
-            adapter.SelectCommand = cmd;
-            ds = DbMan.DbDs(ds);
-            adapter.Fill(ds);
-            SStatusGridView_GenderAge_Setting(ds);
         }
-
-        // 콤보박스 나이
-        private void SellAgeSearch()
-        {
-          
-        }
-
-        // 콤보박스 성별
-        private void SellGenderSearch()
-        {
-           
-        }
-
-        // 콤보박스 나이, 성별
-        private void SellAllSearch()
-        {
-           
-        }
-
-        // 입력후 초기화
-        private void componentInit()
-        {
-            
-        }
-
-        // 성별 차트
+        
+        /// <summary>
+        /// 성별 차트 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void genderChart_Click(object sender, EventArgs e)
         {
             
@@ -440,6 +411,16 @@ namespace PosProject_psi
             {
                 SStatusGridView_Date_Setting(ds, 0);
             }
+        }
+
+        /// <summary>
+        /// 연령대 차트 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void oldChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

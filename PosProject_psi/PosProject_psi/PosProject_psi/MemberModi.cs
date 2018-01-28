@@ -25,6 +25,11 @@ namespace PosProject_psi
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 수정 할 회원 전화번호 검색 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUserNameSearch_Click(object sender, EventArgs e)
         {
             if (CheckPhoneSearch())
@@ -103,6 +108,10 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 휴대전화번호 입력 유효성 검사
+        /// </summary>
+        /// <returns></returns>
         private bool CheckPhoneSearch()
         {
             if (this.cboPhone1.Text == "")
@@ -126,6 +135,11 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 회원 수정 완료 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             if (CheckPhone())
@@ -187,6 +201,10 @@ namespace PosProject_psi
             }
         }
 
+        /// <summary>
+        /// 휴대전화번호 입력 유효성 검사
+        /// </summary>
+        /// <returns></returns>
         private bool CheckPhone()
         {
             if (this.txtModiUserName.Text == "")

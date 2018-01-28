@@ -32,6 +32,9 @@ namespace CommonProject
             ResetGridView();
         }
 
+        /// <summary>
+        /// 그리드뷰 초기화
+        /// </summary>
         private void ResetGridView()
         {
             #region 싱글톤 이전 버전
@@ -61,6 +64,10 @@ namespace CommonProject
             MemberView(ds);
         }
 
+        /// <summary>
+        /// 그리드뷰 설정
+        /// </summary>
+        /// <param name="ds"></param>
         private void MemberView(DataSet ds)
         {
             MemberGridView.Rows.Clear();
@@ -93,6 +100,11 @@ namespace CommonProject
             }
         }
 
+        /// <summary>
+        /// 회원 등록 폼 불러오기 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Add_Click(object sender, EventArgs e)
         {
             new MemberAdd().Show();
@@ -101,6 +113,11 @@ namespace CommonProject
             this.Close();
         }
 
+        /// <summary>
+        /// 회원 수정 폼 불러오기 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Modi_Click(object sender, EventArgs e)
         {
             new MemberModi().Show();
@@ -109,6 +126,11 @@ namespace CommonProject
             this.Close();
         }
 
+        /// <summary>
+        /// 전화 번호 검색 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             bool flag = false;
@@ -127,6 +149,11 @@ namespace CommonProject
             }
         }
 
+        /// <summary>
+        /// 회원 삭제 버튼
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Del_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this.MemberGridView.CurrentRow.Cells[1].Value.ToString() + " 를(을) 삭제 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
