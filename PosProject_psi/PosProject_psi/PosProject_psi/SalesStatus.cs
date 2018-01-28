@@ -254,7 +254,10 @@ namespace PosProject_psi
         /// <param name="e"></param>
         private void genderChart_Click(object sender, EventArgs e)
         {
-            
+            ChartGender cg = new ChartGender();
+            cg.StartPosition = this.StartPosition;
+            cg.Show();
+
         }
 
         /// <summary>
@@ -420,7 +423,9 @@ namespace PosProject_psi
         /// <param name="e"></param>
         private void oldChart_Click(object sender, EventArgs e)
         {
-
+            ChartAge ca = new ChartAge();
+            ca.StartPosition = this.StartPosition;
+            ca.Show();
         }
     }
 }

@@ -121,11 +121,6 @@
             Represents a combined list and collection of HTML nodes.
             </summary>
         </member>
-        <member name="P:HtmlAgilityPack.HtmlAttributeCollection.Item(System.String)">
-            <summary>
-            Gets a given attribute from the list using its name.
-            </summary>
-        </member>
         <member name="P:HtmlAgilityPack.HtmlAttributeCollection.Count">
             <summary>
             Gets the number of elements actually contained in the list.
@@ -139,6 +134,11 @@
         <member name="P:HtmlAgilityPack.HtmlAttributeCollection.Item(System.Int32)">
             <summary>
             Gets the attribute at the specified index.
+            </summary>
+        </member>
+        <member name="P:HtmlAgilityPack.HtmlAttributeCollection.Item(System.String)">
+            <summary>
+            Gets a given attribute from the list using its name.
             </summary>
         </member>
         <member name="M:HtmlAgilityPack.HtmlAttributeCollection.Add(HtmlAgilityPack.HtmlAttribute)">

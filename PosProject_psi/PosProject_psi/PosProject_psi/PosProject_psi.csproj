@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.6.13.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.6.13\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.6.15.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.15\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -69,11 +69,23 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartAge.Designer.cs">
+      <DependentUpon>ChartAge.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChartDay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChartDay.Designer.cs">
       <DependentUpon>ChartDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartGender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartGender.Designer.cs">
+      <DependentUpon>ChartGender.cs</DependentUpon>
     </Compile>
     <Compile Include="ChartMonth.cs">
       <SubType>Form</SubType>
@@ -244,8 +256,14 @@
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartAge.resx">
+      <DependentUpon>ChartAge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartDay.resx">
       <DependentUpon>ChartDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartGender.resx">
+      <DependentUpon>ChartGender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartMonth.resx">
       <DependentUpon>ChartMonth.cs</DependentUpon>
