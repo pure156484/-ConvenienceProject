@@ -30,6 +30,7 @@
         {
             this.txtBirth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
@@ -44,16 +45,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtTSalary = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtMobile = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtBirth
             // 
             this.txtBirth.Location = new System.Drawing.Point(138, 197);
             this.txtBirth.Name = "txtBirth";
-            this.txtBirth.PasswordChar = '*';
             this.txtBirth.Size = new System.Drawing.Size(100, 21);
             this.txtBirth.TabIndex = 64;
             // 
@@ -67,6 +64,13 @@
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 63;
             this.label5.Text = "주민번호";
+            // 
+            // txtMobile
+            // 
+            this.txtMobile.Location = new System.Drawing.Point(138, 35);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(100, 21);
+            this.txtMobile.TabIndex = 62;
             // 
             // label4
             // 
@@ -123,7 +127,7 @@
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Confirm.Location = new System.Drawing.Point(91, 264);
+            this.btn_Confirm.Location = new System.Drawing.Point(98, 225);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(89, 26);
             this.btn_Confirm.TabIndex = 56;
@@ -204,43 +208,12 @@
             this.label8.TabIndex = 69;
             this.label8.Text = "월급";
             // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(138, 224);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(100, 21);
-            this.txtPass.TabIndex = 72;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.label9.Location = new System.Drawing.Point(47, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 16);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "비밀번호";
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.Location = new System.Drawing.Point(138, 35);
-            this.txtMobile.Mask = "000-9000-0000";
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(100, 21);
-            this.txtMobile.TabIndex = 73;
-            this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(310, 302);
-            this.Controls.Add(this.txtMobile);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.txtTSalary);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtHours);
@@ -249,6 +222,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBirth);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddr);
             this.Controls.Add(this.txtPosition);
@@ -260,7 +234,6 @@
             this.Name = "EmployeeAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "직원 등록";
-            this.Load += new System.EventHandler(this.EmployeeAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +243,7 @@
 
         private System.Windows.Forms.TextBox txtBirth;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.TextBox txtPosition;
@@ -284,8 +258,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTSalary;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox txtMobile;
     }
 }

@@ -34,6 +34,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtBirth = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddr = new System.Windows.Forms.TextBox();
@@ -101,6 +103,24 @@
             this.label6.TabIndex = 82;
             this.label6.Text = "시급";
             // 
+            // txtBirth
+            // 
+            this.txtBirth.Location = new System.Drawing.Point(99, 197);
+            this.txtBirth.Name = "txtBirth";
+            this.txtBirth.Size = new System.Drawing.Size(100, 21);
+            this.txtBirth.TabIndex = 81;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
+            this.label5.Location = new System.Drawing.Point(8, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "주민번호";
+            // 
             // txtMobile
             // 
             this.txtMobile.Location = new System.Drawing.Point(99, 35);
@@ -163,7 +183,7 @@
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Confirm.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Confirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(25)))), ((int)(((byte)(107)))));
-            this.btn_Confirm.Location = new System.Drawing.Point(98, 204);
+            this.btn_Confirm.Location = new System.Drawing.Point(98, 225);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(89, 26);
             this.btn_Confirm.TabIndex = 73;
@@ -210,7 +230,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(284, 244);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btnUserNameSearch);
             this.Controls.Add(this.txtTSalary);
             this.Controls.Add(this.label8);
@@ -218,6 +238,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtBirth);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAddr);
@@ -243,6 +265,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBirth;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAddr;

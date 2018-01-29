@@ -14,7 +14,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -33,16 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="BusinessRefinery.Barcode.Win">
       <HintPath>..\..\..\..\..\Downloads\BusinessRefinery.Barcode.DotNET.Ultimate.Evaluation\BusinessRefinery.Barcode.Win.dll</HintPath>
     </Reference>
     <Reference Include="KeepAutomation.Barcode.Windows">
       <HintPath>..\..\..\..\..\Downloads\KA.Barcode.for.NETSuite\KeepAutomation.Barcode.Windows.dll</HintPath>
-=======
-    <Reference Include="HtmlAgilityPack, Version=1.6.13.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.6.13\lib\Net40\HtmlAgilityPack.dll</HintPath>
->>>>>>> LWS
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -129,24 +124,6 @@
     <Compile Include="GarbageProd.Designer.cs">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginAlterPass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginAlterPass.Designer.cs">
-      <DependentUpon>LoginAlterPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginFind.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginFind.Designer.cs">
-      <DependentUpon>LoginFind.cs</DependentUpon>
-    </Compile>
     <Compile Include="MChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,15 +186,12 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="ReceiptPrint.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReceiptPrint.Designer.cs">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> LWS
     <Compile Include="Sales.cs" />
     <Compile Include="SalesStatus.cs">
       <SubType>Form</SubType>
@@ -284,15 +258,6 @@
     <EmbeddedResource Include="GarbageProd.resx">
       <DependentUpon>GarbageProd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginAlterPass.resx">
-      <DependentUpon>LoginAlterPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginFind.resx">
-      <DependentUpon>LoginFind.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MChart.resx">
       <DependentUpon>MChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,7 +308,6 @@
     <EmbeddedResource Include="YChart.resx">
       <DependentUpon>YChart.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -378,7 +342,6 @@
     <None Include="Resources\no_image.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\if_search_2988651.png" />
   </ItemGroup>
   <ItemGroup>
@@ -398,32 +361,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1q23.JPG" />
-=======
-    <COMReference Include="SoHotLib">
-      <Guid>{A8ABB9E1-14B4-4BC7-BA59-E767429AEA8E}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\POSlogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\POSlogo2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bc25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bc25_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bc25_3.png" />
->>>>>>> LWS
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
