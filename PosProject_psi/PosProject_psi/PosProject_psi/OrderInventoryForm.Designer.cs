@@ -29,10 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderInventoryForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> LWS
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -94,7 +100,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btnSeacrch = new System.Windows.Forms.Button();
+=======
+>>>>>>> LWS
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +119,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+<<<<<<< HEAD
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
+=======
+            this.tabControl1.Location = new System.Drawing.Point(-2, -3);
+>>>>>>> LWS
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(987, 602);
@@ -279,7 +292,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Orange;
+<<<<<<< HEAD
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+=======
+>>>>>>> LWS
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -331,6 +347,7 @@
             // itemListGrid
             // 
             this.itemListGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -339,6 +356,16 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.itemListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+=======
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+>>>>>>> LWS
             this.itemListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -394,7 +421,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
+<<<<<<< HEAD
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+=======
+>>>>>>> LWS
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -488,6 +518,7 @@
             // ProdStockView
             // 
             this.ProdStockView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -496,6 +527,16 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ProdStockView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+=======
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdStockView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+>>>>>>> LWS
             this.ProdStockView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProdStockView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -512,6 +553,36 @@
             this.ProdStockView.Size = new System.Drawing.Size(634, 169);
             this.ProdStockView.TabIndex = 15;
             this.ProdStockView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProdStockView_KeyPress);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "선택";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "바 코 드";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "상 품 명";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "품 종";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "단 가";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "재고수량";
+            this.Column6.Name = "Column6";
             // 
             // Column1
             // 
@@ -600,7 +671,24 @@
             this.btnOrder.TabIndex = 20;
             this.btnOrder.Text = "입고";
             this.btnOrder.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
+=======
+            // 
+            // btnSeacrch
+            // 
+            this.btnSeacrch.BackColor = System.Drawing.Color.Orange;
+            this.btnSeacrch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSeacrch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSeacrch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeacrch.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSeacrch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSeacrch.Location = new System.Drawing.Point(327, 475);
+            this.btnSeacrch.Name = "btnSeacrch";
+            this.btnSeacrch.Size = new System.Drawing.Size(27, 27);
+            this.btnSeacrch.TabIndex = 19;
+            this.btnSeacrch.UseVisualStyleBackColor = false;
+>>>>>>> LWS
             // 
             // cboType
             // 
@@ -634,6 +722,7 @@
             // OrderListGrid
             // 
             this.OrderListGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -642,6 +731,16 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.OrderListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+=======
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+>>>>>>> LWS
             this.OrderListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrderListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column14,
@@ -766,6 +865,7 @@
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "날짜";
             // 
+<<<<<<< HEAD
             // btnSeacrch
             // 
             this.btnSeacrch.BackColor = System.Drawing.Color.Orange;
@@ -782,6 +882,8 @@
             this.btnSeacrch.UseVisualStyleBackColor = false;
             this.btnSeacrch.Click += new System.EventHandler(this.btnSeacrch_Click);
             // 
+=======
+>>>>>>> LWS
             // OrderInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -811,8 +913,15 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox basketList;
+=======
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox1;
+>>>>>>> LWS
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox ItemListcbo;
         private System.Windows.Forms.TextBox prodInfoTxt;
@@ -856,6 +965,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnProdBasket;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label5;
@@ -873,5 +983,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDrop;
+=======
+>>>>>>> LWS
     }
 }

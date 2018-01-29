@@ -63,6 +63,7 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap _1q23 {
             get {
                 object obj = ResourceManager.GetObject("1q23", resourceCulture);
@@ -94,8 +95,11 @@ namespace PosProject_psi.Properties {
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap if_icons_settings_15645291 {
+=======
+        internal static System.Drawing.Bitmap bc25_3 {
+>>>>>>> LWS
             get {
-                object obj = ResourceManager.GetObject("if_icons_settings_15645291", resourceCulture);
+                object obj = ResourceManager.GetObject("bc25_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +107,15 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap if_minus_1645995 {
             get {
                 object obj = ResourceManager.GetObject("if_minus_1645995", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap if_icons_settings_1564529 {
+            get {
+                object obj = ResourceManager.GetObject("if_icons_settings_1564529", resourceCulture);
+>>>>>>> LWS
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,19 +123,15 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap if_save_173091 {
             get {
                 object obj = ResourceManager.GetObject("if_save_173091", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap if_search_298865 {
+=======
+        internal static System.Drawing.Bitmap if_icons_settings_15645291 {
             get {
-                object obj = ResourceManager.GetObject("if_search_298865", resourceCulture);
+                object obj = ResourceManager.GetObject("if_icons_settings_15645291", resourceCulture);
+>>>>>>> LWS
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +152,16 @@ namespace PosProject_psi.Properties {
         internal static System.Drawing.Bitmap if_setting_468371 {
             get {
                 object obj = ResourceManager.GetObject("if_setting_468371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_image {
+            get {
+                object obj = ResourceManager.GetObject("no_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

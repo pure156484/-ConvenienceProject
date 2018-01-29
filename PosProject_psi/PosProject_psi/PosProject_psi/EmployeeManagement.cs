@@ -62,8 +62,8 @@ namespace CommonProject
             EmployeeGridView.Columns[5].HeaderText = "시급";
             EmployeeGridView.Columns[6].HeaderText = "노동시간";
             EmployeeGridView.Columns[7].HeaderText = "월급";
-            EmployeeGridView.Columns[8].HeaderText = "주민번호";
-
+            EmployeeGridView.Columns[8].Visible = false;
+           
             employeeTable = ds.Tables[0];
             DataRowCollection rows = employeeTable.Rows;
 

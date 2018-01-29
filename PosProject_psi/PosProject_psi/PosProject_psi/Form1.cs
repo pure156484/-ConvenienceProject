@@ -16,6 +16,7 @@ namespace PosProject_psi
     public partial class MainForm : Form
     {
         // point 받는 객체
+<<<<<<< HEAD
         private int val;
         public int Val
         {
@@ -24,6 +25,15 @@ namespace PosProject_psi
         }
 
         double priceDis = 0;
+=======
+        private string nam2;
+        public string Nam2
+        {
+            get { return nam2; }
+            set { nam2 = value; }
+        }
+
+>>>>>>> LWS
         SellAge sa = new SellAge();
         int eventPrice;
         CardPay cp;
@@ -40,7 +50,12 @@ namespace PosProject_psi
         int price;
         TextBox cursor;
         string bacode;
+<<<<<<< HEAD
         int sellbarcode;
+=======
+        string id;
+
+>>>>>>> LWS
         public MainForm()
         {
             InitializeComponent();
@@ -50,8 +65,24 @@ namespace PosProject_psi
             lblDate.Text = DateTime.Now.ToString();
         }
 
+        public MainForm(string id) : this()
+        {
+            this.id = id;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // 우석이 코드 
+            //Login lg = new Login();
+            //string receiveName;
+
+            //lbl_Name.Text = lg.Nam;
+            // = receiveName;
+          //  Login login = Owner as MainForm;
+            
+           // lbl_Name.Text= login.Nam;
+            lbl_Name.Text = id;
+
             sa.StartPosition = this.StartPosition;
             sa.TopMost = true;
             //this.Enabled = false;
@@ -597,6 +628,11 @@ namespace PosProject_psi
                 txtReturnMoney.Text = (int.Parse(txtMoney.Text) - int.Parse(txtPrice.Text)).ToString();
                 txtReturnMoney.Focus();
             }
+<<<<<<< HEAD
+=======
+
+        }
+>>>>>>> LWS
 
         }
 
@@ -638,7 +674,7 @@ namespace PosProject_psi
 
         private void SellProdInsert()
         {
-            
+
             for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
                 var con = DbMan.Dbcon(sqlcon);
@@ -677,7 +713,10 @@ namespace PosProject_psi
         {
             if (txtPrice.Text != "0")
             {
+<<<<<<< HEAD
                 sellbarcode = new Random().Next(2147483647);
+=======
+>>>>>>> LWS
                 cp = new CardPay();
                 cp.StartPosition = this.StartPosition;
                 cp.Show();
@@ -751,6 +790,7 @@ namespace PosProject_psi
 
         private void button2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             PointManagement main = new PointManagement();
             main.Val = int.Parse(this.txtPrice.Text);
             int a;
@@ -763,6 +803,25 @@ namespace PosProject_psi
         {
             Setting s = new Setting();
             s.Show();
+=======
+            // MessageBox.Show(this.txtPrice.ToString());
+            PointManagement pome = new PointManagement();
+            pome.Vals = int.Parse(this.txtPrice.Text);
+
+            int a;
+            // a = int.Parse(this.txtPrice.Text);
+            // MessageBox.Show(a.ToString());
+            pome.ShowDialog();
+
+            a = pome.Vals;
+            txtPrice.Text = a.ToString();
+
+            // MessageBox.Show(pome.Vals + "원");
+            // txtPrice.Text = int.Parse();
+
+
+            // txtPrice.Text
+>>>>>>> LWS
         }
     }
 }

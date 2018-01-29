@@ -161,10 +161,17 @@ namespace PosProject_psi
             {
                 case "상품명":
                     SearchStockProdName();
+<<<<<<< HEAD
                     break;
                 case "바코드":
                     SearchStockBarcode();
                     break;     
+=======
+                    break;
+                case "바코드":
+                    SearchStockBarcode();
+                    break;
+>>>>>>> LWS
             }
         }
 

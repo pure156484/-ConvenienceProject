@@ -19,6 +19,8 @@ namespace CommonProject
         DataGridView myView;
         DataTable memberTable;
         List<Users> list = new List<Users>();
+        SqlConnection sqlcon;
+        SqlDataAdapter adapter;
 
         public MembershipManagement()
         {
@@ -32,6 +34,11 @@ namespace CommonProject
 
         private void ResetGridView()
         {
+<<<<<<< HEAD
+=======
+            #region 싱글톤 이전 버전
+            /*
+>>>>>>> LWS
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
             {
                 con.Open();
@@ -43,6 +50,21 @@ namespace CommonProject
                 adapter.Fill(ds);
                 MemberView(ds);
             }
+<<<<<<< HEAD
+=======
+            */
+            #endregion
+
+            // 싱글톤 수정
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("MemberLoad", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            adapter = DbMan.DbAdap(adapter);
+            adapter.SelectCommand = cmd;
+            ds = DbMan.DbDs(ds);
+            adapter.Fill(ds);
+            MemberView(ds);
+>>>>>>> LWS
         }
 
         private void MemberView(DataSet ds)
@@ -115,6 +137,11 @@ namespace CommonProject
         {
             if (MessageBox.Show(this.MemberGridView.CurrentRow.Cells[1].Value.ToString() + " 를(을) 삭제 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+<<<<<<< HEAD
+=======
+                #region 싱글톤 이전 버전
+                /*
+>>>>>>> LWS
                 using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
                     using (var cmd = new SqlCommand("MemberDelete", con))
@@ -138,6 +165,29 @@ namespace CommonProject
                         }
                     }
                 }
+<<<<<<< HEAD
+=======
+                */
+                #endregion
+
+                var con = DbMan.Dbcon(sqlcon);
+                var cmd = new SqlCommand("MemberDelete", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user_name", this.MemberGridView.CurrentRow.Cells[1].Value.ToString());
+                con.Open();
+                int i = cmd.ExecuteNonQuery(); // select을 제외한 나머지는 ExecuteNonQuery 사용한다. 
+                if (i == 1)
+                {
+                    MessageBox.Show("회원이 삭제 되었습니다.");
+                    ResetGridView();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("회원 삭제 실패하였습니다.");
+                    return;
+                }
+>>>>>>> LWS
             }
             else
             {
