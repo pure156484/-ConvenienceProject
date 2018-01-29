@@ -87,11 +87,15 @@ namespace PosProject_psi
             }
             else if (rboCard.Checked) // 카드 라디오 버튼 체크
             {
-                SStatusGridView_Date_Setting(ds,2);
+                rboCard.Checked = false;
+                rboAll.Checked = true;
+                SStatusGridView_Date_Setting(ds,0);
             }
             else if (rboMoney.Checked) // 카드 라디오 버튼 체크
             {
-                SStatusGridView_Date_Setting(ds,1);
+                rboCard.Checked = false;
+                rboAll.Checked = true;
+                SStatusGridView_Date_Setting(ds,0);
             }
             else
             {
