@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BusinessRefinery.Barcode.Win">
+      <HintPath>..\..\..\..\..\Downloads\BusinessRefinery.Barcode.DotNET.Ultimate.Evaluation\BusinessRefinery.Barcode.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Windows">
+      <HintPath>..\..\..\..\..\Downloads\KA.Barcode.for.NETSuite\KeepAutomation.Barcode.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -142,6 +148,12 @@
     <Compile Include="MembershipManagement.Designer.cs">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderConfirm.Designer.cs">
+      <DependentUpon>OrderConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +186,12 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceiptPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptPrint.Designer.cs">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales.cs" />
     <Compile Include="SalesStatus.cs">
       <SubType>Form</SubType>
@@ -187,6 +205,7 @@
     <Compile Include="SellAge.Designer.cs">
       <DependentUpon>SellAge.cs</DependentUpon>
     </Compile>
+    <Compile Include="SellItem.cs" />
     <Compile Include="Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +270,9 @@
     <EmbeddedResource Include="MembershipManagement.resx">
       <DependentUpon>MembershipManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderConfirm.resx">
+      <DependentUpon>OrderConfirm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderInventoryForm.resx">
       <DependentUpon>OrderInventoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptPrint.resx">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesStatus.resx">
       <DependentUpon>SalesStatus.cs</DependentUpon>
@@ -315,6 +340,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_2988651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_shopping-basket-add_63149.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_save_173091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_error_1646012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_minus_1645995.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20180124_155546014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1q23.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

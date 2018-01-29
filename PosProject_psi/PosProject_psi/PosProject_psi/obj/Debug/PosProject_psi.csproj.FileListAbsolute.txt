@@ -213,6 +213,13 @@ C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\PosProject_psi.pdb
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Category.resources
 C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.PointManagement.resources
+<<<<<<< HEAD
 >>>>>>> d414f55aa418480bf5db60445c95088eebb463b0
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.Category.resources
 C:\Users\gd3-18\Documents\-ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.PointManagement.resources
+=======
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.OrderConfirm.resources
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\BusinessRefinery.Barcode.Win.dll
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\bin\Debug\KeepAutomation.Barcode.Windows.dll
+C:\Users\gd3-12\Desktop\WindowsProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ReceiptPrint.resources
+>>>>>>> 5f2188ee5ad1b1409c906e0d914d9a8740e27f84

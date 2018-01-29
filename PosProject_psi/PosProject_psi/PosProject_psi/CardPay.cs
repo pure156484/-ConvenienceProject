@@ -193,5 +193,10 @@ namespace PosProject_psi
                 return;
             }
         }
+
+        private void CardPay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

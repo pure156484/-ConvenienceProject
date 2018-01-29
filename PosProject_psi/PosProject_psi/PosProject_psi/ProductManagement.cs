@@ -649,5 +649,13 @@ namespace PosProject_psi
         {
 
         }
+
+        private void product_barcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show(((TextBox)sender).Text);
+            }
+        }
     }
 }
