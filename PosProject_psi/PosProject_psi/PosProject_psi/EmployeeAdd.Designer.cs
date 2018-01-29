@@ -53,6 +53,7 @@
             // 
             this.txtBirth.Location = new System.Drawing.Point(138, 197);
             this.txtBirth.Name = "txtBirth";
+            this.txtBirth.PasswordChar = '*';
             this.txtBirth.Size = new System.Drawing.Size(100, 21);
             this.txtBirth.TabIndex = 64;
             // 
@@ -207,6 +208,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(138, 224);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(100, 21);
             this.txtPass.TabIndex = 72;
             // 
