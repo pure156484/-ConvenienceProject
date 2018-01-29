@@ -36,7 +36,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
-            this.lbl_Name = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -83,6 +83,7 @@
             this.btnProd = new System.Windows.Forms.Button();
             this.btnCard = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,7 +115,6 @@
             this.itemGrid.Size = new System.Drawing.Size(732, 301);
             this.itemGrid.TabIndex = 0;
             this.itemGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemGrid_CellClick);
-            this.itemGrid.SelectionChanged += new System.EventHandler(this.itemGrid_SelectionChanged);
             // 
             // panel1
             // 
@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.lblGender);
-            this.panel1.Controls.Add(this.lbl_Name);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblDate);
@@ -174,14 +174,15 @@
             this.lblGender.TabIndex = 9;
             this.lblGender.Text = "성별";
             // 
-            // lbl_Name
+            // label4
             // 
-            this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbl_Name.Location = new System.Drawing.Point(184, 3);
-            this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(0, 16);
-            this.lbl_Name.TabIndex = 4;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(184, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "홍길동(01)";
             // 
             // label3
             // 
@@ -467,7 +468,7 @@
             this.btnWait.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnWait.Location = new System.Drawing.Point(750, 6);
             this.btnWait.Name = "btnWait";
-            this.btnWait.Size = new System.Drawing.Size(110, 52);
+            this.btnWait.Size = new System.Drawing.Size(90, 52);
             this.btnWait.TabIndex = 4;
             this.btnWait.Text = "보류";
             this.btnWait.UseVisualStyleBackColor = false;
@@ -583,7 +584,7 @@
             this.txtBacode.Name = "txtBacode";
             this.txtBacode.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBacode.Size = new System.Drawing.Size(208, 41);
-            this.txtBacode.TabIndex = 0;
+            this.txtBacode.TabIndex = 11;
             this.txtBacode.WordWrap = false;
             this.txtBacode.Click += new System.EventHandler(this.txtBacode_Click);
             this.txtBacode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBacode_KeyDown);
@@ -779,9 +780,9 @@
             this.btnCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCard.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCard.Location = new System.Drawing.Point(866, 6);
+            this.btnCard.Location = new System.Drawing.Point(847, 6);
             this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(110, 52);
+            this.btnCard.Size = new System.Drawing.Size(90, 52);
             this.btnCard.TabIndex = 12;
             this.btnCard.Text = "카드";
             this.btnCard.UseVisualStyleBackColor = false;
@@ -803,12 +804,30 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSetting.BackgroundImage = global::PosProject_psi.Properties.Resources.if_setting_46837;
+            this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSetting.FlatAppearance.BorderColor = System.Drawing.Color.MintCream;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSetting.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSetting.Location = new System.Drawing.Point(947, 6);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(52, 52);
+            this.btnSetting.TabIndex = 14;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1010, 622);
+            this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnCard);
             this.Controls.Add(this.btnCustomer);
@@ -858,7 +877,6 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnWait;
@@ -894,6 +912,8 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Button btnCard;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSetting;
+        internal System.Windows.Forms.Label label4;
     }
 }
 

@@ -647,6 +647,7 @@
             this.Controls.Add(this.label12);
             this.Name = "CardPay";
             this.Text = "CardPay";
+            this.Load += new System.EventHandler(this.CardPay_Load);
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -682,7 +683,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCardType;
-        private System.Windows.Forms.Label lblDiscountPer;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Button btnOK;
         internal System.Windows.Forms.TextBox txtMoney;
@@ -704,5 +704,6 @@
         internal System.Windows.Forms.TextBox txtCardCom;
         internal System.Windows.Forms.Button btnCancel;
         internal System.Windows.Forms.TextBox txtDiscount;
+        internal System.Windows.Forms.Label lblDiscountPer;
     }
 }

@@ -73,7 +73,7 @@
             this.category_name.Multiline = true;
             this.category_name.Name = "category_name";
             this.category_name.Size = new System.Drawing.Size(158, 20);
-            this.category_name.TabIndex = 0;
+            this.category_name.TabIndex = 38;
             // 
             // btn_delete
             // 

@@ -16,7 +16,7 @@ namespace PosProject_psi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new MainForm());
         }
     }
 }

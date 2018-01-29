@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonProject;
-using System.Security.Cryptography;
 
 namespace PosProject_psi
 {
@@ -34,7 +33,6 @@ namespace PosProject_psi
                 string employee_hours = this.txtHours.Text;
                 string employee_total_salary = this.txtTSalary.Text;
                 string employee_pk = this.txtBirth.Text;
-                string employee_pass = this.txtPass.Text;
                 
                 using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConvenienceStore"].ConnectionString))
                 {
@@ -50,14 +48,6 @@ namespace PosProject_psi
                         cmd.Parameters.AddWithValue("@employee_hours", employee_hours);
                         cmd.Parameters.AddWithValue("@employee_total_salary", employee_total_salary);
                         cmd.Parameters.AddWithValue("@employee_pk", employee_pk);
-                        //using (MD5 md5Hash = MD5.Create())
-                        //{
-                        //    string hash = GetMd5Hash(md5Hash, employee_pass);
-                        //    // MessageBox.Show(hash + " : 비밀번호"); // 암호화 잘됨
-                        //    cmd.Parameters.AddWithValue("@employee_pass", hash);
-                        //}
-                        cmd.Parameters.AddWithValue("@employee_pass", employee_pass);
-
                         con.Open();
                         componentInit();
 
@@ -128,50 +118,6 @@ namespace PosProject_psi
             {
                 return true;
             }
-        }
-        //static string GetMd5Hash(MD5 md5Hash, string input)
-        //{
-
-        //    // Convert the input string to a byte array and compute the hash.
-        //    byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-        //    // Create a new Stringbuilder to collect the bytes
-        //    // and create a string.
-        //    StringBuilder sBuilder = new StringBuilder();
-
-        //    // Loop through each byte of the hashed data 
-        //    // and format each one as a hexadecimal string.
-        //    for (int i = 0; i < data.Length; i++)
-        //    {
-        //        sBuilder.Append(data[i].ToString("x2"));
-        //    }
-
-        //    // Return the hexadecimal string.
-        //    return sBuilder.ToString();
-        //}
-
-        //// Verify a hash against a string.
-        //static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
-        //{
-        //    // Hash the input.
-        //    string hashOfInput = GetMd5Hash(md5Hash, input);
-
-        //    // Create a StringComparer an compare the hashes.
-        //    StringComparer comparer = StringComparer.OrdinalIgnoreCase;
-
-        //    if (0 == comparer.Compare(hashOfInput, hash))
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        private void EmployeeAdd_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
