@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -134,14 +134,14 @@
             // empGridView
             // 
             this.empGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.empGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.empGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.empGridView.ColumnHeadersHeight = 40;
             this.empGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.empGridView.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -213,7 +213,7 @@
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(268, 30);
             this.txtPhone.TabIndex = 19;
-            this.txtPhone.Text = "02-2158-5900";
+            this.txtPhone.Text = "010-1234-5678";
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
@@ -236,7 +236,7 @@
             this.txtCeoNum.ReadOnly = true;
             this.txtCeoNum.Size = new System.Drawing.Size(245, 30);
             this.txtCeoNum.TabIndex = 17;
-            this.txtCeoNum.Text = "2154543218";
+            this.txtCeoNum.Text = "21545-43218";
             this.txtCeoNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
@@ -282,7 +282,7 @@
             this.txtShopName.ReadOnly = true;
             this.txtShopName.Size = new System.Drawing.Size(245, 30);
             this.txtShopName.TabIndex = 13;
-            this.txtShopName.Text = "GD 편의점 가산점";
+            this.txtShopName.Text = "구디 편의점";
             this.txtShopName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnUpdate
@@ -352,17 +352,17 @@
         private System.Windows.Forms.DataGridView empGridView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCeoNum;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCeoName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtShopName;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.TextBox txtAddr;
-        internal System.Windows.Forms.TextBox txtPhone;
-        internal System.Windows.Forms.TextBox txtCeoNum;
-        internal System.Windows.Forms.TextBox txtCeoName;
-        internal System.Windows.Forms.TextBox txtShopName;
     }
 }

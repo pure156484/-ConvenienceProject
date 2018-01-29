@@ -51,7 +51,7 @@ namespace PosProject_psi
                                 this.txtSalary.Text = sdr["employee_salary"].ToString();
                                 this.txtHours.Text = sdr["employee_hours"].ToString();
                                 this.txtTSalary.Text = sdr["employee_total_salary"].ToString();
-                                this.txtBirth.Text = sdr["employee_pk"].ToString();
+                               // this.txtBirth.Text = sdr["employee_pk"].ToString();
                             }
                             sdr.Close();
                         }
@@ -81,7 +81,7 @@ namespace PosProject_psi
                         cmd.Parameters.AddWithValue("@employee_salary", this.txtSalary.Text);
                         cmd.Parameters.AddWithValue("@employee_hours", this.txtHours.Text);
                         cmd.Parameters.AddWithValue("@employee_total_salary", this.txtTSalary.Text);
-                        cmd.Parameters.AddWithValue("@employee_pk", this.txtBirth.Text);
+                        //cmd.Parameters.AddWithValue("@employee_pk", this.txtBirth.Text);
 
                         con.Open();
                         componentInit();
@@ -106,7 +106,7 @@ namespace PosProject_psi
         // 입력후 초기화
         private void componentInit()
         {
-            this.txtName.Text = txtMobile.Text = txtPosition.Text = txtAddr.Text = txtSalary.Text = txtHours.Text = txtTSalary.Text = txtBirth.Text = "";
+            this.txtName.Text = txtMobile.Text = txtPosition.Text = txtAddr.Text = txtSalary.Text = txtHours.Text = txtTSalary.Text = "";
             this.txtName.Focus();
         }
     }

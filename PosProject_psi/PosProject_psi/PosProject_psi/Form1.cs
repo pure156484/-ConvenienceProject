@@ -16,14 +16,13 @@ namespace PosProject_psi
     public partial class MainForm : Form
     {
         // point 받는 객체
-        private int val;
-        public int Val
+        private string nam2;
+        public string Nam2
         {
-            get { return val; }
-            set { val = value; }
+            get { return nam2; }
+            set { nam2 = value; }
         }
 
-        double priceDis = 0;
         SellAge sa = new SellAge();
         int eventPrice;
         CardPay cp;
@@ -40,7 +39,8 @@ namespace PosProject_psi
         int price;
         TextBox cursor;
         string bacode;
-        int sellbarcode;
+        string id;
+
         public MainForm()
         {
             InitializeComponent();
@@ -50,8 +50,24 @@ namespace PosProject_psi
             lblDate.Text = DateTime.Now.ToString();
         }
 
+        public MainForm(string id) : this()
+        {
+            this.id = id;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // 우석이 코드 
+            //Login lg = new Login();
+            //string receiveName;
+
+            //lbl_Name.Text = lg.Nam;
+            // = receiveName;
+          //  Login login = Owner as MainForm;
+            
+           // lbl_Name.Text= login.Nam;
+            lbl_Name.Text = id;
+
             sa.StartPosition = this.StartPosition;
             sa.TopMost = true;
             //this.Enabled = false;
@@ -139,16 +155,8 @@ namespace PosProject_psi
 
         private void btnOrder_Click_1(object sender, EventArgs e)
         {
-            OrderInventoryForm oif = new OrderInventoryForm();
-            oif.Show();
+            new OrderInventoryForm().Show();
             this.Hide();
-            oif.button3.Click += Button3_Click;
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            
-            this.Show();
         }
 
         private void txtBacode_KeyDown(object sender, KeyEventArgs e)
@@ -157,7 +165,6 @@ namespace PosProject_psi
             {
                 InputInfo();
                 BonusEvent();
-                DiscountEvent();
             }
         }
 
@@ -192,7 +199,7 @@ namespace PosProject_psi
             }
 
             BonusEvent();
-            DiscountEvent();
+
             //price = int.Parse(itemGrid.CurrentRow.Cells[3].Value.ToString()) / int.Parse(prodCount);
             //txtPrice.Text = itemGrid.CurrentRow.Cells[3].Value.ToString();
             GiveMoney();
@@ -408,34 +415,22 @@ namespace PosProject_psi
             //BonusEvent();
         }
 
-        private void DiscountEvent()
-        {
-            var con = DbMan.Dbcon(sqlcon);
-            var cmd = new SqlCommand("EventDiscount", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@eventNum", eventNum);
-            con.Open();
+        //private void DiscountEvent()
+        //{
+        //    var con = DbMan.Dbcon(sqlcon);
+        //    var cmd = new SqlCommand("EventDiscount", con);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.AddWithValue("@eventNum", eventNum);
+        //    con.Open();
 
-            adapter = DbMan.DbAdap(adapter);
-            adapter.SelectCommand = cmd;
-            ds = DbMan.DbDs(ds);
-            adapter.Fill(ds);
-            DataTable pro = ds.Tables[0];
-            DataRowCollection rows = pro.Rows;
-            foreach (DataRow er in rows)
-            {
-                if (er[0].ToString() == "")
-                {
-                    return;
-                }
-                else
-                {
-                    priceDis = double.Parse(price.ToString()) * (double.Parse((100 - int.Parse(er[0].ToString())).ToString()) / 100);
-                    MessageBox.Show(priceDis.ToString());
-                    EventDr.Cells[3].Value = priceDis * double.Parse(EventDr.Cells[4].Value.ToString());
-                }
-            }
-        }
+        //    adapter = DbMan.DbAdap(adapter);
+        //    adapter.SelectCommand = cmd;
+        //    ds = DbMan.DbDs(ds);
+        //    adapter.Fill(ds);
+        //    DataTable pro = ds.Tables[0];
+        //    DataRowCollection rows = pro.Rows;
+
+        //}
 
         private void ProdImage(string barcodeNum)
         {
@@ -600,6 +595,11 @@ namespace PosProject_psi
 
         }
 
+        private void itemGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            txtProdInfo.Text = "";
+        }
+
         private void btnGain_Click(object sender, EventArgs e)
         {
             new SalesStatus().Show();
@@ -614,10 +614,8 @@ namespace PosProject_psi
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
                 if (int.Parse(txtReturnMoney.Text) >= 0)
                 {
-                    sellbarcode = new Random().Next(2147483647);
                     ProdMinus();
                     SellProdInsert();
                     AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
@@ -638,7 +636,7 @@ namespace PosProject_psi
 
         private void SellProdInsert()
         {
-            
+
             for (int i = 0; i < itemGrid.Rows.Count; i++)
             {
                 var con = DbMan.Dbcon(sqlcon);
@@ -650,9 +648,7 @@ namespace PosProject_psi
                 cmd.Parameters.AddWithValue("@count", itemGrid.Rows[i].Cells[4].Value.ToString());
                 cmd.Parameters.AddWithValue("@age", lblAge.Text);
                 cmd.Parameters.AddWithValue("@gender", lblGender.Text);
-                cmd.Parameters.AddWithValue("@empnum", 1);
-                cmd.Parameters.AddWithValue("@sellBarcode",sellbarcode.ToString());
-                cmd.Parameters.AddWithValue("@sellgivmoney", int.Parse(txtMoney.Text));
+                cmd.Parameters.AddWithValue("@empnum", 49);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -677,7 +673,6 @@ namespace PosProject_psi
         {
             if (txtPrice.Text != "0")
             {
-                sellbarcode = new Random().Next(2147483647);
                 cp = new CardPay();
                 cp.StartPosition = this.StartPosition;
                 cp.Show();
@@ -738,11 +733,9 @@ namespace PosProject_psi
                 cmd.Parameters.AddWithValue("@cardDate", DateTime.Parse(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01"));
                 //DateTime.Parse(cp.txtYear.Text + "-" + cp.txtMonth.Text + "-01")
                 cmd.Parameters.AddWithValue("@cardNum", cp.txtCardNum.Text);
-                cmd.Parameters.AddWithValue("@empnum", 1);
+                cmd.Parameters.AddWithValue("@empnum", 49);
                 cmd.Parameters.AddWithValue("@age", this.lblAge.Text);
                 cmd.Parameters.AddWithValue("@gender", this.lblGender.Text);
-                cmd.Parameters.AddWithValue("@sellBarcode", sellbarcode.ToString());
-                cmd.Parameters.AddWithValue("@money", int.Parse(cp.txtMoney.Text) - int.Parse(cp.txtDiscount.Text));
                 j = cmd.ExecuteNonQuery();
             }
             AutoClosingMessageBox.Show("정상처리되었습니다.", "GD편의점", 2000);
@@ -751,18 +744,23 @@ namespace PosProject_psi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PointManagement main = new PointManagement();
-            main.Val = int.Parse(this.txtPrice.Text);
+            // MessageBox.Show(this.txtPrice.ToString());
+            PointManagement pome = new PointManagement();
+            pome.Vals = int.Parse(this.txtPrice.Text);
+
             int a;
-            a = int.Parse(this.txtPrice.Text);
+            // a = int.Parse(this.txtPrice.Text);
+            // MessageBox.Show(a.ToString());
+            pome.ShowDialog();
 
-            main.Show();
-        }
+            a = pome.Vals;
+            txtPrice.Text = a.ToString();
 
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            Setting s = new Setting();
-            s.Show();
+            // MessageBox.Show(pome.Vals + "원");
+            // txtPrice.Text = int.Parse();
+
+
+            // txtPrice.Text
         }
     }
 }

@@ -29,21 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderInventoryForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnDrop = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnProdBasket = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.basketList = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.ItemListcbo = new System.Windows.Forms.ComboBox();
             this.prodInfoTxt = new System.Windows.Forms.TextBox();
@@ -76,25 +69,17 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.btnSeacrch = new System.Windows.Forms.Button();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.OrderListGrid = new System.Windows.Forms.DataGridView();
-            this.Column14 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.btnSeacrch = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +95,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-1, -3);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(987, 602);
@@ -118,15 +103,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnDelete);
-            this.tabPage1.Controls.Add(this.btnDrop);
-            this.tabPage1.Controls.Add(this.btnUpdate);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.btnProdBasket);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.basketList);
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.ItemListcbo);
             this.tabPage1.Controls.Add(this.prodInfoTxt);
@@ -147,96 +126,6 @@
             this.tabPage1.Text = "재고";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Linen;
-            this.btnDelete.BackgroundImage = global::PosProject_psi.Properties.Resources.if_minus_1645995;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(887, 473);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 36);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnDrop
-            // 
-            this.btnDrop.BackColor = System.Drawing.Color.Linen;
-            this.btnDrop.BackgroundImage = global::PosProject_psi.Properties.Resources.if_error_1646012;
-            this.btnDrop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDrop.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
-            this.btnDrop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDrop.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDrop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDrop.Location = new System.Drawing.Point(929, 473);
-            this.btnDrop.Name = "btnDrop";
-            this.btnDrop.Size = new System.Drawing.Size(36, 36);
-            this.btnDrop.TabIndex = 35;
-            this.btnDrop.UseVisualStyleBackColor = false;
-            this.btnDrop.Click += new System.EventHandler(this.btnDrop_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Linen;
-            this.btnUpdate.BackgroundImage = global::PosProject_psi.Properties.Resources.if_save_173091;
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdate.Location = new System.Drawing.Point(569, 503);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(36, 36);
-            this.btnUpdate.TabIndex = 34;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("휴먼매직체", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(654, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 16);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "장바구니";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Linen;
-            this.button6.BackgroundImage = global::PosProject_psi.Properties.Resources.if_shopping_basket_add_63149;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(611, 503);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(36, 36);
-            this.button6.TabIndex = 32;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // btnProdBasket
-            // 
-            this.btnProdBasket.BackColor = System.Drawing.Color.Linen;
-            this.btnProdBasket.BackgroundImage = global::PosProject_psi.Properties.Resources.if_shopping_basket_add_63149;
-            this.btnProdBasket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProdBasket.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btnProdBasket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProdBasket.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnProdBasket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProdBasket.Location = new System.Drawing.Point(611, 260);
-            this.btnProdBasket.Name = "btnProdBasket";
-            this.btnProdBasket.Size = new System.Drawing.Size(36, 36);
-            this.btnProdBasket.TabIndex = 31;
-            this.btnProdBasket.UseVisualStyleBackColor = false;
-            this.btnProdBasket.Click += new System.EventHandler(this.btnProdBasket_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -250,7 +139,6 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "취소";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -265,27 +153,25 @@
             this.button4.TabIndex = 30;
             this.button4.Text = "주문";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // basketList
+            // listBox1
             // 
-            this.basketList.FormattingEnabled = true;
-            this.basketList.ItemHeight = 16;
-            this.basketList.Location = new System.Drawing.Point(656, 82);
-            this.basketList.Name = "basketList";
-            this.basketList.Size = new System.Drawing.Size(310, 388);
-            this.basketList.TabIndex = 28;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(656, 82);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(310, 420);
+            this.listBox1.TabIndex = 28;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Orange;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(327, 263);
+            this.button2.Location = new System.Drawing.Point(327, 243);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 27);
             this.button2.TabIndex = 27;
@@ -298,7 +184,7 @@
             this.ItemListcbo.Items.AddRange(new object[] {
             "상품명",
             "바코드"});
-            this.ItemListcbo.Location = new System.Drawing.Point(13, 264);
+            this.ItemListcbo.Location = new System.Drawing.Point(13, 244);
             this.ItemListcbo.Name = "ItemListcbo";
             this.ItemListcbo.Size = new System.Drawing.Size(100, 24);
             this.ItemListcbo.TabIndex = 26;
@@ -306,10 +192,11 @@
             // 
             // prodInfoTxt
             // 
-            this.prodInfoTxt.Location = new System.Drawing.Point(134, 263);
+            this.prodInfoTxt.Location = new System.Drawing.Point(134, 243);
             this.prodInfoTxt.Name = "prodInfoTxt";
             this.prodInfoTxt.Size = new System.Drawing.Size(193, 26);
             this.prodInfoTxt.TabIndex = 25;
+            this.prodInfoTxt.Text = "검색어";
             // 
             // StockInfoTxt
             // 
@@ -317,6 +204,7 @@
             this.StockInfoTxt.Name = "StockInfoTxt";
             this.StockInfoTxt.Size = new System.Drawing.Size(193, 26);
             this.StockInfoTxt.TabIndex = 20;
+            this.StockInfoTxt.Text = "검색어";
             // 
             // label12
             // 
@@ -331,14 +219,14 @@
             // itemListGrid
             // 
             this.itemListGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.itemListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.itemListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.itemListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -353,7 +241,7 @@
             this.itemListGrid.Name = "itemListGrid";
             this.itemListGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.itemListGrid.RowTemplate.Height = 23;
-            this.itemListGrid.Size = new System.Drawing.Size(634, 176);
+            this.itemListGrid.Size = new System.Drawing.Size(634, 155);
             this.itemListGrid.TabIndex = 23;
             // 
             // Column7
@@ -394,7 +282,6 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -488,14 +375,14 @@
             // ProdStockView
             // 
             this.ProdStockView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProdStockView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdStockView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.ProdStockView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProdStockView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -511,7 +398,6 @@
             this.ProdStockView.RowTemplate.Height = 23;
             this.ProdStockView.Size = new System.Drawing.Size(634, 169);
             this.ProdStockView.TabIndex = 15;
-            this.ProdStockView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProdStockView_KeyPress);
             // 
             // Column1
             // 
@@ -557,12 +443,12 @@
             // 
             this.tabPage2.Controls.Add(this.btnCancel);
             this.tabPage2.Controls.Add(this.btnOrder);
+            this.tabPage2.Controls.Add(this.btnSeacrch);
             this.tabPage2.Controls.Add(this.cboType);
             this.tabPage2.Controls.Add(this.txtSearch);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.OrderListGrid);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.btnSeacrch);
             this.tabPage2.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -579,13 +465,12 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(729, 513);
+            this.btnCancel.Location = new System.Drawing.Point(741, 509);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 52);
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnOrder
             // 
@@ -594,21 +479,35 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOrder.Location = new System.Drawing.Point(845, 513);
+            this.btnOrder.Location = new System.Drawing.Point(857, 509);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(110, 52);
             this.btnOrder.TabIndex = 20;
-            this.btnOrder.Text = "입고";
+            this.btnOrder.Text = "주문";
             this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
+            // 
+            // btnSeacrch
+            // 
+            this.btnSeacrch.BackColor = System.Drawing.Color.Orange;
+            this.btnSeacrch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSeacrch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSeacrch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeacrch.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSeacrch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSeacrch.Location = new System.Drawing.Point(327, 475);
+            this.btnSeacrch.Name = "btnSeacrch";
+            this.btnSeacrch.Size = new System.Drawing.Size(27, 27);
+            this.btnSeacrch.TabIndex = 19;
+            this.btnSeacrch.UseVisualStyleBackColor = false;
             // 
             // cboType
             // 
             this.cboType.FormattingEnabled = true;
             this.cboType.Items.AddRange(new object[] {
             "상품명",
-            "바코드"});
-            this.cboType.Location = new System.Drawing.Point(14, 515);
+            "바코드",
+            "회사명"});
+            this.cboType.Location = new System.Drawing.Point(13, 477);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(100, 24);
             this.cboType.TabIndex = 18;
@@ -616,10 +515,11 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(135, 513);
+            this.txtSearch.Location = new System.Drawing.Point(134, 475);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(193, 26);
             this.txtSearch.TabIndex = 17;
+            this.txtSearch.Text = "검색어";
             // 
             // label6
             // 
@@ -634,71 +534,22 @@
             // OrderListGrid
             // 
             this.OrderListGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("돋움", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.OrderListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrderListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21});
             this.OrderListGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.OrderListGrid.Location = new System.Drawing.Point(13, 86);
             this.OrderListGrid.Name = "OrderListGrid";
             this.OrderListGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.OrderListGrid.RowTemplate.Height = 23;
-            this.OrderListGrid.Size = new System.Drawing.Size(942, 421);
+            this.OrderListGrid.Size = new System.Drawing.Size(942, 383);
             this.OrderListGrid.TabIndex = 14;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "선 택";
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "주 문 일 자";
-            this.Column15.Name = "Column15";
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "상 품 번 호";
-            this.Column16.Name = "Column16";
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "상 품 명";
-            this.Column17.Name = "Column17";
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "수 량";
-            this.Column18.Name = "Column18";
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "단 가";
-            this.Column19.Name = "Column19";
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "발 주 사 원";
-            this.Column20.Name = "Column20";
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "발 주 회 사";
-            this.Column21.Name = "Column21";
             // 
             // panel1
             // 
@@ -766,31 +617,15 @@
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "날짜";
             // 
-            // btnSeacrch
-            // 
-            this.btnSeacrch.BackColor = System.Drawing.Color.Orange;
-            this.btnSeacrch.BackgroundImage = global::PosProject_psi.Properties.Resources.if_search_298865;
-            this.btnSeacrch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSeacrch.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSeacrch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeacrch.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSeacrch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSeacrch.Location = new System.Drawing.Point(328, 513);
-            this.btnSeacrch.Name = "btnSeacrch";
-            this.btnSeacrch.Size = new System.Drawing.Size(27, 27);
-            this.btnSeacrch.TabIndex = 19;
-            this.btnSeacrch.UseVisualStyleBackColor = false;
-            this.btnSeacrch.Click += new System.EventHandler(this.btnSeacrch_Click);
-            // 
             // OrderInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 596);
-            this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Name = "OrderInventoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "OrderInventoryForm";
             this.Load += new System.EventHandler(this.OrderInventoryForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -811,8 +646,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListBox basketList;
+        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox ItemListcbo;
         private System.Windows.Forms.TextBox prodInfoTxt;
@@ -849,6 +686,7 @@
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView OrderListGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -856,22 +694,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnProdBasket;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage tabPage1;
-        internal System.Windows.Forms.DataGridView OrderListGrid;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnDrop;
     }
 }
