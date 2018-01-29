@@ -79,7 +79,7 @@
             this.btn19m.Name = "btn19m";
             this.btn19m.Size = new System.Drawing.Size(110, 85);
             this.btn19m.TabIndex = 2;
-            this.btn19m.Text = "12~19세 (남)";
+            this.btn19m.Text = "14~19세 (남)";
             this.btn19m.UseVisualStyleBackColor = false;
             // 
             // btn20m
@@ -149,7 +149,7 @@
             this.btn19w.Name = "btn19w";
             this.btn19w.Size = new System.Drawing.Size(110, 85);
             this.btn19w.TabIndex = 7;
-            this.btn19w.Text = "12~19세 (여)";
+            this.btn19w.Text = "14~19세 (여)";
             this.btn19w.UseVisualStyleBackColor = false;
             // 
             // btn30w

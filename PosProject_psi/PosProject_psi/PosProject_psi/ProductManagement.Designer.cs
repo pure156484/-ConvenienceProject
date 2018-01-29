@@ -317,6 +317,7 @@
             this.product_barcode.Name = "product_barcode";
             this.product_barcode.Size = new System.Drawing.Size(192, 20);
             this.product_barcode.TabIndex = 9;
+            this.product_barcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.product_barcode_KeyDown);
             // 
             // btn_image
             // 

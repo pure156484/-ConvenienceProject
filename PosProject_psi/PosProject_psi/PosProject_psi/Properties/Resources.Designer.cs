@@ -63,6 +63,26 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap _1q23 {
+            get {
+                object obj = ResourceManager.GetObject("1q23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_error_1646012 {
+            get {
+                object obj = ResourceManager.GetObject("if_error_1646012", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap if_icons_settings_1564529 {
             get {
                 object obj = ResourceManager.GetObject("if_icons_settings_1564529", resourceCulture);
@@ -83,6 +103,36 @@ namespace PosProject_psi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap if_minus_1645995 {
+            get {
+                object obj = ResourceManager.GetObject("if_minus_1645995", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_save_173091 {
+            get {
+                object obj = ResourceManager.GetObject("if_save_173091", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_search_298865 {
+            get {
+                object obj = ResourceManager.GetObject("if_search_298865", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap if_setting_46837 {
             get {
                 object obj = ResourceManager.GetObject("if_setting_46837", resourceCulture);
@@ -96,6 +146,26 @@ namespace PosProject_psi.Properties {
         internal static System.Drawing.Bitmap if_setting_468371 {
             get {
                 object obj = ResourceManager.GetObject("if_setting_468371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_shopping_basket_add_63149 {
+            get {
+                object obj = ResourceManager.GetObject("if_shopping-basket-add_63149", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20180124_155546014 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20180124_155546014", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
