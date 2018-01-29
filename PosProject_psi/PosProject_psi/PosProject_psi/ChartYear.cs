@@ -23,17 +23,19 @@ namespace PosProject_psi
         }
 
         /// <summary>
-        /// 월별 날짜 버튼
+        /// 연도별 날짜 버튼
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            //string month = dtpDay.Value.ToString("yyyy");
+            int yearStart = int.Parse(dtpStart.Value.ToString("yyyy"));
+            int yearEnd = int.Parse(dtpEnd.Value.ToString("yyyy")) + 1;
             var con = DbMan.Dbcon(sqlcon);
             var cmd = new SqlCommand("NewChartYear", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("@monthValue", month);
+            cmd.Parameters.AddWithValue("@start", yearStart);
+            cmd.Parameters.AddWithValue("@end", yearEnd);
             adapter = DbMan.DbAdap(adapter);
             adapter.SelectCommand = cmd;
             ds = DbMan.DbDs(ds);
