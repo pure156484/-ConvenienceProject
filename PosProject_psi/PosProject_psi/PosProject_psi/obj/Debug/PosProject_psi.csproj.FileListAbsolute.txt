@@ -277,3 +277,5 @@ C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosP
 C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ChartYear.resources
 C:\Users\정현우\Desktop\ConvenienceProject_backup\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ChartGender.resources
 C:\Users\정현우\Desktop\ConvenienceProject_backup\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ChartAge.resources
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ChartAge.resources
+C:\Users\정현우\Desktop\ConvenienceProject\PosProject_psi\PosProject_psi\PosProject_psi\obj\Debug\PosProject_psi.ChartGender.resources

@@ -133,28 +133,36 @@ namespace CommonProject
         /// <param name="e"></param>
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            bool flag = false;
-            for (int i = 0; i < MemberGridView.RowCount; i++)
-            {
-                if (MemberGridView.Rows[i].Cells[2].Value.ToString() == txtSearch.Text)
-                {
-                    MemberGridView.CurrentCell = MemberGridView.Rows[i].Cells[0];
-                    flag = true;
-                }
-            }
+            var con = DbMan.Dbcon(sqlcon);
+            var cmd = new SqlCommand("MemberSearchPhone", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@phone", cboPhone1.SelectedItem.ToString() + txtPhone2.Text + txtPhone3.Text);
+            con.Open();
+            var sdr = cmd.ExecuteReader();
 
-            if (!flag)
+            if (!sdr.HasRows)
             {
-                MessageBox.Show("없는 전화번호입니다.");
+                MessageBox.Show("휴대전화 번호를 다시 한 번 입력해주세요.");
+                return;
+            }
+            else
+            {
+                while (sdr.Read())
+                {
+                    DataGridViewCell MemberGrideView_Search = MemberGridView.Rows[int.Parse(sdr["user_num"].ToString())].Cells[0];
+                    MemberGridView.FirstDisplayedCell = MemberGrideView_Search;
+                    MemberGridView.CurrentCell = MemberGrideView_Search;
+                }
+                sdr.Close();
             }
         }
 
-        /// <summary>
-        /// 회원 삭제 버튼
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Del_Click(object sender, EventArgs e)
+    /// <summary>
+    /// 회원 삭제 버튼
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void btn_Del_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(this.MemberGridView.CurrentRow.Cells[1].Value.ToString() + " 를(을) 삭제 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
